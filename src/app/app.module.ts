@@ -6,14 +6,16 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BjjChecklistComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
- 	  AngularFirestoreModule,
+    AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule
   ],
