@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+interface Technique {
+  position: string;
+  name: string;
+  videoId: string;
+  belt: 'white' | 'purple' | 'brown';
+  status: number;
+}
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -8,17 +17,22 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./bjj-checklist.component.scss']
 })
 export class BjjChecklistComponent implements OnInit {
-  items: Observable<any[]>;
+  techniques: Technique[];
+  videoUrl: SafeResourceUrl;
 
   constructor(
-    private db: AngularFirestore
+    private db: AngularFirestore,
+    private domSanitizer: DomSanitizer
   ) { }
 
   ngOnInit() {
-    this.items = this.db.collection('test').valueChanges();
-    this.db.collection('test').valueChanges().subscribe(data => {
-      console.log('data: ', data);
+    this.db.collection('techniques').valueChanges().subscribe((results: Technique[]) => {
+      this.techniques = results;
     });
+  }
+
+  setVideoUrl(technique: Technique): void {
+    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${technique.videoId}`);
   }
 
 }
