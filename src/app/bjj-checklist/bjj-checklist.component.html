@@ -1,11 +1,14 @@
 <div class="container-fluid pt-3">
+  <button type="button" class="btn btn-primary" (click)="addTechnique()">Add</button>
+  <button type="button" class="btn btn-danger" (click)="deleteTechnique()">Delete</button>
   <div class="row">
     <div class="col-sm">
       <table class="table table-hover table-sm">
         <thead>
           <tr>
             <th scope="col">Position</th>
-            <th scope="col">Name</th>
+            <th scope="col">Technique</th>
+            <th scope="col">Type</th>
             <th scope="col">Belt</th>
           </tr>
         </thead>
@@ -13,15 +16,15 @@
           <tr *ngFor="let technique of techniques">
             <td>{{ technique.position }}</td>
             <td class="btn btn-link" (click)="setVideoUrl(technique)">{{ technique.name }}</td>
-            <td></td>
+            <td>{{ technique.noGi ? 'No-gi' : 'Gi' }}</td>
+            <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-sm">
-      <iframe *ngIf="videoUrl" width="100%" height="500" [src]="videoUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe *ngIf="videoUrl" width="100%" height="500" [src]="videoUrl" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </div>
-
-

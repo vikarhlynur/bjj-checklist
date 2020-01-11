@@ -1,15 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-interface Technique {
-  position: string;
-  name: string;
-  videoId: string;
-  belt: 'white' | 'purple' | 'brown';
-  status: number;
-}
+import { Technique } from './technique.model';
+
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -27,12 +21,23 @@ export class BjjChecklistComponent implements OnInit {
 
   ngOnInit() {
     this.db.collection('techniques').valueChanges().subscribe((results: Technique[]) => {
-      this.techniques = results;
+      this.techniques = results.map(result => new Technique(result));
     });
   }
 
   setVideoUrl(technique: Technique): void {
     this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${technique.videoId}`);
+  }
+
+  addTechnique(): void {
+    this.db.collection('techniques').doc('test').set({
+      name: 'Tokyo',
+      country: 'Japan'
+    });
+  }
+
+  deleteTechnique(): void {
+    this.db.collection('techniques').doc('test').delete();
   }
 
 }
