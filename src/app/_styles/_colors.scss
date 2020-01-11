@@ -1,0 +1,138 @@
+/*
+ * - - - - Utils Colors - - - -
+ * Color utility classes
+*/
+
+/*
+ * Background colors
+ */
+ .bg-blue           { background-color: $blue !important; }
+ .bg-blue-dark      { background-color: $blue-dark !important; }
+ .bg-blue-darker    { background-color: $blue-darker !important; }
+ .bg-indigo         { background-color: $indigo !important; }
+ .bg-indigo-dark    { background-color: $indigo-dark !important; }
+ .bg-indigo-darker  { background-color: $indigo-darker !important; }
+ .bg-purple         { background-color: $purple !important; }
+ .bg-purple-dark    { background-color: $purple-dark !important; }
+ .bg-purple-darker  { background-color: $purple-darker !important; }
+ .bg-pink           { background-color: $pink !important; }
+ .bg-pink-dark      { background-color: $pink-dark !important; }
+ .bg-pink-darker    { background-color: $pink-darker !important; }
+ .bg-red            { background-color: $red !important; }
+ .bg-red-dark       { background-color: $red-dark !important; }
+ .bg-red-darker     { background-color: $red-darker !important; }
+ .bg-orange         { background-color: $orange !important; }
+ .bg-orange-dark    { background-color: $orange-dark !important; }
+ .bg-orange-darker  { background-color: $orange-darker !important; }
+ .bg-yellow         { background-color: $yellow !important; }
+ .bg-yellow-dark    { background-color: $yellow-dark !important; }
+ .bg-yellow-darker  { background-color: $yellow-darker !important; }
+ .bg-green-lighter  { background-color: $green-lighter !important; }
+ .bg-green-light    { background-color: $green-light !important; }
+ .bg-green          { background-color: $green !important; }
+ .bg-green-dark     { background-color: $green-dark !important; }
+ .bg-green-darker   { background-color: $green-darker !important; }
+ .bg-teal           { background-color: $teal !important; }
+ .bg-teal-dark      { background-color: $teal-dark !important; }
+ .bg-teal-darker    { background-color: $teal-darker !important; }
+ .bg-cyan           { background-color: $cyan !important; }
+ .bg-cyan-dark      { background-color: $cyan-dark !important; }
+ .bg-cyan-darker    { background-color: $cyan-darker !important; }
+ .bg-gray-100       { background-color: $gray-100 !important; }
+ .bg-gray-200       { background-color: $gray-200 !important; }
+ .bg-gray-300       { background-color: $gray-300 !important; }
+ .bg-gray-400       { background-color: $gray-400 !important; }
+ .bg-gray-500       { background-color: $gray-500 !important; }
+ .bg-gray-600       { background-color: $gray-600 !important; }
+ .bg-gray-700       { background-color: $gray-700 !important; }
+ .bg-gray-800       { background-color: $gray-800 !important; }
+ .bg-gray-900       { background-color: $gray-900 !important; }
+ 
+ 
+ /*
+  * Border colors
+  */
+ .border-blue           { border-color: $blue !important; }
+ .border-blue-dark      { border-color: $blue-dark !important; }
+ .border-blue-darker    { border-color: $blue-darker !important; }
+ .border-indigo         { border-color: $indigo !important; }
+ .border-indigo-dark    { border-color: $indigo-dark !important; }
+ .border-indigo-darker  { border-color: $indigo-darker !important; }
+ .border-purple         { border-color: $purple !important; }
+ .border-purple-dark    { border-color: $purple-dark !important; }
+ .border-purple-darker  { border-color: $purple-darker !important; }
+ .border-pink           { border-color: $pink !important; }
+ .border-pink-dark      { border-color: $pink-dark !important; }
+ .border-pink-darker    { border-color: $pink-darker !important; }
+ .border-red            { border-color: $red !important; }
+ .border-red-dark       { border-color: $red-dark !important; }
+ .border-red-darker     { border-color: $red-darker !important; }
+ .border-orange         { border-color: $orange !important; }
+ .border-orange-dark    { border-color: $orange-dark !important; }
+ .border-orange-darker  { border-color: $orange-darker !important; }
+ .border-yellow         { border-color: $yellow !important; }
+ .border-yellow-dark    { border-color: $yellow-dark !important; }
+ .border-yellow-darker  { border-color: $yellow-darker !important; }
+ .border-green-lighter  { border-color: $green-lighter !important; }
+ .border-green-light    { border-color: $green-light !important; }
+ .border-green          { border-color: $green !important; }
+ .border-green-dark     { border-color: $green-dark !important; }
+ .border-green-darker   { border-color: $green-darker !important; }
+ .border-teal           { border-color: $teal !important; }
+ .border-teal-dark      { border-color: $teal-dark !important; }
+ .border-teal-darker    { border-color: $teal-darker !important; }
+ .border-cyan           { border-color: $cyan !important; }
+ .border-cyan-dark      { border-color: $cyan-dark !important; }
+ .border-cyan-darker    { border-color: $cyan-darker !important; }
+ .border-gray-100       { border-color: $gray-100 !important; }
+ .border-gray-200       { border-color: $gray-200 !important; }
+ .border-gray-300       { border-color: $gray-300 !important; }
+ .border-gray-400       { border-color: $gray-400 !important; }
+ .border-gray-500       { border-color: $gray-500 !important; }
+ .border-gray-600       { border-color: $gray-600 !important; }
+ .border-gray-700       { border-color: $gray-700 !important; }
+ .border-gray-800       { border-color: $gray-800 !important; }
+ .border-gray-900       { border-color: $gray-900 !important; }
+ 
+  /*
+  * Text colors
+  */
+ .text-blue           { color: $blue !important; }
+ .text-blue-dark      { color: $blue-dark !important; }
+ .text-blue-darker    { color: $blue-darker !important; }
+ .text-indigo         { color: $indigo !important; }
+ .text-indigo-dark    { color: $indigo-dark !important; }
+ .text-indigo-darker  { color: $indigo-darker !important; }
+ .text-purple         { color: $purple !important; }
+ .text-purple-dark    { color: $purple-dark !important; }
+ .text-purple-darker  { color: $purple-darker !important; }
+ .text-pink           { color: $pink !important; }
+ .text-pink-dark      { color: $pink-dark !important; }
+ .text-pink-darker    { color: $pink-darker !important; }
+ .text-red            { color: $red !important; }
+ .text-red-dark       { color: $red-dark !important; }
+ .text-red-darker     { color: $red-darker !important; }
+ .text-orange         { color: $orange !important; }
+ .text-orange-dark    { color: $orange-dark !important; }
+ .text-orange-darker  { color: $orange-darker !important; }
+ .text-yellow         { color: $yellow !important; }
+ .text-yellow-dark    { color: $yellow-dark !important; }
+ .text-yellow-darker  { color: $yellow-darker !important; }
+ .text-green          { color: $green !important; }
+ .text-green-dark     { color: $green-dark !important; }
+ .text-green-darker   { color: $green-darker !important; }
+ .text-teal           { color: $teal !important; }
+ .text-teal-dark      { color: $teal-dark !important; }
+ .text-teal-darker    { color: $teal-darker !important; }
+ .text-cyan           { color: $cyan !important; }
+ .text-cyan-dark      { color: $cyan-dark !important; }
+ .text-cyan-darker    { color: $cyan-darker !important; }
+ .text-gray-100       { color: $gray-100 !important; }
+ .text-gray-200       { color: $gray-200 !important; }
+ .text-gray-300       { color: $gray-300 !important; }
+ .text-gray-400       { color: $gray-400 !important; }
+ .text-gray-500       { color: $gray-500 !important; }
+ .text-gray-600       { color: $gray-600 !important; }
+ .text-gray-700       { color: $gray-700 !important; }
+ .text-gray-800       { color: $gray-800 !important; }
+ .text-gray-900       { color: $gray-900 !important; }

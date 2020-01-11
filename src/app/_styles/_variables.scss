@@ -1,3 +1,90 @@
-// BJJ Checklist Variables
+/*
+ * - - - - Variables - - - -
+ *
+ * This document defines variables and overrides Bootstrap variables
+ * If you change Bootstrap default values ADD COMMENT after the assignment with the default value.
+ * Boostrap variables are in: node_modules/bootstrap/scss/_variables.scss
+*/
 
-// Bootstrap variables override
+/*
+ * Buttons
+ */
+ $btn-disabled-opacity: .5; // .65 !default;
+
+/*
+ * Fonts
+ */
+$font-size-base: 0.875rem; // =14px // 1rem !default;
+
+/*
+ * Spacing
+ */
+$spacer: .5rem; // 1rem
+
+/*
+ * Forms
+ */
+$label-margin-bottom: 0; // .5rem
+$form-group-margin-bottom: .5rem; // 1rem
+$label-margin-bottom: 0; // .5rem
+
+/*
+ * Grid Layout
+ */
+$grid-gutter-width: 10px; // 30px !default;
+
+
+// Cards
+$card-spacer-y:  .5rem; // .75rem !default;
+$card-spacer-x:  1rem; // 1.25rem !default;
+
+/*
+ * Colors
+ */
+// Bootstrap colors
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:   #438de0;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink:   #e83e8c;
+$red:    #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green:  #7fbd00; // #28a745;
+$teal:   #20c997;
+$cyan:   #17a2b8;
+
+// New AGR colors
+$blue-dark:     darken($blue,   10%);
+$blue-darker:   darken($blue,   20%);
+$indigo-dark:   darken($indigo, 10%);
+$indigo-darker: darken($indigo, 20%);
+$purple-dark:   darken($purple, 10%);
+$purple-darker: darken($purple, 20%);
+$pink-dark:     darken($pink,   10%);
+$pink-darker:   darken($pink,   20%);
+$red-dark:      darken($red,    10%);
+$red-darker:    darken($red,    20%);
+$orange-dark:   darken($orange, 10%);
+$orange-darker: darken($orange, 20%);
+$yellow-dark:   darken($yellow, 10%);
+$yellow-darker: darken($yellow, 20%);
+$green-lighter: lighten($green, 55%);
+$green-light:   lighten($green, 45%);
+$green-dark:    darken($green,  10%);
+$green-darker:  darken($green,  20%);
+$teal-dark:     darken($teal,   10%);
+$teal-darker:   darken($teal,   20%);
+$cyan-dark:     darken($cyan,   10%);
+$cyan-darker:   darken($cyan,   20%);
