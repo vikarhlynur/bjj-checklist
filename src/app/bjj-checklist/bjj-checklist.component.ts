@@ -20,7 +20,7 @@ export class BjjChecklistComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.db.collection('techniques').valueChanges().subscribe((results: Technique[]) => {
+    this.db.collection('technique').valueChanges().subscribe((results: Technique[]) => {
       this.techniques = results.map(result => new Technique(result));
     });
   }

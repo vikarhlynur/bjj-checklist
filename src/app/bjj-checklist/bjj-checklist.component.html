@@ -13,7 +13,9 @@
         <tbody>
           <tr *ngFor="let technique of techniques">
             <td>{{ technique.position }}</td>
-            <td class="btn btn-link" (click)="setVideoUrl(technique)">{{ technique.name }}</td>
+            <td (click)="setVideoUrl(technique)">
+              <span class="grid-link">{{ technique.name }}</span>
+            </td>
             <td>{{ technique.noGi ? 'No-gi' : 'Gi' }}</td>
             <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
           </tr>
