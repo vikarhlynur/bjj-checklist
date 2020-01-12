@@ -18,11 +18,6 @@ export class BjjChecklistDataComponent implements OnInit {
   ngOnInit() {
   }
 
-  reload(): void {
-    this.remove();
-    this.add();
-  }
-
   add(): void {
     techniquesJson.forEach(technique => {
       technique.id = kebabCase(technique.name);
@@ -38,9 +33,6 @@ export class BjjChecklistDataComponent implements OnInit {
     let techniques;
     const subscription = this.db.collection('technique').valueChanges().subscribe((results: Technique[]) => {
       techniques = results.map(result => new Technique(result));
-
-      console.log('techniques: ', techniques);
-
       techniques.forEach(technique => {
         this.db.collection('technique').doc(technique.id).delete().then(() => {
           console.log('Finished');
