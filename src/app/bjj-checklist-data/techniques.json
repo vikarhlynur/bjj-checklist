@@ -9,9 +9,273 @@
   },
   {
     "belt": "blue",
-    "name": "xxx",
+    "name": "Weak side back to mat escape",
     "noGi": true,
     "position": "Back control (bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Strong side baseball bat grip escape",
+    "noGi": true,
+    "position": "Back control (bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "But scoop escape",
+    "noGi": true,
+    "position": "Back control (bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Upa/bridge and roll escape",
+    "noGi": true,
+    "position": "Mount (Bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Elbow-knee escape",
+    "noGi": true,
+    "position": "Mount (Bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Hip escape guard replacement",
+    "noGi": true,
+    "position": "Side control (Bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Backdoor escape",
+    "noGi": true,
+    "position": "Side control (Bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Over-under guard pass",
+    "noGi": true,
+    "position": "Inside Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Knee slice",
+    "noGi": true,
+    "position": "Inside Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Bullfighter guard pass (Toreando)",
+    "noGi": true,
+    "position": "Inside Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Under-hook back take",
+    "noGi": true,
+    "position": "Half Guard (Bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Foot sweep",
+    "noGi": true,
+    "position": "Half Guard (Bottom)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Foot-wedge guard pass",
+    "noGi": true,
+    "position": "Half Guard (Top)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Hip-switch gard pass",
+    "noGi": true,
+    "position": "Half Guard (Top)",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Arm-drag back take",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Scissor sweep",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Hip bump sweep",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Cross collar choke",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Arm bar",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Triangle choke",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Kimura",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Guillotine",
+    "noGi": true,
+    "position": "Full Guard",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Knee slice to mount",
+    "noGi": true,
+    "position": "Side control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Kimura",
+    "noGi": true,
+    "position": "Side control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Americana",
+    "noGi": true,
+    "position": "Side control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Head arm triangle choke",
+    "noGi": true,
+    "position": "Side control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Back take",
+    "noGi": true,
+    "position": "Mount",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Cross collar choke",
+    "noGi": true,
+    "position": "Mount",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Americana",
+    "noGi": true,
+    "position": "Mount",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Arm bar",
+    "noGi": true,
+    "position": "Mount",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Rear naked choke",
+    "noGi": true,
+    "position": "Back control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Doorbell choke",
+    "noGi": true,
+    "position": "Back control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Bow and arrow choke",
+    "noGi": true,
+    "position": "Back control",
+    "videoId": "xxx",
+    "videoStart": 0
+  },
+  {
+    "belt": "blue",
+    "name": "Arm bar",
+    "noGi": true,
+    "position": "Back control",
     "videoId": "xxx",
     "videoStart": 0
   }
