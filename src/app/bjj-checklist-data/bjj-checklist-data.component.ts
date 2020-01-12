@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { kebabCase } from 'lodash';
+import { camelCase } from 'lodash';
 
 import techniquesJson from './techniques.json';
 import { Technique } from '../bjj-checklist/technique.model.js';
@@ -20,7 +20,7 @@ export class BjjChecklistDataComponent implements OnInit {
 
   add(): void {
     techniquesJson.forEach(technique => {
-      technique.id = kebabCase(technique.name);
+      technique.id = camelCase(technique.name);
       this.db.collection('technique').doc(technique.id).set(technique).then(() => {
         console.log('Finished');
       }, (error) => {
