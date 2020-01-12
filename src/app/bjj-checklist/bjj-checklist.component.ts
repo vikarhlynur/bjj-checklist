@@ -29,15 +29,4 @@ export class BjjChecklistComponent implements OnInit {
     this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${technique.videoId}`);
   }
 
-  addTechnique(): void {
-    this.db.collection('techniques').doc('test').set({
-      name: 'Tokyo',
-      country: 'Japan'
-    });
-  }
-
-  deleteTechnique(): void {
-    this.db.collection('techniques').doc('test').delete();
-  }
-
 }
