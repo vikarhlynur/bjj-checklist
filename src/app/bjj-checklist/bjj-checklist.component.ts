@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 import { Technique } from './technique.model';
+import { BjjChecklistService } from './bjj-checklist.service';
 
 
 @Component({
@@ -15,13 +15,13 @@ export class BjjChecklistComponent implements OnInit {
   videoUrl: SafeResourceUrl;
 
   constructor(
-    private db: AngularFirestore,
+    private service: BjjChecklistService,
     private domSanitizer: DomSanitizer
   ) { }
 
   ngOnInit() {
-    this.db.collection('technique').valueChanges().subscribe((results: Technique[]) => {
-      this.techniques = results.map(result => new Technique(result));
+    this.service.getTechniques().subscribe((results: Technique[]) => {
+      this.techniques = results;
     });
   }
 
