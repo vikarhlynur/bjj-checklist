@@ -1,14 +1,6 @@
 [
   {
     "belt": "blue",
-    "name": "Bridge and Roll",
-    "noGi": true,
-    "position": "Back control (bottom)",
-    "videoId": "2iB5nlIeZR8",
-    "videoStart": 73
-  },
-  {
-    "belt": "blue",
     "name": "Weak side back to mat escape",
     "noGi": true,
     "position": "Back control (bottom)",
@@ -36,39 +28,39 @@
     "name": "Upa/bridge and roll escape",
     "noGi": true,
     "position": "Mount (Bottom)",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "2iB5nlIeZR8",
+    "videoStart": 73
   },
   {
     "belt": "blue",
     "name": "Elbow-knee escape",
     "noGi": true,
     "position": "Mount (Bottom)",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "2iB5nlIeZR8",
+    "videoStart": 221
   },
   {
     "belt": "blue",
     "name": "Hip escape guard replacement",
     "noGi": true,
     "position": "Side control (Bottom)",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "9S3nDygvk6A",
+    "videoStart": 21
   },
   {
     "belt": "blue",
     "name": "Backdoor escape",
     "noGi": true,
     "position": "Side control (Bottom)",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "9S3nDygvk6A",
+    "videoStart": 135
   },
   {
     "belt": "blue",
     "name": "Over-under guard pass",
     "noGi": true,
     "position": "Inside Guard",
-    "videoId": "xxx",
+    "videoId": "-669RC8iRAs",
     "videoStart": 0
   },
   {
@@ -156,7 +148,7 @@
     "name": "Arm bar",
     "noGi": true,
     "position": "Full Guard",
-    "videoId": "xxx",
+    "videoId": "5I6SNtejqe4",
     "videoStart": 0
   },
   {
@@ -164,7 +156,7 @@
     "name": "Triangle choke",
     "noGi": true,
     "position": "Full Guard",
-    "videoId": "xxx",
+    "videoId": "ID-DEV1pr1M",
     "videoStart": 0
   },
   {
@@ -172,8 +164,8 @@
     "name": "Kimura",
     "noGi": true,
     "position": "Full Guard",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "5I6SNtejqe4",
+    "videoStart": 114
   },
   {
     "belt": "blue",
@@ -244,8 +236,8 @@
     "name": "Arm bar",
     "noGi": true,
     "position": "Mount",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "5I6SNtejqe4",
+    "videoStart": 240
   },
   {
     "belt": "blue",
