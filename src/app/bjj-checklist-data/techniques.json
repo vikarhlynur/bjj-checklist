@@ -244,7 +244,7 @@
     "name": "Rear naked choke",
     "noGi": true,
     "position": "Back control",
-    "videoId": "xxx",
+    "videoId": "X5OrEPQCrjk",
     "videoStart": 0
   },
   {
@@ -252,15 +252,15 @@
     "name": "Doorbell choke",
     "noGi": true,
     "position": "Back control",
-    "videoId": "xxx",
+    "videoId": "QNayO6kPmWE",
     "videoStart": 0
   },
   {
     "belt": "blue",
     "name": "Bow and arrow choke",
-    "noGi": true,
+    "noGi": false,
     "position": "Back control",
-    "videoId": "xxx",
+    "videoId": "yrUXIujVGTM",
     "videoStart": 0
   },
   {
@@ -268,7 +268,7 @@
     "name": "Arm bar",
     "noGi": true,
     "position": "Back control",
-    "videoId": "xxx",
-    "videoStart": 0
+    "videoId": "CtcZlbLkedg",
+    "videoStart": 16
   }
 ]
