@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
 import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BjjChecklistComponent,
-    BjjChecklistDataComponent
+    BjjChecklistDataComponent,
+    LoginComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
