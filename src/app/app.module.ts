@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +7,25 @@ import { AppComponent } from './app.component';
 import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
 import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
 import { LoginComponent } from './login/login.component';
+
+import { FirebaseUIModule, firebase, firebaseui } from 'firebaseui-angular';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+const firebaseUiAuthConfig: firebaseui.auth.Config = {
+  // signInFlow: 'popup',
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    {
+      provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
+    },
+    {
+      requireDisplayName: false,
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID
+    }
+  ]
+};
 
 @NgModule({
   declarations: [
@@ -18,7 +35,10 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule
