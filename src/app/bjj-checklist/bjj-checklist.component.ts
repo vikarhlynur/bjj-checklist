@@ -25,26 +25,14 @@ export class BjjChecklistComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.angularFireAuth.authState.subscribe(this.firebaseAuthChangeListener.bind(this));
-    this.service.getTechniques().subscribe((results: Technique[]) => {
-      this.techniques = results;
-    });
+    this.getLoggedInUser();
+    this.getTechniquesList();
   }
+
+  //////////////////////////////////////////
 
   setVideoUrl(technique: Technique): void {
     this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${technique.videoId}`);
-  }
-
-  private firebaseAuthChangeListener(user: firebase.User) {
-    // if needed, do a redirect in here
-    if (user) {
-      console.log('Logged in :)');
-      this.user = user;
-      console.log('user: ', user);
-    } else {
-      console.log('user: ', user);
-      console.log('Logged out :(');
-    }
   }
 
   routeToLogin(): void {
@@ -53,10 +41,23 @@ export class BjjChecklistComponent implements OnInit {
 
   signOut(): void {
     this.angularFireAuth.auth.signOut().then(() => {
-      console.log('signed out');
       this.user = undefined;
     }).catch((error) => {
       console.log('error: ', error);
+    });
+  }
+
+  // Private
+
+  private getLoggedInUser(): void {
+    this.angularFireAuth.authState.subscribe((user: firebase.User) => {
+      if (user) { this.user = user; }
+    });
+  }
+
+  private getTechniquesList(): void {
+    this.service.getTechniques().subscribe((results: Technique[]) => {
+      this.techniques = results;
     });
   }
 

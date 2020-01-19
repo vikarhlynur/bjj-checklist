@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseUISignInSuccessWithAuthResult, FirebaseUISignInFailure } from 'firebaseui-angular';
+import { FirebaseUISignInFailure } from 'firebaseui-angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,13 +15,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  successCallback(signInSuccessData: FirebaseUISignInSuccessWithAuthResult) {
-    console.log('login success');
+  successCallback() {
     this.router.navigate(['/']);
   }
 
   errorCallback(errorData: FirebaseUISignInFailure) {
-    console.log('login failure');
+    console.log(errorData);
   }
 
 }
