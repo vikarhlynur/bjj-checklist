@@ -8,13 +8,13 @@ import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
 import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
 import { LoginComponent } from './login/login.component';
 
-import { FirebaseUIModule, firebase, firebaseui } from 'firebaseui-angular';
+import { FirebaseUIModule, firebase } from 'firebaseui-angular';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
-  // signInFlow: 'popup',
+  signInFlow: 'popup',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     {
@@ -35,13 +35,12 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     LoginComponent
   ],
   imports: [
-    // AngularFireModule.initializeApp(environment.firebaseConfig),
-    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
