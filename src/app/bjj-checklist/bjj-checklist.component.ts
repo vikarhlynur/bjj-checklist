@@ -16,7 +16,7 @@ export class BjjChecklistComponent implements OnInit {
   videoUrl: SafeResourceUrl;
   user: firebase.User;
 
-  techniqueFilter: string;
+  nameFilter = '';
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -48,6 +48,13 @@ export class BjjChecklistComponent implements OnInit {
     });
   }
 
+  filterTechniques(): void {
+    console.log('filterTechniques()');
+    this.techniquesFiltered = this.techniques.filter(technique => {
+      return technique.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
+    });
+  }
+
   // Private
 
   private getLoggedInUser(): void {
@@ -58,7 +65,7 @@ export class BjjChecklistComponent implements OnInit {
 
   private getTechniquesList(): void {
     this.service.getTechniques().subscribe((results: Technique[]) => {
-      this.techniques = results;
+      this.techniques = this.techniquesFiltered = results;
     });
   }
 

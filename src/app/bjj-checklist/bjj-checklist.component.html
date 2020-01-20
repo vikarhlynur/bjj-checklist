@@ -2,9 +2,9 @@
 <button type="button" class="btn btn-secondary" *ngIf="user" (click)="signOut()">Sign Out</button>
 <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
 
-<div class="form-group">
+<div class="form-group form-inline">
   <label for="technique-filter">Technique</label>
-  <input type="text" id="technique-filter" class="form-control">
+  <input type="text" id="technique-filter" class="form-control" [(ngModel)]="nameFilter" (keyup)="filterTechniques()">
 </div>
 
 <div class="container-fluid pt-3">
@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let technique of techniques">
+          <tr *ngFor="let technique of techniquesFiltered">
             <td>{{ technique.position }}</td>
             <td (click)="setVideoUrl(technique)">
               <span [class.grid-link]="technique.videoId?.length > 0">{{ technique.name }}</span>
