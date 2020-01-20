@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { camelCase } from 'lodash';
-
-import techniquesJson from './techniques.json';
 import { Technique } from '../bjj-checklist/technique.model.js';
+import techniquesJson from './techniques.json';
 
 @Component({
   selector: 'app-bjj-checklist-data',

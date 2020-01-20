@@ -1,17 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { environment } from '../environments/environment';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
-import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
-import { LoginComponent } from './login/login.component';
-
-import { FirebaseUIModule, firebase } from 'firebaseui-angular';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { BrowserModule } from '@angular/platform-browser';
+import { firebase, FirebaseUIModule } from 'firebaseui-angular';
+
+import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
+import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
+import { LoginComponent } from './login/login.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
@@ -40,7 +39,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AngularFirestoreModule,
     AppRoutingModule,
     BrowserModule,
-    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

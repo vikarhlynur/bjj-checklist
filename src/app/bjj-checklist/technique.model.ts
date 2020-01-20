@@ -1,6 +1,5 @@
 import { TechniqueStatus } from './technique-status.model';
 
-
 export class Technique {
   id: string;
   position: string;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseUISignInFailure } from 'firebaseui-angular';
 import { Router } from '@angular/router';
+import { FirebaseUISignInFailure } from 'firebaseui-angular';
 
 @Component({
   selector: 'app-login',

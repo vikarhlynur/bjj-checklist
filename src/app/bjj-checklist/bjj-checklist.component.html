@@ -1,6 +1,11 @@
+<div *ngIf="user">{{ user.email }}</div>
 <button type="button" class="btn btn-secondary" *ngIf="user" (click)="signOut()">Sign Out</button>
 <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
-<span *ngIf="user">{{ user.email }}</span>
+
+<div class="form-group">
+  <label for="technique-filter">Technique</label>
+  <input type="text" id="technique-filter" class="form-control">
+</div>
 
 <div class="container-fluid pt-3">
   <div class="row">

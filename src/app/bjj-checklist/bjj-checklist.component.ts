@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { AngularFireAuth } from '@angular/fire/auth';
-
-import { Technique } from './technique.model';
-import { BjjChecklistService } from './bjj-checklist.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-
+import { BjjChecklistService } from './bjj-checklist.service';
+import { Technique } from './technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -14,8 +12,11 @@ import { Router } from '@angular/router';
 })
 export class BjjChecklistComponent implements OnInit {
   techniques: Technique[];
+  techniquesFiltered: Technique[];
   videoUrl: SafeResourceUrl;
   user: firebase.User;
+
+  techniqueFilter: string;
 
   constructor(
     private angularFireAuth: AngularFireAuth,
