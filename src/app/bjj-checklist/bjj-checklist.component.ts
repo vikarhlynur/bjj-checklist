@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { BeltColor, BeltFilter } from './belt-filter.model';
+import { BeltColor, BeltFilter } from './models/belt-filter.model';
 import { BjjChecklistService } from './bjj-checklist.service';
-import { Position, PositionFilter } from './position-filter.model';
-import { Technique } from './technique.model';
+import { Position, PositionFilter } from './models/position-filter.model';
+import { Technique } from './models/technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',

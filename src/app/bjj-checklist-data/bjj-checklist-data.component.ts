@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { camelCase } from 'lodash';
-import { Technique } from '../bjj-checklist/technique.model.js';
+import { Technique } from '../bjj-checklist/models/technique.model.js';
 import techniquesJson from './techniques.json';
 
 @Component({
