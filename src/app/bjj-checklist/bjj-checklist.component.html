@@ -7,6 +7,13 @@
   <input type="text" id="technique-filter" class="form-control" [(ngModel)]="nameFilter" (keyup)="filterTechniques()">
 </div>
 
+<span class="badge bg-blue text-white u-cursor-pointer" [class.filter-inactive]="!beltFilter.blue"
+  (click)="filterBelt('blue');">blue</span>
+<span class="badge bg-purple text-white u-cursor-pointer" [class.filter-inactive]="!beltFilter.purple"
+  (click)="filterBelt('purple');">purple</span>
+<span class="badge bg-orange text-white u-cursor-pointer" [class.filter-inactive]="!beltFilter.brown"
+  (click)="filterBelt('brown');">brown</span>
+
 <div class="container-fluid pt-3">
   <div class="row">
     <div class="col-sm">

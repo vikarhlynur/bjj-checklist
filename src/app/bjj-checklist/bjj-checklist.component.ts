@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { BeltFilter, BeltColor } from './belt-filter.model';
 import { BjjChecklistService } from './bjj-checklist.service';
 import { Technique } from './technique.model';
 
@@ -17,6 +18,7 @@ export class BjjChecklistComponent implements OnInit {
   user: firebase.User;
 
   nameFilter = '';
+  beltFilter = new BeltFilter();
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -50,9 +52,18 @@ export class BjjChecklistComponent implements OnInit {
 
   filterTechniques(): void {
     console.log('filterTechniques()');
-    this.techniquesFiltered = this.techniques.filter(technique => {
-      return technique.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
-    });
+    this.techniquesFiltered = this.techniques
+      .filter(technique => {
+        return technique.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
+      })
+      .filter(technique => {
+        return this.beltFilter.belts.includes(technique.belt);
+      });
+  }
+
+  filterBelt(belt: BeltColor): void {
+    this.beltFilter.toggle(belt);
+    this.filterTechniques();
   }
 
   // Private
