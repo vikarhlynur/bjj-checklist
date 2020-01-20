@@ -3,16 +3,16 @@
 <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
 
 <div class="form-group form-inline">
-  <label for="technique-filter">Technique</label>
+  <label class="mr-1" for="technique-filter">Technique</label>
   <input type="text" id="technique-filter" class="form-control" [(ngModel)]="nameFilter" (keyup)="filterTechniques()">
 </div>
 
-<span class="badge bg-blue text-white u-cursor-pointer" [class.filter-inactive]="!beltFilter.blue"
-  (click)="filterBelt('blue');">blue</span>
-<span class="badge bg-purple text-white u-cursor-pointer" [class.filter-inactive]="!beltFilter.purple"
-  (click)="filterBelt('purple');">purple</span>
-<span class="badge bg-orange text-white u-cursor-pointer" [class.filter-inactive]="!beltFilter.brown"
-  (click)="filterBelt('brown');">brown</span>
+<span class="badge bg-{{ filter }} text-white u-cursor-pointer mr-1" [class.filter-inactive]="!beltFilter[filter]"
+  *ngFor="let filter of beltFiltersAvailable" (click)="filterBelt(filter);">{{ filter }}</span>
+<br>
+<span class="badge bg-secondary text-white u-cursor-pointer mr-1" [class.filter-inactive]="!positionFilter[filter]"
+  *ngFor="let filter of positionFiltersAvailable" (click)="filterPosition(filter);">{{ filter }}</span>
+
 
 <div class="container-fluid pt-3">
   <div class="row">

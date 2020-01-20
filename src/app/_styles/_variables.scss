@@ -64,6 +64,7 @@ $yellow: #ffc107;
 $green:  #7fbd00; // #28a745;
 $teal:   #20c997;
 $cyan:   #17a2b8;
+$brown:  #905b1a;
 
 // New AGR colors
 $blue-dark:     darken($blue,   10%);
@@ -88,3 +89,5 @@ $teal-dark:     darken($teal,   10%);
 $teal-darker:   darken($teal,   20%);
 $cyan-dark:     darken($cyan,   10%);
 $cyan-darker:   darken($cyan,   20%);
+$brown-dark:    darken($brown,   10%);
+$brown-darker:  darken($brown,   20%);

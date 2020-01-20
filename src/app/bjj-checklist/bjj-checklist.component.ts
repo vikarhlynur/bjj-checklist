@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { BeltFilter, BeltColor } from './belt-filter.model';
+import { BeltColor, BeltFilter } from './belt-filter.model';
 import { BjjChecklistService } from './bjj-checklist.service';
+import { Position, PositionFilter } from './position-filter.model';
 import { Technique } from './technique.model';
 
 @Component({
@@ -19,6 +20,9 @@ export class BjjChecklistComponent implements OnInit {
 
   nameFilter = '';
   beltFilter = new BeltFilter();
+  beltFiltersAvailable = ['blue', 'purple', 'brown'];
+  positionFilter = new PositionFilter();
+  positionFiltersAvailable = ['Back control', 'Full guard', 'Half guard', 'Inside guard', 'Mount', 'Side control', 'Standing'];
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -58,11 +62,19 @@ export class BjjChecklistComponent implements OnInit {
       })
       .filter(technique => {
         return this.beltFilter.belts.includes(technique.belt);
+      })
+      .filter(technique => {
+        return this.positionFilter.positions.includes(technique.position);
       });
   }
 
   filterBelt(belt: BeltColor): void {
     this.beltFilter.toggle(belt);
+    this.filterTechniques();
+  }
+
+  filterPosition(position: Position): void {
+    this.positionFilter.toggle(position);
     this.filterTechniques();
   }
 

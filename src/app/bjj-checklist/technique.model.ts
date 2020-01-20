@@ -1,12 +1,13 @@
+import { Position } from './position-filter.model';
 import { TechniqueStatus } from './technique-status.model';
 
 export class Technique {
   id: string;
-  position: string;
+  position: Position;
   name: string;
   noGi: boolean;
-  belt: 'blue' | 'purple' | 'brown';
   status: TechniqueStatus;
+  belt: 'blue' | 'purple' | 'brown';
   videoId: string;
   videoStart: number;
 
@@ -20,12 +21,12 @@ export class Technique {
     this.videoStart = technique.videoStart !== undefined ? technique.videoStart : 0;
   }
 
-  setStatus(statuses: TechniqueStatus[]): TechniqueStatus | boolean {
-    const status = statuses.find(s => s.techniqueId === this.position); // TODO: Find by ID
-    if (status) {
-      this.status = status;
-      return true;
-    }
-    return !!status;
-  }
+  // setStatus(statuses: TechniqueStatus[]): TechniqueStatus | boolean {
+  //   const status = statuses.find(s => s.techniqueId === this.position); // TODO: Find by ID
+  //   if (status) {
+  //     this.status = status;
+  //     return true;
+  //   }
+  //   return !!status;
+  // }
 }
