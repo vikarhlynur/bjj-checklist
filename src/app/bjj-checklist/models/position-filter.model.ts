@@ -1,18 +1,5 @@
 // tslint:disable: no-string-literal
-
-export type Position =
-  'Back control (bottom)' |
-  'Back control' |
-  'Full guard' |
-  'Half guard' | // extra for filter
-  'Half guard (bottom)' |
-  'Half guard (top)' |
-  'Inside guard' |
-  'Mount (bottom)' |
-  'Mount' |
-  'Side control (bottom)' |
-  'Side control' |
-  'Standing';
+import { Position } from './technique.model';
 
 export const positionHierarchy: Position[] = [
   'Back control (bottom)',

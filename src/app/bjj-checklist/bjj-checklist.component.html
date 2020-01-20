@@ -9,6 +9,9 @@
 
 <span class="badge bg-{{ filter }} text-white u-cursor-pointer mr-1" [class.filter-inactive]="!beltFilter[filter]"
   *ngFor="let filter of beltFiltersAvailable" (click)="filterBelt(filter);">{{ filter }}</span>
+|
+<span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!giFilter[filter]"
+  *ngFor="let filter of giFiltersAvailable" (click)="filterGi(filter);">{{ filter }}</span>
 <br>
 <span class="badge bg-secondary text-white u-cursor-pointer mr-1" [class.filter-inactive]="!positionFilter[filter]"
   *ngFor="let filter of positionFiltersAvailable" (click)="filterPosition(filter);">{{ filter }}</span>
@@ -32,7 +35,7 @@
             <td (click)="setVideoUrl(technique)">
               <span [class.grid-link]="technique.videoId?.length > 0">{{ technique.name }}</span>
             </td>
-            <td>{{ technique.noGi ? 'No-gi' : 'Gi' }}</td>
+            <td>{{ technique.gi }}</td>
             <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
           </tr>
         </tbody>

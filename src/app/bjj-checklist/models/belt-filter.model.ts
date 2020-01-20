@@ -1,12 +1,12 @@
-export type BeltColor = 'blue' | 'purple' | 'brown';
+import { Belt } from './technique.model';
 
 export class BeltFilter {
   blue = false;
   purple = false;
   brown = false;
 
-  get belts(): BeltColor[] {
-    const belts: BeltColor[] = [];
+  get belts(): Belt[] {
+    const belts: Belt[] = [];
     if (this.blue) { belts.push('blue'); }
     if (this.purple) { belts.push('purple'); }
     if (this.brown) { belts.push('brown'); }
@@ -15,7 +15,7 @@ export class BeltFilter {
 
   constructor() { }
 
-  toggle(belt: BeltColor): void {
+  toggle(belt: Belt): void {
     this[belt] = !this[belt];
   }
 }

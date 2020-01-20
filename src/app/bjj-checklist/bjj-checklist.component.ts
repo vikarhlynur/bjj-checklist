@@ -3,9 +3,10 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { BjjChecklistService } from './bjj-checklist.service';
-import { BeltColor, BeltFilter } from './models/belt-filter.model';
-import { Position, PositionFilter } from './models/position-filter.model';
-import { Technique } from './models/technique.model';
+import { BeltFilter } from './models/belt-filter.model';
+import { GiFilter } from './models/gi-filter.model';
+import { PositionFilter } from './models/position-filter.model';
+import { Belt, Gi, Position, Technique } from './models/technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -23,6 +24,8 @@ export class BjjChecklistComponent implements OnInit {
   beltFiltersAvailable = ['blue', 'purple', 'brown'];
   positionFilter = new PositionFilter();
   positionFiltersAvailable = ['Back control', 'Full guard', 'Half guard', 'Inside guard', 'Mount', 'Side control', 'Standing'];
+  giFilter = new GiFilter();
+  giFiltersAvailable: Gi[] = ['Gi', 'No-gi'];
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -50,13 +53,10 @@ export class BjjChecklistComponent implements OnInit {
     this.angularFireAuth.auth.signOut().then(() => {
       this.user = undefined;
     }).catch((error) => {
-      console.log('error: ', error);
     });
   }
 
   filterTechniques(): void {
-    console.log('filterTechniques()');
-    console.log('this.beltFilter.belts: ', this.beltFilter.belts);
     this.techniquesFiltered = this.techniques
       .filter(technique => {
         return technique.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
@@ -66,16 +66,24 @@ export class BjjChecklistComponent implements OnInit {
       })
       .filter(technique => {
         return this.positionFilter.positions.length > 0 ? this.positionFilter.positions.includes(technique.positionRoot) : true;
+      })
+      .filter(technique => {
+        return this.giFilter.gis.length > 0 ? this.giFilter.gis.includes(technique.gi) : true;
       });
   }
 
-  filterBelt(belt: BeltColor): void {
+  filterBelt(belt: Belt): void {
     this.beltFilter.toggle(belt);
     this.filterTechniques();
   }
 
   filterPosition(position: Position): void {
     this.positionFilter.toggle(position);
+    this.filterTechniques();
+  }
+
+  filterGi(gi: Gi): void {
+    this.giFilter.toggle(gi);
     this.filterTechniques();
   }
 
@@ -90,9 +98,7 @@ export class BjjChecklistComponent implements OnInit {
   private getTechniquesList(): void {
     this.service.getTechniques().subscribe((results: Technique[]) => {
       this.techniques = this.techniquesFiltered = results;
-      console.log('this.techniques: ', this.techniques);
       this.filterTechniques();
-      console.log('this.techniquesFiltered: ', this.techniquesFiltered);
     });
   }
 
