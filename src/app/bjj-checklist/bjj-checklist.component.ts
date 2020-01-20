@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { BeltColor, BeltFilter } from './models/belt-filter.model';
 import { BjjChecklistService } from './bjj-checklist.service';
+import { BeltColor, BeltFilter } from './models/belt-filter.model';
 import { Position, PositionFilter } from './models/position-filter.model';
 import { Technique } from './models/technique.model';
 
@@ -56,15 +56,16 @@ export class BjjChecklistComponent implements OnInit {
 
   filterTechniques(): void {
     console.log('filterTechniques()');
+    console.log('this.beltFilter.belts: ', this.beltFilter.belts);
     this.techniquesFiltered = this.techniques
       .filter(technique => {
         return technique.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
       })
       .filter(technique => {
-        return this.beltFilter.belts.includes(technique.belt);
+        return this.beltFilter.belts.length > 0 ? this.beltFilter.belts.includes(technique.belt) : true;
       })
       .filter(technique => {
-        return this.positionFilter.positions.includes(technique.position);
+        return this.positionFilter.positions.length > 0 ? this.positionFilter.positions.includes(technique.positionRoot) : true;
       });
   }
 
@@ -89,6 +90,9 @@ export class BjjChecklistComponent implements OnInit {
   private getTechniquesList(): void {
     this.service.getTechniques().subscribe((results: Technique[]) => {
       this.techniques = this.techniquesFiltered = results;
+      console.log('this.techniques: ', this.techniques);
+      this.filterTechniques();
+      console.log('this.techniquesFiltered: ', this.techniquesFiltered);
     });
   }
 

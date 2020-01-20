@@ -1,9 +1,9 @@
 export type BeltColor = 'blue' | 'purple' | 'brown';
 
 export class BeltFilter {
-  blue = true;
-  purple = true;
-  brown = true;
+  blue = false;
+  purple = false;
+  brown = false;
 
   get belts(): BeltColor[] {
     const belts: BeltColor[] = [];

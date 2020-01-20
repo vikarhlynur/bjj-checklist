@@ -2,8 +2,9 @@ import { Position } from './position-filter.model';
 import { TechniqueStatus } from './technique-status.model';
 
 export class Technique {
-  id: string;
+  id: string; // extra
   position: Position;
+  positionRoot: Position; // extra
   name: string;
   noGi: boolean;
   status: TechniqueStatus;
@@ -13,7 +14,8 @@ export class Technique {
 
   constructor(technique: Technique) {
     this.id = technique.id;
-    this.position = technique.position;
+    this.position = technique.position; // e.g. "Mount (bottom)"
+    this.positionRoot = technique.position.split(' (')[0] as Position; // e.g. "Mount"
     this.name = technique.name;
     this.noGi = technique.noGi;
     this.belt = technique.belt;

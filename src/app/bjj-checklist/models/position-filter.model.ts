@@ -29,13 +29,13 @@ export const positionHierarchy: Position[] = [
 ];
 
 export class PositionFilter {
-  'Back control' = true;
-  'Full guard' = true;
-  'Half guard' = true;
-  'Inside guard' = true;
-  'Mount' = true;
-  'Side control' = true;
-  'Standing' = true;
+  'Back control' = false;
+  'Full guard' = false;
+  'Half guard' = false;
+  'Inside guard' = false;
+  'Mount' = false;
+  'Side control' = false;
+  'Standing' = false;
 
   get positions(): Position[] {
     const positions: Position[] = [];
