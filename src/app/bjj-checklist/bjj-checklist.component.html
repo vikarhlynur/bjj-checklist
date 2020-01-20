@@ -23,18 +23,19 @@
       <table class="table table-hover table-sm">
         <thead>
           <tr>
-            <th scope="col">Position</th>
             <th scope="col">Technique</th>
+            <th scope="col">Position</th>
             <th scope="col">Type</th>
             <th scope="col">Belt</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let technique of techniquesFiltered">
-            <td>{{ technique.position }}</td>
-            <td (click)="setVideoUrl(technique)">
-              <span [class.grid-link]="technique.videoId?.length > 0">{{ technique.name }}</span>
+          <tr class="u-cursor-pointer" *ngFor="let technique of techniquesFiltered" (click)="setVideoUrl(technique)">
+            <td>
+              {{ technique.name }}
+              <i class="fa fa-video-camera text-blue" *ngIf="technique.videoId?.length > 0"></i>
             </td>
+            <td>{{ technique.position }}</td>
             <td>{{ technique.gi }}</td>
             <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
           </tr>
