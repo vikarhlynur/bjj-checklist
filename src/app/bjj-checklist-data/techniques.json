@@ -1,274 +1,271 @@
 [
   {
     "belt": "blue",
-    "name": "Weak side back to mat escape",
+    "caption": "Weak side back to mat escape",
     "noGi": true,
-    "position": "Back control (bottom)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "backControl",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Strong side baseball bat grip escape",
+    "caption": "Strong side baseball bat grip escape",
     "noGi": true,
-    "position": "Back control (bottom)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "backControl",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "But scoop escape",
+    "caption": "But scoop escape",
     "noGi": true,
-    "position": "Back control (bottom)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "backControl",
+    "placement": "bottom",
+    "video": ["", 0]
+  },
+  {
+    "belt": "blue", 
+    "caption": "Upa/bridge and roll escape",
+    "noGi": true,
+    "position": "mount",
+    "placement": "bottom",
+    "video": ["2iB5nlIeZR8", 73]
   },
   {
     "belt": "blue",
-    "name": "Upa/bridge and roll escape",
+    "caption": "Elbow-knee escape",
     "noGi": true,
-    "position": "Mount (Bottom)",
-    "videoId": "2iB5nlIeZR8",
-    "videoStart": 73
+    "position": "mount",
+    "placement": "bottom",
+    "video": ["2iB5nlIeZR8", 221]
   },
   {
     "belt": "blue",
-    "name": "Elbow-knee escape",
+    "caption": "Hip escape guard replacement",
     "noGi": true,
-    "position": "Mount (Bottom)",
-    "videoId": "2iB5nlIeZR8",
-    "videoStart": 221
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["9S3nDygvk6A", 21]
   },
   {
     "belt": "blue",
-    "name": "Hip escape guard replacement",
+    "caption": "Backdoor escape",
     "noGi": true,
-    "position": "Side control (Bottom)",
-    "videoId": "9S3nDygvk6A",
-    "videoStart": 21
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["9S3nDygvk6A", 135]
   },
   {
     "belt": "blue",
-    "name": "Backdoor escape",
+    "caption": "Over-under guard pass",
     "noGi": true,
-    "position": "Side control (Bottom)",
-    "videoId": "9S3nDygvk6A",
-    "videoStart": 135
+    "position": "insideGuard",
+    "video": ["-669RC8iRAs", 0]
   },
   {
     "belt": "blue",
-    "name": "Over-under guard pass",
+    "caption": "Knee slice",
     "noGi": true,
-    "position": "Inside Guard",
-    "videoId": "-669RC8iRAs",
-    "videoStart": 0
+    "position": "insideGuard",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Knee slice",
+    "caption": "Bullfighter guard pass (Toreando)",
     "noGi": true,
-    "position": "Inside Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "insideGuard",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Bullfighter guard pass (Toreando)",
+    "caption": "Under-hook back take",
     "noGi": true,
-    "position": "Inside Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "halfGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Under-hook back take",
+    "caption": "Foot sweep",
     "noGi": true,
-    "position": "Half Guard (Bottom)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "halfGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Foot sweep",
+    "caption": "Foot-wedge guard pass",
     "noGi": true,
-    "position": "Half Guard (Bottom)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "halfGuard",
+    "placement": "top",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Foot-wedge guard pass",
+    "caption": "Hip-switch gard pass",
     "noGi": true,
-    "position": "Half Guard (Top)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "halfGuard",
+    "placement": "top",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Hip-switch gard pass",
+    "caption": "Arm-drag back take",
     "noGi": true,
-    "position": "Half Guard (Top)",
-    "videoId": "",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Arm-drag back take",
+    "caption": "Scissor sweep",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Scissor sweep",
+    "caption": "Hip bump sweep",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Hip bump sweep",
+    "caption": "Cross collar choke",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Cross collar choke",
+    "caption": "Arm bar",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["5I6SNtejqe4", 0]
   },
   {
     "belt": "blue",
-    "name": "Arm bar",
+    "caption": "Triangle choke",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "5I6SNtejqe4",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["ID-DEV1pr1M", 0]
   },
   {
     "belt": "blue",
-    "name": "Triangle choke",
+    "caption": "Kimura",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "ID-DEV1pr1M",
-    "videoStart": 0
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["5I6SNtejqe4", 114]
   },
   {
     "belt": "blue",
-    "name": "Kimura",
+    "caption": "Guillotine",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "5I6SNtejqe4",
-    "videoStart": 114
+    "position": "fullGuard",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Guillotine",
+    "caption": "Knee slice to mount",
     "noGi": true,
-    "position": "Full Guard",
-    "videoId": "",
-    "videoStart": 0
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Knee slice to mount",
+    "caption": "Kimura",
     "noGi": true,
-    "position": "Side control",
-    "videoId": "",
-    "videoStart": 0
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Kimura",
+    "caption": "Americana",
     "noGi": true,
-    "position": "Side control",
-    "videoId": "",
-    "videoStart": 0
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Americana",
+    "caption": "Head arm triangle choke",
     "noGi": true,
-    "position": "Side control",
-    "videoId": "",
-    "videoStart": 0
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Head arm triangle choke",
+    "caption": "Back take",
     "noGi": true,
-    "position": "Side control",
-    "videoId": "",
-    "videoStart": 0
+    "position": "mount",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Back take",
+    "caption": "Cross collar choke",
     "noGi": true,
-    "position": "Mount",
-    "videoId": "",
-    "videoStart": 0
+    "position": "mount",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Cross collar choke",
+    "caption": "Americana",
     "noGi": true,
-    "position": "Mount",
-    "videoId": "",
-    "videoStart": 0
+    "position": "mount",
+    "placement": "bottom",
+    "video": ["", 0]
   },
   {
     "belt": "blue",
-    "name": "Americana",
+    "caption": "Arm bar",
     "noGi": true,
-    "position": "Mount",
-    "videoId": "",
-    "videoStart": 0
+    "position": "mount",
+    "placement": "bottom",
+    "video": ["5I6SNtejqe4", 240]
   },
   {
     "belt": "blue",
-    "name": "Arm bar",
+    "caption": "Rear naked choke",
     "noGi": true,
-    "position": "Mount",
-    "videoId": "5I6SNtejqe4",
-    "videoStart": 240
+    "position": "backControl",
+    "placement": "top",
+    "video": ["X5OrEPQCrjk", 0]
   },
   {
     "belt": "blue",
-    "name": "Rear naked choke",
+    "caption": "Doorbell choke",
     "noGi": true,
-    "position": "Back control",
-    "videoId": "X5OrEPQCrjk",
-    "videoStart": 0
+    "position": "backControl",
+    "placement": "top",
+    "video": ["QNayO6kPmWE", 0]
   },
   {
     "belt": "blue",
-    "name": "Doorbell choke",
-    "noGi": true,
-    "position": "Back control",
-    "videoId": "QNayO6kPmWE",
-    "videoStart": 0
-  },
-  {
-    "belt": "blue",
-    "name": "Bow and arrow choke",
+    "caption": "Bow and arrow choke",
     "noGi": false,
-    "position": "Back control",
-    "videoId": "yrUXIujVGTM",
-    "videoStart": 0
+    "position": "backControl",
+    "placement": "top",
+    "video": ["yrUXIujVGTM", 0]
   },
   {
     "belt": "blue",
-    "name": "Arm bar",
+    "caption": "Arm bar",
     "noGi": true,
-    "position": "Back control",
-    "videoId": "CtcZlbLkedg",
-    "videoStart": 16
+    "position": "backControl",
+    "placement": "top",
+    "video": ["CtcZlbLkedg", 16]
   }
 ]

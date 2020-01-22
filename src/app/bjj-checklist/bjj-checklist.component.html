@@ -32,10 +32,10 @@
         <tbody>
           <tr class="u-cursor-pointer" *ngFor="let technique of techniquesFiltered" (click)="setVideoUrl(technique)">
             <td>
-              {{ technique.name }}
-              <i class="fa fa-video-camera text-blue" *ngIf="technique.videoId?.length > 0"></i>
+              {{ technique.caption }}
+              <i class="fa fa-video-camera text-blue" *ngIf="technique.video.id"></i>
             </td>
-            <td>{{ technique.position }}</td>
+            <td>{{ technique.position.caption }} <span class="text-gray-600 small">| {{ technique.position.placementCaption }}</span></td>
             <td>{{ technique.gi }}</td>
             <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
           </tr>

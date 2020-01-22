@@ -6,7 +6,7 @@ import { BjjChecklistService } from './bjj-checklist.service';
 import { BeltFilter } from './models/belt-filter.model';
 import { GiFilter } from './models/gi-filter.model';
 import { PositionFilter } from './models/position-filter.model';
-import { Belt, Gi, Position, Technique } from './models/technique.model';
+import { Belt, Gi, Technique } from './models/technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -42,7 +42,7 @@ export class BjjChecklistComponent implements OnInit {
   //////////////////////////////////////////
 
   setVideoUrl(technique: Technique): void {
-    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${technique.videoId}`);
+    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
   }
 
   routeToLogin(): void {
@@ -58,18 +58,10 @@ export class BjjChecklistComponent implements OnInit {
 
   filterTechniques(): void {
     this.techniquesFiltered = this.techniques
-      .filter(technique => {
-        return technique.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
-      })
-      .filter(technique => {
-        return this.beltFilter.belts.length > 0 ? this.beltFilter.belts.includes(technique.belt) : true;
-      })
-      .filter(technique => {
-        return this.positionFilter.positions.length > 0 ? this.positionFilter.positions.includes(technique.positionRoot) : true;
-      })
-      .filter(technique => {
-        return this.giFilter.gis.length > 0 ? this.giFilter.gis.includes(technique.gi) : true;
-      });
+      .filter(t => t.caption.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1)
+      .filter(t => this.beltFilter.belts.length > 0 ? this.beltFilter.belts.includes(t.belt) : true)
+      .filter(t => this.positionFilter.positions.length > 0 ? this.positionFilter.positions.includes(t.position.caption) : true)
+      .filter(t => this.giFilter.gis.length > 0 ? this.giFilter.gis.includes(t.gi) : true);
   }
 
   filterBelt(belt: Belt): void {

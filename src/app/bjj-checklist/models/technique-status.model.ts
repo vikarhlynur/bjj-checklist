@@ -1,7 +1,7 @@
 export class TechniqueStatus {
   techniqueId: string;
   userId: string;
-  status: 'none' | 'tried' | 'ok';
+  status: number;
 
   constructor(status: TechniqueStatus) {
     this.techniqueId = status.techniqueId;
@@ -10,9 +10,6 @@ export class TechniqueStatus {
   }
 
   toggleStatus(): void {
-    if (this.status === 'none') { this.status = 'tried'; return; }
-    if (this.status === 'tried') { this.status = 'ok'; return; }
-    if (this.status === 'ok') { this.status = 'none'; return; }
-    this.status = 'none';
+    this.status = this.status + 1 % 3;
   }
 }
