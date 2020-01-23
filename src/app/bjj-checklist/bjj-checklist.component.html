@@ -4,17 +4,19 @@
 
 <div class="form-group form-inline">
   <label class="mr-1" for="technique-filter">Technique</label>
-  <input type="text" id="technique-filter" class="form-control" [(ngModel)]="nameFilter" (keyup)="filterTechniques()">
+  <input type="text" id="technique-filter" class="form-control" [(ngModel)]="nameFilter" (keyup)="filter()">
 </div>
 
 <span class="badge bg-{{ filter }} text-white u-cursor-pointer mr-1" [class.filter-inactive]="!beltFilter[filter]"
-  *ngFor="let filter of beltFiltersAvailable" (click)="filterBelt(filter);">{{ filter }}</span>
+  *ngFor="let filter of beltFilters" (click)="filterBelt(filter);">{{ filter }}</span>
 |
-<span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!giFilter[filter]"
-  *ngFor="let filter of giFiltersAvailable" (click)="filterGi(filter);">{{ filter }}</span>
+<span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!giFilters.gi.isFilter"
+  (click)="filterGi('Gi');">Gi</span>
+<span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!giFilters.noGi.isFilter"
+  (click)="filterGi('No-gi');">No-gi</span>
 <br>
-<span class="badge bg-secondary text-white u-cursor-pointer mr-1" [class.filter-inactive]="!positionFilter[filter]"
-  *ngFor="let filter of positionFiltersAvailable" (click)="filterPosition(filter);">{{ filter }}</span>
+<span class="badge bg-secondary text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
+  *ngFor="let filter of positionFilters" (click)="filterPosition(filter);">{{ filter.caption }}</span>
 
 
 <div class="container-fluid pt-3">
@@ -35,8 +37,11 @@
               {{ technique.caption }}
               <i class="fa fa-video-camera text-blue" *ngIf="technique.video.id"></i>
             </td>
-            <td>{{ technique.position.caption }} <span class="text-gray-600 small">| {{ technique.position.placementCaption }}</span></td>
-            <td>{{ technique.gi }}</td>
+            <td>
+              {{ technique.position.caption }} 
+              <span class="text-gray-600 small">| {{ technique.placement.caption }}</span>
+            </td>
+            <td>{{ technique.giCaption }}</td>
             <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
           </tr>
         </tbody>

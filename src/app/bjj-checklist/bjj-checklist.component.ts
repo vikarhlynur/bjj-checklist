@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+
 import { BjjChecklistService } from './bjj-checklist.service';
 import { BeltFilter } from './models/belt-filter.model';
-import { GiFilter } from './models/gi-filter.model';
-import { PositionFilter } from './models/position-filter.model';
-import { Belt, Gi, Technique } from './models/technique.model';
+import { Belt, Gi, Technique, TechniquePlacement, TechniquePosition } from './models/technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -21,11 +20,24 @@ export class BjjChecklistComponent implements OnInit {
 
   nameFilter = '';
   beltFilter = new BeltFilter();
-  beltFiltersAvailable = ['blue', 'purple', 'brown'];
-  positionFilter = new PositionFilter();
-  positionFiltersAvailable = ['Back control', 'Full guard', 'Half guard', 'Inside guard', 'Mount', 'Side control', 'Standing'];
-  giFilter = new GiFilter();
-  giFiltersAvailable: Gi[] = ['Gi', 'No-gi'];
+  beltFilters = ['blue', 'purple', 'brown'];
+  positionFilters = [
+    new TechniquePosition('backControl'),
+    new TechniquePosition('fullGuard'),
+    new TechniquePosition('halfGuard'),
+    new TechniquePosition('insideGuard'),
+    new TechniquePosition('mount'),
+    new TechniquePosition('sideControl'),
+    new TechniquePosition('standing')
+  ];
+  placementFilters = [
+    new TechniquePlacement('top'),
+    new TechniquePlacement('bottom')
+  ];
+  giFilters = {
+    gi: { caption: 'Gi', isFilter: false },
+    noGi: { caption: 'No-gi', isFilter: false }
+  };
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -56,30 +68,34 @@ export class BjjChecklistComponent implements OnInit {
     });
   }
 
-  filterTechniques(): void {
+  // Filtering
+
+  filter(): void {
     this.techniquesFiltered = this.techniques
       .filter(t => t.caption.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1)
       .filter(t => this.beltFilter.belts.length > 0 ? this.beltFilter.belts.includes(t.belt) : true)
-      .filter(t => this.positionFilter.positions.length > 0 ? this.positionFilter.positions.includes(t.position.caption) : true)
-      .filter(t => this.giFilter.gis.length > 0 ? this.giFilter.gis.includes(t.gi) : true);
+      .filter(t => {
+        const positionsNames = this.positionFilters.filter(f => f.isFilter).map(f => f.name);
+        return positionsNames.length > 0 ? positionsNames.includes(t.position.name) : true;
+      })
+      .filter(t => this.giFilters.gi.isFilter === !t.noGi || this.giFilters.noGi.isFilter === t.noGi);
   }
 
   filterBelt(belt: Belt): void {
     this.beltFilter.toggle(belt);
-    this.filterTechniques();
+    this.filter();
   }
 
-  filterPosition(position: Position): void {
-    this.positionFilter.toggle(position);
-    this.filterTechniques();
+  filterPosition(position: TechniquePosition): void {
+    position.isFilter = !position.isFilter;
+    this.filter();
   }
 
   filterGi(gi: Gi): void {
-    this.giFilter.toggle(gi);
-    this.filterTechniques();
+    if (gi === 'Gi') { this.giFilters.gi.isFilter = !this.giFilters.gi.isFilter; }
+    if (gi === 'No-gi') { this.giFilters.noGi.isFilter = !this.giFilters.noGi.isFilter; }
+    this.filter();
   }
-
-  // Private
 
   private getLoggedInUser(): void {
     this.angularFireAuth.authState.subscribe((user: firebase.User) => {
@@ -90,7 +106,7 @@ export class BjjChecklistComponent implements OnInit {
   private getTechniquesList(): void {
     this.service.getTechniques().subscribe((results: Technique[]) => {
       this.techniques = this.techniquesFiltered = results;
-      this.filterTechniques();
+      this.filter();
     });
   }
 
