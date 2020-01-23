@@ -5,3 +5,4 @@
 * **position**: 'backControl'|'fullGuard'|'halfGuard'|'insideGuard'|'mount'|'sideControl'|'standing'
 * **placement**: 'top'|'bottom'
 * **video**: [string, number]
+* **video2**: [string, number]
