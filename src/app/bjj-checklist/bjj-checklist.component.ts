@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import { BjjChecklistService } from './bjj-checklist.service';
 import { BeltFilter } from './models/belt-filter.model';
-import { Belt, Gi, Technique, TechniquePlacement, TechniquePosition } from './models/technique.model';
+import { Belt, Gi, Technique, TechniquePlacement, TechniquePosition, TechniqueStatus } from './models/technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -48,7 +48,6 @@ export class BjjChecklistComponent implements OnInit {
 
   ngOnInit() {
     this.getLoggedInUser();
-    this.getTechniquesList();
   }
 
   //////////////////////////////////////////
@@ -100,12 +99,24 @@ export class BjjChecklistComponent implements OnInit {
   private getLoggedInUser(): void {
     this.angularFireAuth.authState.subscribe((user: firebase.User) => {
       if (user) { this.user = user; }
+      this.getTechniquesList();
     });
   }
 
   private getTechniquesList(): void {
     this.service.getTechniques().subscribe((results: Technique[]) => {
       this.techniques = this.techniquesFiltered = results;
+      if (this.user) {
+        this.setUserStatuses();
+      } else {
+        this.filter();
+      }
+    });
+  }
+
+  private setUserStatuses(): void {
+    this.service.getUserStatuses(this.user.uid).subscribe(statuses => {
+      this.techniques.forEach(technique => technique.setStatus(statuses));
       this.filter();
     });
   }

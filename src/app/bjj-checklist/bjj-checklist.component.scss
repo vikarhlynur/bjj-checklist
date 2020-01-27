@@ -1,3 +1,17 @@
 .filter-inactive {
   opacity: .6;
 }
+
+.dot {
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
+}
+
+.status-cell {
+  padding: 7px 0 0 18px;
+}
+
+.fa-check {
+  font-size: 16px;
+}

@@ -25,6 +25,7 @@
       <table class="table table-hover table-sm">
         <thead>
           <tr>
+            <th scope="col">Status</th>
             <th scope="col">Technique</th>
             <th scope="col">Position</th>
             <th scope="col">Type</th>
@@ -32,13 +33,26 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="u-cursor-pointer" *ngFor="let technique of techniquesFiltered" (click)="setVideoUrl(technique)">
-            <td>
-              {{ technique.caption }}
-              <i class="fa fa-video-camera text-blue" *ngIf="technique.video.id"></i>
+          <tr *ngFor="let technique of techniquesFiltered">
+            <td (click)="technique.toggleStatus(user.uid)" class="status-cell u-cursor-pointer">
+              <span *ngIf="technique.getStatus().status === 0">
+                <div class="dot bg-gray-500"></div>
+              </span>
+              <span *ngIf="technique.getStatus().status === 1">
+                <div class="dot bg-yellow"></div>
+              </span>
+              <span *ngIf="technique.getStatus().status === 2">
+                <i class="fa fa-check text-green"></i>
+              </span>
             </td>
             <td>
-              {{ technique.position.caption }} 
+              <span [class.link]="technique.video.id" (click)="setVideoUrl(technique)">
+                {{ technique.caption }}
+                <i class="fa fa-video-camera text-blue" *ngIf="technique.video.id"></i>
+              </span>
+            </td>
+            <td>
+              {{ technique.position.caption }}
               <span class="text-gray-600 small">| {{ technique.placement.caption }}</span>
             </td>
             <td>{{ technique.giCaption }}</td>

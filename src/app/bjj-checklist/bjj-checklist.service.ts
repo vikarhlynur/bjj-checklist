@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Technique, TechniqueDto } from './models/technique.model';
+import { Technique, TechniqueDto, TechniqueStatus, TechniqueStatusDto } from './models/technique.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +19,11 @@ export class BjjChecklistService {
       map((dtos: TechniqueDto[]) => dtos.map(dto => new Technique(dto)))
     );
   }
+
+  getUserStatuses(userId: string): Observable<TechniqueStatus[]> {
+    return this.db.collection('techniqueStatus', ref => ref.where('userId', '==', userId)).valueChanges().pipe(
+      map((statusDtos: TechniqueStatusDto[]) => statusDtos.map(dto => new TechniqueStatus(dto)))
+    );
+  }
+
 }

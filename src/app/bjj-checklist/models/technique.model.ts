@@ -1,3 +1,4 @@
+import { ReturnStatement } from '@angular/compiler';
 
 export type Belt = 'blue' | 'purple' | 'brown';
 export type Gi = 'Gi' | 'No-gi';
@@ -25,9 +26,9 @@ export class Technique {
   caption: string;
   position: TechniquePosition;
   placement: TechniquePlacement;
-  status: TechniqueStatus;
   video: TechniqueVideo;
   video2: TechniqueVideo;
+  private status: TechniqueStatus;
 
   constructor(technique: TechniqueDto) {
     this.belt = technique.belt;
@@ -39,16 +40,23 @@ export class Technique {
     this.placement = new TechniquePlacement(technique.placement);
     this.video = new TechniqueVideo(technique.video);
     this.video2 = new TechniqueVideo(technique.video2);
+    this.status = new TechniqueStatus();
+    this.status.techniqueId = this.name;
   }
 
-  // setStatus(statuses: TechniqueStatus[]): TechniqueStatus | boolean {
-  //   const status = statuses.find(s => s.techniqueId === this.position); // TODO: Find by ID
-  //   if (status) {
-  //     this.status = status;
-  //     return true;
-  //   }
-  //   return !!status;
-  // }
+  getStatus(): TechniqueStatus {
+    this.status.techniqueId = this.name;
+    return this.status;
+  }
+
+  setStatus(statuses: TechniqueStatus[]): void {
+    const foundStatus = statuses.find(status => status.techniqueId === this.name);
+    this.status.set(foundStatus);
+  }
+
+  toggleStatus(userId: string): void {
+    this.status.toggle(userId);
+  }
 }
 
 /**
@@ -117,19 +125,32 @@ export class TechniqueVideo {
 /**
  * Status
  */
-export class TechniqueStatus {
+export interface TechniqueStatusDto {
   techniqueId: string;
   userId?: string;
   status: number;
+}
+
+export class TechniqueStatus {
+  techniqueId: string;
+  userId?: string;
+  status = 0;
   isFilter = false;
 
-  constructor(status: TechniqueStatus) {
-    this.techniqueId = status.techniqueId;
-    this.status = status.status;
+  constructor(status?: TechniqueStatusDto) {
+    this.set(status);
+  }
+
+  set(status: TechniqueStatus | TechniqueStatusDto): void {
+    if (!status) { return; }
+    if (status.techniqueId) { this.techniqueId = status.techniqueId; }
+    if (status.status) { this.status = status.status; }
     if (status.userId) { this.userId = status.userId; }
   }
 
-  toggleStatus(): void {
-    this.status = this.status + 1 % 3;
+  toggle(userId: string): void {
+    this.userId = userId;
+    this.status = (this.status + 1) % 3;
+    console.log('this.status: ', this.status);
   }
 }
