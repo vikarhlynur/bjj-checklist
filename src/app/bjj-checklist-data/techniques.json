@@ -67,14 +67,14 @@
     "caption": "Knee slice",
     "noGi": true,
     "position": "insideGuard",
-    "video": ["", 0]
+    "video": ["ghpI3sq4nb4", 250]
   },
   {
     "belt": "blue",
     "caption": "Bullfighter guard pass (Toreando)",
     "noGi": true,
     "position": "insideGuard",
-    "video": ["", 0]
+    "video": ["IhWp0P7jXVg", 465]
   },
   {
     "belt": "blue",
@@ -82,7 +82,7 @@
     "noGi": true,
     "position": "halfGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["8k2AuGZF4Nc", 45]
   },
   {
     "belt": "blue",
@@ -90,7 +90,7 @@
     "noGi": true,
     "position": "halfGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["65oxIM5llsk", 0]
   },
   {
     "belt": "blue",
@@ -98,7 +98,7 @@
     "noGi": true,
     "position": "halfGuard",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["65oxIM5llsk", 876]
   },
   {
     "belt": "blue",
@@ -106,15 +106,15 @@
     "noGi": true,
     "position": "halfGuard",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["Vn8Y8AnxH14&t=10s", 175]
   },
   {
     "belt": "blue",
     "caption": "Arm-drag back take",
-    "noGi": true,
+    "noGi": false,
     "position": "fullGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["nnzXF5xntE0", 303]
   },
   {
     "belt": "blue",
@@ -122,7 +122,7 @@
     "noGi": true,
     "position": "fullGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["qp5AXBHxQec", 61]
   },
   {
     "belt": "blue",
@@ -130,15 +130,15 @@
     "noGi": true,
     "position": "fullGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["vPNx9jWz1qc", 245]
   },
   {
     "belt": "blue",
     "caption": "Cross collar choke",
-    "noGi": true,
+    "noGi": false,
     "position": "fullGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["SZmnh7yZlOw", 40]
   },
   {
     "belt": "blue",
@@ -170,7 +170,7 @@
     "noGi": true,
     "position": "fullGuard",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["8V5aa-wBpVo", 30]
   },
   {
     "belt": "blue",
@@ -186,7 +186,7 @@
     "noGi": true,
     "position": "sideControl",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["PLa07zdiPZk", 2]
   },
   {
     "belt": "blue",
@@ -194,7 +194,7 @@
     "noGi": true,
     "position": "sideControl",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["Zhh4W24rwrw", 3]
   },
   {
     "belt": "blue",
@@ -202,7 +202,7 @@
     "noGi": true,
     "position": "sideControl",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["2kvM6ACOxHw", 120]
   },
   {
     "belt": "blue",
@@ -210,15 +210,15 @@
     "noGi": true,
     "position": "mount",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["KnEQrOZTaOQ", 59]
   },
   {
     "belt": "blue",
     "caption": "Cross collar choke",
-    "noGi": true,
+    "noGi": false,
     "position": "mount",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["Wfhe0tjo-pg", 125]
   },
   {
     "belt": "blue",
@@ -226,7 +226,7 @@
     "noGi": true,
     "position": "mount",
     "placement": "bottom",
-    "video": ["", 0]
+    "video": ["WLqWGE4YgT8", 2]
   },
   {
     "belt": "blue",
