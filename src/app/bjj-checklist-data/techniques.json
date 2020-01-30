@@ -60,6 +60,7 @@
     "caption": "Over-under guard pass",
     "noGi": true,
     "position": "insideGuard",
+    "placement": "top",
     "video": ["-669RC8iRAs", 0]
   },
   {
@@ -67,6 +68,7 @@
     "caption": "Knee slice",
     "noGi": true,
     "position": "insideGuard",
+    "placement": "top",
     "video": ["ghpI3sq4nb4", 250]
   },
   {
@@ -74,6 +76,7 @@
     "caption": "Bullfighter guard pass (Toreando)",
     "noGi": true,
     "position": "insideGuard",
+    "placement": "top",
     "video": ["IhWp0P7jXVg", 465]
   },
   {
@@ -97,7 +100,7 @@
     "caption": "Foot-wedge guard pass",
     "noGi": true,
     "position": "halfGuard",
-    "placement": "top",
+    "placement": "bottom",
     "video": ["65oxIM5llsk", 876]
   },
   {
@@ -105,8 +108,8 @@
     "caption": "Hip-switch gard pass",
     "noGi": true,
     "position": "halfGuard",
-    "placement": "top",
-    "video": ["Vn8Y8AnxH14&t=10s", 175]
+    "placement": "bottom",
+    "video": ["Vn8Y8AnxH14", 175]
   },
   {
     "belt": "blue",
@@ -209,7 +212,7 @@
     "caption": "Back take",
     "noGi": true,
     "position": "mount",
-    "placement": "bottom",
+    "placement": "top",
     "video": ["KnEQrOZTaOQ", 59]
   },
   {
@@ -217,7 +220,7 @@
     "caption": "Cross collar choke",
     "noGi": false,
     "position": "mount",
-    "placement": "bottom",
+    "placement": "top",
     "video": ["Wfhe0tjo-pg", 125]
   },
   {
@@ -225,7 +228,7 @@
     "caption": "Americana",
     "noGi": true,
     "position": "mount",
-    "placement": "bottom",
+    "placement": "top",
     "video": ["WLqWGE4YgT8", 2]
   },
   {
@@ -233,7 +236,7 @@
     "caption": "Arm bar",
     "noGi": true,
     "position": "mount",
-    "placement": "bottom",
+    "placement": "top",
     "video": ["5I6SNtejqe4", 240]
   },
   {
@@ -247,7 +250,7 @@
   {
     "belt": "blue",
     "caption": "Doorbell choke",
-    "noGi": true,
+    "noGi": false,
     "position": "backControl",
     "placement": "top",
     "video": ["QNayO6kPmWE", 0]
