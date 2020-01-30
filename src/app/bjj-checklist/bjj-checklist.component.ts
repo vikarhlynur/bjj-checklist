@@ -17,6 +17,7 @@ export class BjjChecklistComponent implements OnInit {
   techniquesFiltered: Technique[];
   videoUrl: SafeResourceUrl;
   user: firebase.User;
+  selected: Technique;
 
   nameFilter = '';
   beltFilter = new BeltFilter();
@@ -52,7 +53,8 @@ export class BjjChecklistComponent implements OnInit {
 
   //////////////////////////////////////////
 
-  setVideoUrl(technique: Technique): void {
+  setSelected(technique: Technique): void {
+    this.selected = technique;
     this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
   }
 

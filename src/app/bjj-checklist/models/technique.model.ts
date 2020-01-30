@@ -1,5 +1,3 @@
-import { ReturnStatement } from '@angular/compiler';
-
 export type Belt = 'blue' | 'purple' | 'brown';
 export type Gi = 'Gi' | 'No-gi';
 
