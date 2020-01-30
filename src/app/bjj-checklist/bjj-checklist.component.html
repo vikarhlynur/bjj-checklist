@@ -53,7 +53,9 @@
             </td>
             <td>
               {{ technique.position.caption }}
-              <span class="text-gray-600 small">| {{ technique.placement.caption }}</span>
+              <span class="text-gray-600 small" *ngIf="technique.placement.caption">
+                | {{ technique.placement.caption }}
+              </span>
             </td>
             <td>{{ technique.giCaption }}</td>
             <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
