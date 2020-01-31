@@ -69,6 +69,20 @@ export class BjjChecklistComponent implements OnInit {
     });
   }
 
+  toggleStatus(technique: Technique): void {
+    if (!this.user) {
+      return;
+    }
+    technique.status.toggle();
+    if (technique.status.id) {
+      this.service.updateStatus(technique).then(results => {
+      });
+    } else {
+      this.service.createStatus(technique, this.user.uid).then(results => {
+      });
+    }
+  }
+
   // Filtering
 
   filter(): void {
@@ -98,6 +112,8 @@ export class BjjChecklistComponent implements OnInit {
     this.filter();
   }
 
+  // Init functions
+
   private getLoggedInUser(): void {
     this.angularFireAuth.authState.subscribe((user: firebase.User) => {
       if (user) { this.user = user; }
@@ -117,8 +133,13 @@ export class BjjChecklistComponent implements OnInit {
   }
 
   private setUserStatuses(): void {
-    this.service.getUserStatuses(this.user.uid).subscribe(statuses => {
-      this.techniques.forEach(technique => technique.setStatus(statuses));
+    this.service.getUserStatuses(this.user.uid).subscribe(statusDtos => {
+      statusDtos.forEach(statusDto => {
+        this.techniques.forEach(technique => {
+          technique.status.updateFormDto(statusDto);
+        });
+      });
+
       this.filter();
     });
   }

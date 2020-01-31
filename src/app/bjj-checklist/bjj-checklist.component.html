@@ -34,14 +34,16 @@
         </thead>
         <tbody>
           <tr *ngFor="let technique of techniquesFiltered" [class.table-active]="technique === selected">
-            <td (click)="technique.toggleStatus(user.uid)" class="status-cell u-cursor-pointer">
-              <span *ngIf="technique.getStatus().status === 0">
+            <td (click)="toggleStatus(technique)" class="status-cell u-cursor-pointer">
+              <span *ngIf="technique.status.status === 0">
                 <div class="dot bg-gray-500"></div>
               </span>
-              <span *ngIf="technique.getStatus().status === 1">
+              <span *ngIf="technique.status.status === 1">
                 <div class="dot bg-yellow"></div>
               </span>
-              <span *ngIf="technique.getStatus().status === 2"><i class="fa fa-check text-green"></i></span>
+              <span *ngIf="technique.status.status === 2">
+                <i class="fa fa-check text-green"></i>
+              </span>
             </td>
             <td>
               <span [class.link]="technique.video.id" (click)="setSelected(technique)">

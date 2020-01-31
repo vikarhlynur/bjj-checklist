@@ -20,40 +20,25 @@ export class Technique {
   belt: Belt;
   noGi: boolean;
   giCaption: Gi;
-  name: string;
+  id: string;
   caption: string;
   position: TechniquePosition;
   placement: TechniquePlacement;
   video: TechniqueVideo;
   video2: TechniqueVideo;
-  private status: TechniqueStatus;
+  status: TechniqueStatus;
 
   constructor(technique: TechniqueDto) {
     this.belt = technique.belt;
     this.caption = technique.caption;
     this.giCaption = technique.noGi ? 'No-gi' : 'Gi';
-    this.name = technique.name;
+    this.id = technique.name;
     this.noGi = technique.noGi;
     this.position = new TechniquePosition(technique.position);
     this.placement = new TechniquePlacement(technique.placement);
     this.video = new TechniqueVideo(technique.video);
     this.video2 = new TechniqueVideo(technique.video2);
-    this.status = new TechniqueStatus();
-    this.status.techniqueId = this.name;
-  }
-
-  getStatus(): TechniqueStatus {
-    this.status.techniqueId = this.name;
-    return this.status;
-  }
-
-  setStatus(statuses: TechniqueStatus[]): void {
-    const foundStatus = statuses.find(status => status.techniqueId === this.name);
-    this.status.set(foundStatus);
-  }
-
-  toggleStatus(userId: string): void {
-    this.status.toggle(userId);
+    this.status = new TechniqueStatus(this.id);
   }
 }
 
@@ -124,31 +109,40 @@ export class TechniqueVideo {
  * Status
  */
 export interface TechniqueStatusDto {
+  id?: string;
   techniqueId: string;
-  userId?: string;
+  userId: string;
   status: number;
 }
 
 export class TechniqueStatus {
+  id?: string;
   techniqueId: string;
-  userId?: string;
   status = 0;
+  userId?: string;
+
   isFilter = false;
 
-  constructor(status?: TechniqueStatusDto) {
-    this.set(status);
+  constructor(techniqueId: string) {
+    this.techniqueId = techniqueId;
   }
 
-  set(status: TechniqueStatus | TechniqueStatusDto): void {
-    if (!status) { return; }
-    if (status.techniqueId) { this.techniqueId = status.techniqueId; }
-    if (status.status) { this.status = status.status; }
-    if (status.userId) { this.userId = status.userId; }
+  updateFormDto(dto: TechniqueStatusDto): void {
+    if (!dto || !dto.id || dto.techniqueId !== this.techniqueId) { return; }
+    this.id = dto.id;
+    this.status = dto.status;
+    this.userId = dto.userId;
   }
 
-  toggle(userId: string): void {
-    this.userId = userId;
+  toDto(): TechniqueStatusDto {
+    return {
+      techniqueId: this.techniqueId,
+      userId: this.userId,
+      status: this.status
+    };
+  }
+
+  toggle(): void {
     this.status = (this.status + 1) % 3;
-    console.log('this.status: ', this.status);
   }
 }
