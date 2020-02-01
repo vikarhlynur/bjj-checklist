@@ -75,11 +75,9 @@ export class BjjChecklistComponent implements OnInit {
     }
     technique.status.toggle();
     if (technique.status.id) {
-      this.service.updateStatus(technique).then(results => {
-      });
+      this.service.updateStatus(technique);
     } else {
-      this.service.createStatus(technique, this.user.uid).then(results => {
-      });
+      this.service.createStatus(technique, this.user.uid);
     }
   }
 
@@ -139,7 +137,6 @@ export class BjjChecklistComponent implements OnInit {
           technique.status.updateFormDto(statusDto);
         });
       });
-
       this.filter();
     });
   }
