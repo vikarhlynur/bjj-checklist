@@ -115,7 +115,7 @@
     "belt": "blue",
     "caption": "Arm-drag back take",
     "noGi": false,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["nnzXF5xntE0", 303]
   },
@@ -123,7 +123,7 @@
     "belt": "blue",
     "caption": "Scissor sweep",
     "noGi": true,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["qp5AXBHxQec", 61]
   },
@@ -131,7 +131,7 @@
     "belt": "blue",
     "caption": "Hip bump sweep",
     "noGi": true,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["vPNx9jWz1qc", 245]
   },
@@ -139,7 +139,7 @@
     "belt": "blue",
     "caption": "Cross collar choke",
     "noGi": false,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["SZmnh7yZlOw", 40]
   },
@@ -147,7 +147,7 @@
     "belt": "blue",
     "caption": "Arm bar",
     "noGi": true,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["5I6SNtejqe4", 0]
   },
@@ -155,7 +155,7 @@
     "belt": "blue",
     "caption": "Triangle choke",
     "noGi": true,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["ID-DEV1pr1M", 0]
   },
@@ -163,7 +163,7 @@
     "belt": "blue",
     "caption": "Kimura",
     "noGi": true,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["5I6SNtejqe4", 114]
   },
@@ -171,7 +171,7 @@
     "belt": "blue",
     "caption": "Guillotine",
     "noGi": true,
-    "position": "fullGuard",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["8V5aa-wBpVo", 30]
   },

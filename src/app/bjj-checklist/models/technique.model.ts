@@ -2,8 +2,8 @@ export type Belt = 'blue' | 'purple' | 'brown';
 export type Gi = 'Gi' | 'No-gi';
 
 export interface TechniqueDto {
+  id: string;
   belt: Belt;
-  name: string;
   caption: string;
   noGi: boolean;
   position: PositionName;
@@ -17,10 +17,10 @@ export interface TechniqueDto {
  * Technique
  */
 export class Technique {
+  id: string;
   belt: Belt;
   noGi: boolean;
   giCaption: Gi;
-  id: string;
   caption: string;
   position: TechniquePosition;
   placement: TechniquePlacement;
@@ -29,10 +29,10 @@ export class Technique {
   status: TechniqueStatus;
 
   constructor(technique: TechniqueDto) {
+    this.id = technique.id;
     this.belt = technique.belt;
     this.caption = technique.caption;
     this.giCaption = technique.noGi ? 'No-gi' : 'Gi';
-    this.id = technique.name;
     this.noGi = technique.noGi;
     this.position = new TechniquePosition(technique.position);
     this.placement = new TechniquePlacement(technique.placement);
@@ -45,7 +45,7 @@ export class Technique {
 /**
  * Position
  */
-export type PositionName = 'backControl' | 'fullGuard' | 'halfGuard' | 'insideGuard' | 'mount' | 'sideControl' | 'standing';
+export type PositionName = 'backControl' | 'closedGuard' | 'halfGuard' | 'insideGuard' | 'mount' | 'sideControl' | 'standing';
 
 export class TechniquePosition {
   name: PositionName;
@@ -59,7 +59,7 @@ export class TechniquePosition {
 
   private captions = {
     backControl: 'Back control',
-    fullGuard: 'Full guard',
+    closedGuard: 'Closed guard',
     halfGuard: 'Half guard',
     insideGuard: 'Inside guard',
     mount: 'Mount',

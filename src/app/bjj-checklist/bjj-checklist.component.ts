@@ -24,7 +24,7 @@ export class BjjChecklistComponent implements OnInit {
   beltFilters = ['blue', 'purple', 'brown'];
   positionFilters = [
     new TechniquePosition('backControl'),
-    new TechniquePosition('fullGuard'),
+    new TechniquePosition('closedGuard'),
     new TechniquePosition('halfGuard'),
     new TechniquePosition('insideGuard'),
     new TechniquePosition('mount'),

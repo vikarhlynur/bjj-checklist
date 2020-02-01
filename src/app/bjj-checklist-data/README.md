@@ -2,7 +2,7 @@
 * **belt**: 'blue'|'purple'|'brown'
 * **caption**: string
 * **noGi**: boolean
-* **position**: 'backControl'|'fullGuard'|'halfGuard'|'insideGuard'|'mount'|'sideControl'|'standing'
+* **position**: 'backControl'|'closedGuard'|'halfGuard'|'insideGuard'|'mount'|'sideControl'|'standing'
 * **placement**: 'top'|'bottom'
 * **video**: [string, number]
 * **video2**: [string, number]
