@@ -59,7 +59,7 @@
     "belt": "blue",
     "caption": "Over-under guard pass",
     "noGi": true,
-    "position": "insideGuard",
+    "position": "closedGuard",
     "placement": "top",
     "video": ["-669RC8iRAs", 0]
   },
@@ -67,7 +67,7 @@
     "belt": "blue",
     "caption": "Knee slice",
     "noGi": true,
-    "position": "insideGuard",
+    "position": "closedGuard",
     "placement": "top",
     "video": ["ghpI3sq4nb4", 250]
   },
@@ -75,7 +75,7 @@
     "belt": "blue",
     "caption": "Bullfighter guard pass (Toreando)",
     "noGi": true,
-    "position": "insideGuard",
+    "position": "closedGuard",
     "placement": "top",
     "video": ["IhWp0P7jXVg", 467]
   },
@@ -301,7 +301,7 @@
     "belt": "purple",
     "caption": "Upward Lift Escape (Under Mount)",
     "noGi": true,
-    "position": "escape",
+    "position": "mount",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -309,7 +309,7 @@
     "belt": "purple",
     "caption": "Guard Escape (Push)",
     "noGi": true,
-    "position": "escape",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -317,7 +317,7 @@
     "belt": "purple",
     "caption": "Guard Escape (Elbow Drive)",
     "noGi": true,
-    "position": "escape",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -325,15 +325,15 @@
     "belt": "purple",
     "caption": "Passing The Guard (Kneeling)",
     "noGi": true,
-    "position": "escape",
-    "placement": "bottom",
+    "position": "openGuard",
+    "placement": "top",
     "video": ["xxx", 0]
   },
   {
     "belt": "purple",
     "caption": "Head Lock Escape (Hip Roll)",
     "noGi": true,
-    "position": "escape",
+    "position": "mount",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -341,7 +341,7 @@
     "belt": "purple",
     "caption": "Head Lock Escape (Leg Hook)",
     "noGi": true,
-    "position": "escape",
+    "position": "mount",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -349,7 +349,7 @@
     "belt": "purple",
     "caption": "Head Lock Escape (Arm Frame)",
     "noGi": true,
-    "position": "escape",
+    "position": "mount",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -357,15 +357,15 @@
     "belt": "purple",
     "caption": "Standing Up In Base",
     "noGi": true,
-    "position": "transitione",
-    "placement": "bottom",
+    "position": "closedGuard",
+    "placement": "top",
     "video": ["xxx", 0]
   },
   {
     "belt": "purple",
     "caption": "Side Mount To Mount - Step Over",
     "noGi": true,
-    "position": "transitione",
+    "position": "sideControl",
     "placement": "top",
     "video": ["xxx", 0]
   },
@@ -373,7 +373,7 @@
     "belt": "purple",
     "caption": "Side Mount To Mount - Knee Drive",
     "noGi": true,
-    "position": "transitione",
+    "position": "siteControl",
     "placement": "top",
     "video": ["xxx", 0]
   },
@@ -381,7 +381,7 @@
     "belt": "purple",
     "caption": "Scissor Sweep (Guard To Mount)",
     "noGi": true,
-    "position": "transitione",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -389,7 +389,7 @@
     "belt": "purple",
     "caption": "Push Sweep (Guard To Mount)",
     "noGi": true,
-    "position": "transitione",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["xxx", 0]
   },
@@ -397,7 +397,7 @@
     "belt": "purple",
     "caption": "Double Ankle Grab Sweep (Guard To Mount)",
     "noGi": true,
-    "position": "transitione",
+    "position": "closedGuard",
     "placement": "bottom",
     "video": ["xxx", 0]
   }
