@@ -21,7 +21,7 @@
     "noGi": true,
     "position": "backControl",
     "placement": "bottom",
-    "video": ["rHr_Xge5eIw", 110]
+    "video": ["rHr_Xge5eIw", 129]
   },
   {
     "belt": "blue", 
@@ -53,7 +53,7 @@
     "noGi": true,
     "position": "sideControl",
     "placement": "bottom",
-    "video": ["9S3nDygvk6A", 135]
+    "video": ["9S3nDygvk6A", 167]
   },
   {
     "belt": "blue",
@@ -77,7 +77,7 @@
     "noGi": true,
     "position": "insideGuard",
     "placement": "top",
-    "video": ["IhWp0P7jXVg", 465]
+    "video": ["IhWp0P7jXVg", 467]
   },
   {
     "belt": "blue",
@@ -253,7 +253,7 @@
     "noGi": false,
     "position": "backControl",
     "placement": "top",
-    "video": ["QNayO6kPmWE", 0]
+    "video": ["QNayO6kPmWE", 114]
   },
   {
     "belt": "blue",
@@ -261,7 +261,7 @@
     "noGi": false,
     "position": "backControl",
     "placement": "top",
-    "video": ["yrUXIujVGTM", 0]
+    "video": ["yrUXIujVGTM", 185]
   },
   {
     "belt": "blue",
@@ -270,5 +270,137 @@
     "position": "backControl",
     "placement": "top",
     "video": ["CtcZlbLkedg", 16]
-  }
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {
+    "belt": "purple",
+    "caption": "Upward Lift Escape (Under Mount)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Guard Escape (Push)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Guard Escape (Elbow Drive)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Passing The Guard (Kneeling)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Head Lock Escape (Hip Roll)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Head Lock Escape (Leg Hook)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Head Lock Escape (Arm Frame)",
+    "noGi": true,
+    "position": "escape",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Standing Up In Base",
+    "noGi": true,
+    "position": "transitione",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Side Mount To Mount - Step Over",
+    "noGi": true,
+    "position": "transitione",
+    "placement": "top",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Side Mount To Mount - Knee Drive",
+    "noGi": true,
+    "position": "transitione",
+    "placement": "top",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Scissor Sweep (Guard To Mount)",
+    "noGi": true,
+    "position": "transitione",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Push Sweep (Guard To Mount)",
+    "noGi": true,
+    "position": "transitione",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  {
+    "belt": "purple",
+    "caption": "Double Ankle Grab Sweep (Guard To Mount)",
+    "noGi": true,
+    "position": "transitione",
+    "placement": "bottom",
+    "video": ["xxx", 0]
+  },
+  
+  
 ]
