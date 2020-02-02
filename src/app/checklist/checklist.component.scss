@@ -16,4 +16,5 @@
 
 .table th {
   cursor: pointer;
+  &:hover { text-decoration: underline; }
 }
