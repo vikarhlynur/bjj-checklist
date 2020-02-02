@@ -145,6 +145,6 @@ export class TechniqueStatus {
   }
 
   toggle(): void {
-    this.status = (this.status + 1) % 3;
+    this.status = (this.status + 1) % 4;
   }
 }
