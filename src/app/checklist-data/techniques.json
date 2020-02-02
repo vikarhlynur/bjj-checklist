@@ -151,7 +151,7 @@
     "placement": "bottom",
     "video": ["5I6SNtejqe4", 0]
   },
-  "triangleChoke": {
+  "triangleChoke2": {
     "belt": "blue",
     "caption": "Triangle choke",
     "noGi": true,
@@ -401,48 +401,48 @@
     "placement": "bottom",
     "video": ["", 0]
   },
-  "straightArmbar": {
-    "belt": "Purple",
-    "caption": "Straight armbar",
+  "straightArmBar": {
+    "belt": "purple",
+    "caption": "Straight arm bar",
     "noGi": true,
     "position": "sideControl",
     "placement": "top",
     "video": ["", 0]
   },
   "straightArmbarOtherSide": {
-    "belt": "Purple",
-    "caption": "Straight armbar (other side)",
+    "belt": "purple",
+    "caption": "Straight arm bar (other side)",
     "noGi": true,
     "position": "sideControl",
     "placement": "top",
     "video": ["", 0]
   },
-  "straightArmbar": {
-    "belt": "Purple",
-    "caption": "Straight armbar",
+  "straightArmBar2": {
+    "belt": "purple",
+    "caption": "Straight arm bar",
     "noGi": true,
     "position": "sideControl",
     "placement": "bottom",
     "video": ["", 0]
   },
-  "straightArmbarHoldingPosition": {
-    "belt": "Purple",
-    "caption": "Straight armbar (holding position)",
+  "straightArmBarHoldingPosition": {
+    "belt": "purple",
+    "caption": "Straight arm bar (holding position)",
     "noGi": true,
     "position": "mount",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "triangleChoke": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Triangle choke",
     "noGi": true,
     "position": "mount",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "sleeveChoke1": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Sleeve choke (Ezekiel Choke)",
     "noGi": false,
     "position": "mount",
@@ -450,7 +450,7 @@
     "video": ["PZ99OrGLSLo", 92]
   },
   "sleeveChoke2": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Sleeve choke (Ezekiel Choke)",
     "noGi": false,
     "position": "sideControl",
@@ -458,7 +458,7 @@
     "video": ["PZ99OrGLSLo", 57]
   },
   "sleeveChoke3": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Sleeve choke (Ezekiel Choke)",
     "noGi": false,
     "position": "halfGuard",
@@ -466,7 +466,7 @@
     "video": ["PZ99OrGLSLo", 135]
   },
   "sleeveChoke4": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Sleeve choke (Ezekiel Choke)",
     "noGi": false,
     "position": "closedGuard",
@@ -474,15 +474,15 @@
     "video": ["PZ99OrGLSLo", 167]
   },
   "guillotine1": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Guillotine",
     "noGi": true,
     "position": "halfGuard",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "guillotine2": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Arm in - guillotine",
     "noGi": true,
     "position": "halfGuard",
@@ -490,23 +490,23 @@
     "video": ["fGa-NJ8sF9k", 358]
   },
   "guillotine3": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Guillotine",
     "noGi": true,
     "position": "openGuard",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "guillotine4": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Guillotine",
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "guillotine5": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Guillotine",
     "noGi": true,
     "position": "standing",
@@ -514,28 +514,28 @@
     "video": ["fGa-NJ8sF9k", 188]
   },
   "Kimura3": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Kimura",
     "noGi": true,
     "position": "backControl",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "Kimura4": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Kimura",
     "noGi": true,
     "position": "halfGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "Kimura5": {
-    "belt": "Purple",
+    "belt": "purple",
     "caption": "Straight Ankle lock (Achilles)",
     "noGi": true,
     "position": "openGuard",
     "placement": "top",
     "video": ["92yhKE8w9zc", 21]
-  },
+  }
   
 }
