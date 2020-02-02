@@ -64,6 +64,11 @@ export class ChecklistFiltersComponent implements OnInit {
     this.changed.emit(this.filters);
   }
 
+  filterPlacement(placement: TechniquePlacement): void {
+    placement.isFilter = !placement.isFilter;
+    this.changed.emit(this.filters);
+  }
+
   filterGi(gi: Gi): void {
     if (gi === 'Gi') { this.filters.gi.isFilter = !this.filters.gi.isFilter; }
     if (gi === 'No-gi') { this.filters.noGi.isFilter = !this.filters.noGi.isFilter; }
