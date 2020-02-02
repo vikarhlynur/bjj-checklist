@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Technique, TechniqueDto } from '../bjj-checklist/models/technique.model.js';
+import { Technique, TechniqueDto } from '../models/technique.model.js';
 import techniquesJson from './techniques.json';
 
 @Component({
-  selector: 'app-bjj-checklist-data',
-  templateUrl: './bjj-checklist-data.component.html'
+  selector: 'app-checklist-data',
+  templateUrl: './checklist-data.component.html'
 })
 export class BjjChecklistDataComponent implements OnInit {
 

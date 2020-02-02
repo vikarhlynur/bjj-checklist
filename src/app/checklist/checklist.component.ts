@@ -3,14 +3,14 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { BjjChecklistService } from './bjj-checklist.service';
-import { BeltFilter } from './models/belt-filter.model';
-import { Belt, Gi, Technique, TechniquePlacement, TechniquePosition, TechniqueStatus } from './models/technique.model';
+import { BeltFilter } from '../models/belt-filter.model';
+import { Belt, Gi, Technique, TechniquePlacement, TechniquePosition } from '../models/technique.model';
+import { ChecklistService } from './checklist.service';
 
 @Component({
   selector: 'app-bjj-checklist',
-  templateUrl: './bjj-checklist.component.html',
-  styleUrls: ['./bjj-checklist.component.scss']
+  templateUrl: './checklist.component.html',
+  styleUrls: ['./checklist.component.scss']
 })
 export class BjjChecklistComponent implements OnInit {
   techniques: Technique[];
@@ -45,7 +45,7 @@ export class BjjChecklistComponent implements OnInit {
   constructor(
     private angularFireAuth: AngularFireAuth,
     private router: Router,
-    private service: BjjChecklistService,
+    private service: ChecklistService,
     private domSanitizer: DomSanitizer
   ) { }
 

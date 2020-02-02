@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
-import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
+import { BjjChecklistDataComponent } from './checklist-data/checklist-data.component';
+import { BjjChecklistComponent } from './checklist/checklist.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [

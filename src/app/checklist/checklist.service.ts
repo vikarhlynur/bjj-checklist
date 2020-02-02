@@ -1,19 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
-import { Technique, TechniqueDto, TechniqueStatus, TechniqueStatusDto } from './models/technique.model';
-
-interface UserMetaDto {
-  userId: string;
-  statuses: TechniqueStatusDto[];
-}
+import { Technique, TechniqueDto, TechniqueStatusDto } from '../models/technique.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BjjChecklistService {
+export class ChecklistService {
 
   constructor(
     private db: AngularFirestore

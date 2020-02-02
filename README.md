@@ -1,7 +1,7 @@
 # BjjChecklist
 
 ## Edit techniques list
-* Open file: `src/app/bjj-checklist-data/techniques.json`
+* Open file: `src/app/checklist-data/techniques.json`
 * Click pencil icon
 * Edit document
 * Commit changes (see bottom of page)

@@ -9,8 +9,8 @@ import { firebase, FirebaseUIModule } from 'firebaseui-angular';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BjjChecklistDataComponent } from './bjj-checklist-data/bjj-checklist-data.component';
-import { BjjChecklistComponent } from './bjj-checklist/bjj-checklist.component';
+import { BjjChecklistDataComponent } from './checklist-data/checklist-data.component';
+import { BjjChecklistComponent } from './checklist/checklist.component';
 import { LoginComponent } from './login/login.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
