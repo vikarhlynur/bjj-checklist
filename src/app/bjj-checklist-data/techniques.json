@@ -303,7 +303,7 @@
     "noGi": true,
     "position": "mount",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "guardEscapePush": {
     "belt": "purple",
@@ -311,7 +311,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "guardEscapeElbowDrive": {
     "belt": "purple",
@@ -319,7 +319,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "passingTheGuardKneeling": {
     "belt": "purple",
@@ -327,7 +327,7 @@
     "noGi": true,
     "position": "openGuard",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "headLockEscapeHipRoll": {
     "belt": "purple",
@@ -335,7 +335,7 @@
     "noGi": true,
     "position": "mount",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "headLockEscapeLegHook": {
     "belt": "purple",
@@ -343,7 +343,7 @@
     "noGi": true,
     "position": "mount",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "headLockEscapeArmFrame": {
     "belt": "purple",
@@ -351,7 +351,7 @@
     "noGi": true,
     "position": "mount",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "standingUpInBase": {
     "belt": "purple",
@@ -359,7 +359,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "sideMountToMountStepOver": {
     "belt": "purple",
@@ -367,7 +367,7 @@
     "noGi": true,
     "position": "sideControl",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "sideMountToMountKneeDrive": {
     "belt": "purple",
@@ -375,7 +375,7 @@
     "noGi": true,
     "position": "siteControl",
     "placement": "top",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "scissorSweepGuardToMount": {
     "belt": "purple",
@@ -383,7 +383,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "pushSweepGuardToMount": {
     "belt": "purple",
@@ -391,7 +391,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   },
   "doubleAnkleGrabSweepGuardToMount": {
     "belt": "purple",
@@ -399,7 +399,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["xxx", 0]
+    "video": ["", 0]
   }
   
   
