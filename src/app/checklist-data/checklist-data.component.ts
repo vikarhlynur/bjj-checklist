@@ -7,7 +7,7 @@ import techniquesJson from './techniques.json';
   selector: 'app-checklist-data',
   templateUrl: './checklist-data.component.html'
 })
-export class BjjChecklistDataComponent implements OnInit {
+export class ChecklistDataComponent implements OnInit {
 
   constructor(
     private db: AngularFirestore

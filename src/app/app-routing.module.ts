@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BjjChecklistDataComponent } from './checklist-data/checklist-data.component';
-import { BjjChecklistComponent } from './checklist/checklist.component';
+import { ChecklistDataComponent } from './checklist-data/checklist-data.component';
+import { ChecklistComponent } from './checklist/checklist.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', component: BjjChecklistComponent, pathMatch: 'full' },
+  { path: '', component: ChecklistComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'data', component: BjjChecklistDataComponent },
-  { path: '**', component: BjjChecklistComponent }
+  { path: 'data', component: ChecklistDataComponent },
+  { path: '**', component: ChecklistComponent }
 ];
 
 @NgModule({

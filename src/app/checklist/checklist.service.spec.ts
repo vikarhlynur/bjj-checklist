@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { ChecklistService } from './checklist.service';
 
-describe('BjjChecklistService', () => {
+describe('ChecklistService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {

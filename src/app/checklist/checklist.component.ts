@@ -3,44 +3,22 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { BeltFilter } from '../models/belt-filter.model';
-import { Belt, Gi, Technique, TechniquePlacement, TechniquePosition } from '../models/technique.model';
+import { Technique } from '../models/technique.model';
 import { ChecklistService } from './checklist.service';
+import { TechniqueFilters } from './filters/checklist-filters.component';
 
 @Component({
   selector: 'app-bjj-checklist',
   templateUrl: './checklist.component.html',
   styleUrls: ['./checklist.component.scss']
 })
-export class BjjChecklistComponent implements OnInit {
+export class ChecklistComponent implements OnInit {
+  filters: TechniqueFilters;
   techniques: Technique[];
   techniquesFiltered: Technique[];
   videoUrl: SafeResourceUrl;
   user: firebase.User;
   selected: Technique;
-
-  nameFilter = '';
-  beltFilter = new BeltFilter();
-  beltFilters = ['blue', 'purple', 'brown'];
-  positionFilters = [
-    new TechniquePosition('backControl'),
-    new TechniquePosition('northSouth'),
-    new TechniquePosition('closedGuard'),
-    new TechniquePosition('openGuard'),
-    new TechniquePosition('halfGuard'),
-    new TechniquePosition('insideGuard'),
-    new TechniquePosition('mount'),
-    new TechniquePosition('sideControl'),
-    new TechniquePosition('standing')
-  ];
-  placementFilters = [
-    new TechniquePlacement('top'),
-    new TechniquePlacement('bottom')
-  ];
-  giFilters = {
-    gi: { caption: 'Gi', isFilter: false },
-    noGi: { caption: 'No-gi', isFilter: false }
-  };
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -85,31 +63,21 @@ export class BjjChecklistComponent implements OnInit {
 
   // Filtering
 
+  onFiltersChanged(filters: TechniqueFilters): void {
+    this.filters = filters;
+    this.filter();
+  }
+
   filter(): void {
+    if (!this.filters) { return; }
     this.techniquesFiltered = this.techniques
-      .filter(t => t.caption.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1)
-      .filter(t => this.beltFilter.belts.length > 0 ? this.beltFilter.belts.includes(t.belt) : true)
+      .filter(t => t.caption.toLowerCase().indexOf(this.filters.caption.toLowerCase()) > -1)
+      .filter(t => this.filters.belt.belts.length > 0 ? this.filters.belt.belts.includes(t.belt) : true)
       .filter(t => {
-        const positionsNames = this.positionFilters.filter(f => f.isFilter).map(f => f.name);
+        const positionsNames = this.filters.position.filter(f => f.isFilter).map(f => f.name);
         return positionsNames.length > 0 ? positionsNames.includes(t.position.name) : true;
       })
-      .filter(t => this.giFilters.gi.isFilter === !t.noGi || this.giFilters.noGi.isFilter === t.noGi);
-  }
-
-  filterBelt(belt: Belt): void {
-    this.beltFilter.toggle(belt);
-    this.filter();
-  }
-
-  filterPosition(position: TechniquePosition): void {
-    position.isFilter = !position.isFilter;
-    this.filter();
-  }
-
-  filterGi(gi: Gi): void {
-    if (gi === 'Gi') { this.giFilters.gi.isFilter = !this.giFilters.gi.isFilter; }
-    if (gi === 'No-gi') { this.giFilters.noGi.isFilter = !this.giFilters.noGi.isFilter; }
-    this.filter();
+      .filter(t => this.filters.gi.isFilter === !t.noGi || this.filters.noGi.isFilter === t.noGi);
   }
 
   // Init functions

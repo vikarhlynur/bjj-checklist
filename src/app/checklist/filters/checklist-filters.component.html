@@ -1,1 +1,28 @@
-<p>checklist-filters works!</p>
+<!-- Caption -->
+<div class="form-group form-inline">
+  <label class="mr-1" for="technique-filter">Technique</label>
+  <input type="text" id="technique-filter" class="form-control" [(ngModel)]="filters.caption"
+    (keyup)="changed.emit(filters)">
+</div>
+
+<!-- Belts -->
+<span class="badge bg-{{ filter }} text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filters.belt[filter]"
+  *ngFor="let filter of filters.belts" (click)="filterBelt(filter);">{{ filter }}</span> |
+
+<!-- Gi -->
+<span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filters.gi.isFilter"
+  (click)="filterGi('Gi');">
+  Gi
+</span>
+<span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filters.noGi.isFilter"
+  (click)="filterGi('No-gi');">
+  No-gi
+</span>
+
+<br>
+
+<!-- Position -->
+<span class="badge bg-secondary text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
+  *ngFor="let filter of filters.position" (click)="filterPosition(filter);">
+  {{ filter.caption }}
+</span>
