@@ -45,7 +45,7 @@ export class Technique {
 /**
  * Position
  */
-export type PositionName = 'backControl' | 'northSouth' | 'closedGuard' | 'openGuard' | 'halfGuard' | 'insideGuard'
+export type PositionName = 'backControl' | 'northSouth' | 'closedGuard' | 'openGuard' | 'halfGuard'
   | 'mount' | 'sideControl' | 'standing';
 
 export class TechniquePosition {
@@ -64,7 +64,6 @@ export class TechniquePosition {
     closedGuard: 'Closed guard',
     openGuard: 'Open guard',
     halfGuard: 'Half guard',
-    insideGuard: 'Inside guard',
     mount: 'Mount',
     sideControl: 'Side control',
     standing: 'Standing'

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-import { BeltFilter } from 'src/app/models/belt-filter.model';
+import { BeltFilter } from 'src/app/checklist/filters/belt-filter.model';
 import { Belt, Gi, TechniquePlacement, TechniquePosition } from 'src/app/models/technique.model';
 
 export interface TechniqueFilters {
@@ -36,7 +36,6 @@ export class ChecklistFiltersComponent implements OnInit {
       new TechniquePosition('closedGuard'),
       new TechniquePosition('openGuard'),
       new TechniquePosition('halfGuard'),
-      new TechniquePosition('insideGuard'),
       new TechniquePosition('mount'),
       new TechniquePosition('sideControl'),
       new TechniquePosition('standing')
