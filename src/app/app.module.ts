@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { BjjChecklistDataComponent } from './checklist-data/checklist-data.component';
 import { BjjChecklistComponent } from './checklist/checklist.component';
 import { LoginComponent } from './login/login.component';
+import { ChecklistFiltersComponent } from './checklist/filters/checklist-filters.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
@@ -32,7 +33,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AppComponent,
     BjjChecklistComponent,
     BjjChecklistDataComponent,
-    LoginComponent
+    LoginComponent,
+    ChecklistFiltersComponent
   ],
   imports: [
     AngularFireAuthModule,
