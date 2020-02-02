@@ -10,11 +10,11 @@
       <table class="table table-hover table-sm">
         <thead>
           <tr>
-            <th scope="col">Status</th>
-            <th scope="col">Technique</th>
-            <th scope="col">Position</th>
-            <th scope="col">Type</th>
-            <th scope="col">Belt</th>
+            <th *ngFor="let header of tableHeaders" (click)="sort(header)">
+              {{ header.caption }}
+              <i class="fa fa-caret-up" *ngIf="header === sortByHeader && !header.isReverse"></i>
+              <i class="fa fa-caret-down" *ngIf="header === sortByHeader && header.isReverse"></i>
+            </th>
           </tr>
         </thead>
         <tbody>

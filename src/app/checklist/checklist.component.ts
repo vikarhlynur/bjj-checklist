@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { sortBy } from 'lodash';
 
 import { Technique } from '../models/technique.model';
 import { ChecklistService } from './checklist.service';
 import { TechniqueFilters } from './filters/checklist-filters.component';
+import { ChecklistTableHeader } from './filters/checklist-table-header.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -19,6 +21,8 @@ export class ChecklistComponent implements OnInit {
   videoUrl: SafeResourceUrl;
   user: firebase.User;
   selected: Technique;
+  tableHeaders: ChecklistTableHeader[] = [];
+  sortByHeader: ChecklistTableHeader;
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -28,6 +32,7 @@ export class ChecklistComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.setTableHeaders();
     this.getLoggedInUser();
   }
 
@@ -84,7 +89,33 @@ export class ChecklistComponent implements OnInit {
       .filter(t => this.filters.gi.isFilter === !t.noGi || this.filters.noGi.isFilter === t.noGi);
   }
 
+  // Sorting
+
+  sort(header: ChecklistTableHeader): void {
+    if (this.sortByHeader !== header) {
+      this.techniquesFiltered = sortBy(this.techniquesFiltered, [header.path]);
+      this.sortByHeader = header;
+      return;
+    }
+    if (!header.isReverse) {
+      this.techniquesFiltered.reverse();
+      header.isReverse = true;
+    } else { // reset
+      header.isReverse = false;
+      this.sortByHeader = undefined;
+      this.filter();
+    }
+  }
+
   // Init functions
+
+  private setTableHeaders(): void {
+    this.tableHeaders.push(new ChecklistTableHeader('Status', 'status.status'));
+    this.tableHeaders.push(new ChecklistTableHeader('Technique', 'caption'));
+    this.tableHeaders.push(new ChecklistTableHeader('Position', 'position.caption'));
+    this.tableHeaders.push(new ChecklistTableHeader('Type', 'gi'));
+    this.tableHeaders.push(new ChecklistTableHeader('Belt', 'belt'));
+  }
 
   private getLoggedInUser(): void {
     this.angularFireAuth.authState.subscribe((user: firebase.User) => {
