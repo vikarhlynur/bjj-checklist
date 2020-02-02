@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { camelCase } from 'lodash';
 import { Technique, TechniqueDto } from '../bjj-checklist/models/technique.model.js';
 import techniquesJson from './techniques.json';
 
@@ -18,9 +17,8 @@ export class BjjChecklistDataComponent implements OnInit {
   }
 
   add(): void {
-    techniquesJson.forEach(technique => {
-      technique.name = camelCase(technique.caption);
-      this.db.collection('technique').doc(technique.name).set(technique).then(() => {
+    Object.keys(techniquesJson).forEach(key => {
+      this.db.collection('techniques').doc(key).set(techniquesJson[key]).then(() => {
         console.log('Finished');
       }, (error) => {
         console.log(error);
@@ -30,10 +28,17 @@ export class BjjChecklistDataComponent implements OnInit {
 
   remove(): void {
     let techniques;
-    const subscription = this.db.collection('technique').valueChanges().subscribe((results: TechniqueDto[]) => {
-      techniques = results.map(result => new Technique(result));
+    const subscription = this.db.collection('techniques').snapshotChanges().subscribe(snapshots => {
+      techniques = snapshots.map(snapshot => {
+        const data = snapshot.payload.doc.data() as TechniqueDto;
+        data.id = snapshot.payload.doc.id;
+        return new Technique(data);
+      });
+
+      subscription.unsubscribe();
+
       techniques.forEach(technique => {
-        this.db.collection('technique').doc(technique.name).delete().then(() => {
+        this.db.collection('techniques').doc(technique.id).delete().then(() => {
           console.log('Finished');
           subscription.unsubscribe();
         }, (error) => {
@@ -42,7 +47,6 @@ export class BjjChecklistDataComponent implements OnInit {
         });
       });
     });
-
   }
 
 }

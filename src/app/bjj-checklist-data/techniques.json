@@ -1,5 +1,5 @@
-[
-  {
+{
+  "weakSideBackToMatEscape": {
     "belt": "blue",
     "caption": "Weak side back to mat escape",
     "noGi": true,
@@ -7,7 +7,7 @@
     "placement": "bottom",
     "video": ["rHr_Xge5eIw", 350]
   },
-  {
+  "strongSideBaseballBatGripEscape": {
     "belt": "blue",
     "caption": "Strong side baseball bat grip escape",
     "noGi": true,
@@ -15,7 +15,7 @@
     "placement": "bottom",
     "video": ["rHr_Xge5eIw", 453]
   },
-  {
+  "butScoopEscape": {
     "belt": "blue",
     "caption": "But scoop escape",
     "noGi": true,
@@ -23,7 +23,7 @@
     "placement": "bottom",
     "video": ["rHr_Xge5eIw", 129]
   },
-  {
+  "upaBridgeAndRollEscape": {
     "belt": "blue", 
     "caption": "Upa/bridge and roll escape",
     "noGi": true,
@@ -31,7 +31,7 @@
     "placement": "bottom",
     "video": ["2iB5nlIeZR8", 73]
   },
-  {
+  "elbowKneeEscape": {
     "belt": "blue",
     "caption": "Elbow-knee escape",
     "noGi": true,
@@ -39,7 +39,7 @@
     "placement": "bottom",
     "video": ["2iB5nlIeZR8", 221]
   },
-  {
+  "hipEscapeGuardReplacement": {
     "belt": "blue",
     "caption": "Hip escape guard replacement",
     "noGi": true,
@@ -47,7 +47,7 @@
     "placement": "bottom",
     "video": ["9S3nDygvk6A", 21]
   },
-  {
+  "backdoorEscape": {
     "belt": "blue",
     "caption": "Backdoor escape",
     "noGi": true,
@@ -55,7 +55,7 @@
     "placement": "bottom",
     "video": ["9S3nDygvk6A", 167]
   },
-  {
+  "overUnderGuardPass": {
     "belt": "blue",
     "caption": "Over-under guard pass",
     "noGi": true,
@@ -63,7 +63,7 @@
     "placement": "top",
     "video": ["-669RC8iRAs", 0]
   },
-  {
+  "kneeSlice": {
     "belt": "blue",
     "caption": "Knee slice",
     "noGi": true,
@@ -71,7 +71,7 @@
     "placement": "top",
     "video": ["ghpI3sq4nb4", 250]
   },
-  {
+  "bullfighterGuardPassToreando": {
     "belt": "blue",
     "caption": "Bullfighter guard pass (Toreando)",
     "noGi": true,
@@ -79,7 +79,7 @@
     "placement": "top",
     "video": ["IhWp0P7jXVg", 467]
   },
-  {
+  "underHookBackTake": {
     "belt": "blue",
     "caption": "Under-hook back take",
     "noGi": true,
@@ -87,7 +87,7 @@
     "placement": "bottom",
     "video": ["8k2AuGZF4Nc", 45]
   },
-  {
+  "footSweep": {
     "belt": "blue",
     "caption": "Foot sweep",
     "noGi": true,
@@ -95,7 +95,7 @@
     "placement": "bottom",
     "video": ["65oxIM5llsk", 0]
   },
-  {
+  "footWedgeGuardPass": {
     "belt": "blue",
     "caption": "Foot-wedge guard pass",
     "noGi": true,
@@ -103,7 +103,7 @@
     "placement": "bottom",
     "video": ["65oxIM5llsk", 876]
   },
-  {
+  "hipSwitchGardPass": {
     "belt": "blue",
     "caption": "Hip-switch gard pass",
     "noGi": true,
@@ -111,7 +111,7 @@
     "placement": "bottom",
     "video": ["Vn8Y8AnxH14", 175]
   },
-  {
+  "armDragBackTake": {
     "belt": "blue",
     "caption": "Arm-drag back take",
     "noGi": false,
@@ -119,7 +119,7 @@
     "placement": "bottom",
     "video": ["nnzXF5xntE0", 303]
   },
-  {
+  "scissorSweep": {
     "belt": "blue",
     "caption": "Scissor sweep",
     "noGi": true,
@@ -127,7 +127,7 @@
     "placement": "bottom",
     "video": ["qp5AXBHxQec", 61]
   },
-  {
+  "hipBumpSweep": {
     "belt": "blue",
     "caption": "Hip bump sweep",
     "noGi": true,
@@ -135,7 +135,7 @@
     "placement": "bottom",
     "video": ["vPNx9jWz1qc", 245]
   },
-  {
+  "crossCollarChoke": {
     "belt": "blue",
     "caption": "Cross collar choke",
     "noGi": false,
@@ -143,7 +143,7 @@
     "placement": "bottom",
     "video": ["SZmnh7yZlOw", 40]
   },
-  {
+  "armBar": {
     "belt": "blue",
     "caption": "Arm bar",
     "noGi": true,
@@ -151,7 +151,7 @@
     "placement": "bottom",
     "video": ["5I6SNtejqe4", 0]
   },
-  {
+  "triangleChoke": {
     "belt": "blue",
     "caption": "Triangle choke",
     "noGi": true,
@@ -159,7 +159,7 @@
     "placement": "bottom",
     "video": ["ID-DEV1pr1M", 0]
   },
-  {
+  "kimura": {
     "belt": "blue",
     "caption": "Kimura",
     "noGi": true,
@@ -167,7 +167,7 @@
     "placement": "bottom",
     "video": ["5I6SNtejqe4", 114]
   },
-  {
+  "guillotine": {
     "belt": "blue",
     "caption": "Guillotine",
     "noGi": true,
@@ -175,7 +175,7 @@
     "placement": "bottom",
     "video": ["8V5aa-wBpVo", 30]
   },
-  {
+  "kneeSliceToMount": {
     "belt": "blue",
     "caption": "Knee slice to mount",
     "noGi": true,
@@ -183,7 +183,7 @@
     "placement": "top",
     "video": ["T7U2sUW2Kzc", 15]
   },
-  {
+  "kimura2": {
     "belt": "blue",
     "caption": "Kimura",
     "noGi": true,
@@ -191,7 +191,7 @@
     "placement": "top",
     "video": ["PLa07zdiPZk", 2]
   },
-  {
+  "americana": {
     "belt": "blue",
     "caption": "Americana",
     "noGi": true,
@@ -199,7 +199,7 @@
     "placement": "top",
     "video": ["Zhh4W24rwrw", 3]
   },
-  {
+  "headArmTriangleChoke": {
     "belt": "blue",
     "caption": "Head arm triangle choke",
     "noGi": true,
@@ -207,7 +207,7 @@
     "placement": "top",
     "video": ["2kvM6ACOxHw", 120]
   },
-  {
+  "backTake": {
     "belt": "blue",
     "caption": "Back take",
     "noGi": true,
@@ -215,7 +215,7 @@
     "placement": "top",
     "video": ["KnEQrOZTaOQ", 59]
   },
-  {
+  "crossCollarChoke2": {
     "belt": "blue",
     "caption": "Cross collar choke",
     "noGi": false,
@@ -223,7 +223,7 @@
     "placement": "top",
     "video": ["Wfhe0tjo-pg", 125]
   },
-  {
+  "americana2": {
     "belt": "blue",
     "caption": "Americana",
     "noGi": true,
@@ -231,7 +231,7 @@
     "placement": "top",
     "video": ["WLqWGE4YgT8", 2]
   },
-  {
+  "armBar2": {
     "belt": "blue",
     "caption": "Arm bar",
     "noGi": true,
@@ -239,7 +239,7 @@
     "placement": "top",
     "video": ["5I6SNtejqe4", 240]
   },
-  {
+  "rearNakedChoke": {
     "belt": "blue",
     "caption": "Rear naked choke",
     "noGi": true,
@@ -247,7 +247,7 @@
     "placement": "top",
     "video": ["X5OrEPQCrjk", 0]
   },
-  {
+  "doorbellChoke": {
     "belt": "blue",
     "caption": "Doorbell choke",
     "noGi": false,
@@ -255,7 +255,7 @@
     "placement": "top",
     "video": ["QNayO6kPmWE", 114]
   },
-  {
+  "bowAndArrowChoke": {
     "belt": "blue",
     "caption": "Bow and arrow choke",
     "noGi": false,
@@ -263,7 +263,7 @@
     "placement": "top",
     "video": ["yrUXIujVGTM", 185]
   },
-  {
+  "armBar3": {
     "belt": "blue",
     "caption": "Arm bar",
     "noGi": true,
@@ -297,7 +297,7 @@
   
   
   
-  {
+  "upwardLiftEscapeUnderMount": {
     "belt": "purple",
     "caption": "Upward Lift Escape (Under Mount)",
     "noGi": true,
@@ -305,7 +305,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "guardEscapePush": {
     "belt": "purple",
     "caption": "Guard Escape (Push)",
     "noGi": true,
@@ -313,7 +313,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "guardEscapeElbowDrive": {
     "belt": "purple",
     "caption": "Guard Escape (Elbow Drive)",
     "noGi": true,
@@ -321,7 +321,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "passingTheGuardKneeling": {
     "belt": "purple",
     "caption": "Passing The Guard (Kneeling)",
     "noGi": true,
@@ -329,7 +329,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "headLockEscapeHipRoll": {
     "belt": "purple",
     "caption": "Head Lock Escape (Hip Roll)",
     "noGi": true,
@@ -337,7 +337,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "headLockEscapeLegHook": {
     "belt": "purple",
     "caption": "Head Lock Escape (Leg Hook)",
     "noGi": true,
@@ -345,7 +345,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "headLockEscapeArmFrame": {
     "belt": "purple",
     "caption": "Head Lock Escape (Arm Frame)",
     "noGi": true,
@@ -353,7 +353,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "standingUpInBase": {
     "belt": "purple",
     "caption": "Standing Up In Base",
     "noGi": true,
@@ -361,7 +361,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "sideMountToMountStepOver": {
     "belt": "purple",
     "caption": "Side Mount To Mount - Step Over",
     "noGi": true,
@@ -369,7 +369,7 @@
     "placement": "top",
     "video": ["xxx", 0]
   },
-  {
+  "sideMountToMountKneeDrive": {
     "belt": "purple",
     "caption": "Side Mount To Mount - Knee Drive",
     "noGi": true,
@@ -377,7 +377,7 @@
     "placement": "top",
     "video": ["xxx", 0]
   },
-  {
+  "scissorSweepGuardToMount": {
     "belt": "purple",
     "caption": "Scissor Sweep (Guard To Mount)",
     "noGi": true,
@@ -385,7 +385,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "pushSweepGuardToMount": {
     "belt": "purple",
     "caption": "Push Sweep (Guard To Mount)",
     "noGi": true,
@@ -393,7 +393,7 @@
     "placement": "bottom",
     "video": ["xxx", 0]
   },
-  {
+  "doubleAnkleGrabSweepGuardToMount": {
     "belt": "purple",
     "caption": "Double Ankle Grab Sweep (Guard To Mount)",
     "noGi": true,
@@ -403,4 +403,4 @@
   }
   
   
-]
+}

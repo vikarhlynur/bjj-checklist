@@ -131,7 +131,7 @@ export class BjjChecklistComponent implements OnInit {
   }
 
   private setUserStatuses(): void {
-    this.service.getUserStatuses(this.user.uid).subscribe(statusDtos => {
+    this.service.getStatuses(this.user.uid).subscribe(statusDtos => {
       statusDtos.forEach(statusDto => {
         this.techniques.forEach(technique => {
           technique.status.updateFormDto(statusDto);

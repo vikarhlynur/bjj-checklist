@@ -20,12 +20,16 @@ export class BjjChecklistService {
   ) { }
 
   getTechniques(): Observable<Technique[]> {
-    return this.db.collection('technique').valueChanges().pipe(
-      map((dtos: TechniqueDto[]) => dtos.map(dto => new Technique(dto)))
+    return this.db.collection('techniques').snapshotChanges().pipe(
+      map(snapshots => snapshots.map(snapshot => {
+        const data = snapshot.payload.doc.data() as TechniqueDto;
+        data.id = snapshot.payload.doc.id;
+        return new Technique(data);
+      }))
     );
   }
 
-  getUserStatuses(userId: string): Observable<TechniqueStatusDto[]> {
+  getStatuses(userId: string): Observable<TechniqueStatusDto[]> {
     return this.db.collection('techniqueStatuses', ref => ref.where('userId', '==', userId)).snapshotChanges().pipe(
       map(snapshots => snapshots.map(snapshot => {
         const data = snapshot.payload.doc.data() as TechniqueStatusDto;
