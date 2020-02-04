@@ -513,7 +513,7 @@
     "placement": "top",
     "video": ["fGa-NJ8sF9k", 188]
   },
-  "Kimura3": {
+  "kimura3": {
     "belt": "purple",
     "caption": "Kimura",
     "noGi": true,
@@ -521,7 +521,7 @@
     "placement": "top",
     "video": ["", 0]
   },
-  "Kimura4": {
+  "kimura4": {
     "belt": "purple",
     "caption": "Kimura",
     "noGi": true,
@@ -529,7 +529,7 @@
     "placement": "bottom",
     "video": ["", 0]
   },
-  "Kimura5": {
+  "kimura5": {
     "belt": "purple",
     "caption": "Straight ankle lock (Achilles)",
     "noGi": true,
@@ -552,5 +552,13 @@
     "position": "turtle",
     "placement": "top",
     "video": ["ECZ93LoLVDg", 50]
+  },
+  "crucifix": {
+    "belt": "purple",
+    "caption": "Crucifix",
+    "noGi": false,
+    "pisition": "turtle",
+    "placement": "top",
+    "video": ["J5yzT2p31u8", 0]
   }
 }
