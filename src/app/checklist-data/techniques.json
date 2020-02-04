@@ -531,18 +531,34 @@
   },
   "kimura5": {
     "belt": "purple",
-    "caption": "Straight Ankle lock (Achilles)",
+    "caption": "Straight ankle lock (Achilles)",
     "noGi": true,
     "position": "openGuard",
     "placement": "top",
     "video": ["92yhKE8w9zc", 21]
   },
+  "frontheadlocktoguillotine": {
+    "belt": "purple",
+    "caption": "Front headlock to guillotine",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["l4FWC_kYKas", 210]
+  },
+  "turtletohalfnelsontoarmbar": {
+    "belt": "purple",
+    "caption": "Turtle to half nelson to armbar",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["ECZ93LoLVDg", 50]
+  },
   "crucifix": {
-  "belt": "purple",
-  "caption": "Crucifix",
-  "noGi": false,
-  "pisition": "turtle",
-  "placement": "top",
-  "video": ["J5yzT2p31u8", 0]
+    "belt": "purple",
+    "caption": "Crucifix",
+    "noGi": false,
+    "pisition": "turtle",
+    "placement": "top",
+    "video": ["J5yzT2p31u8", 0]
   }
 }
