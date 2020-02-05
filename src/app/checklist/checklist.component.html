@@ -5,53 +5,6 @@
   <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
 
   <app-checklist-filters (changed)="onFiltersChanged($event)"></app-checklist-filters>
-
-  <div class="bjj-list">
-    <div class="bjj-list-header">
-      <div class="bjj-list-header-cell" *ngFor="let header of tableHeaders" (click)="sort(header)">
-        {{ header.caption }}
-        <i class="fa fa-caret-up" *ngIf="header === sortByHeader && !header.isReverse"></i>
-        <i class="fa fa-caret-down" *ngIf="header === sortByHeader && header.isReverse"></i>
-      </div>
-    </div>
-    <div class="bjj-list-body">
-      <div class="bjj-list-row-header">
-
-        <div class="bjj-list-row" *ngFor="let technique of techniquesFiltered"
-          [class.table-active]="technique === selected">
-
-          <td (click)="toggleStatus(technique)" class="status-cell u-cursor-pointer">
-            <span *ngIf="technique.status.status === 0">
-              <div class="dot bg-gray-400"></div>
-            </span>
-            <span *ngIf="technique.status.status === 1">
-              <i class="fa fa-star-o text-yellow"></i>
-            </span>
-            <span *ngIf="technique.status.status === 2">
-              <i class="fa fa-star text-yellow"></i>
-            </span>
-            <span *ngIf="technique.status.status === 3">
-              <i class="fa fa-check text-green"></i>
-            </span>
-          </td>
-          <td>
-            <span [class.link]="technique.video.id" (click)="setSelected(technique)">
-              {{ technique.caption }}
-            </span>
-          </td>
-          <td>
-            {{ technique.position.caption }}
-            <span class="text-gray-600 small" *ngIf="technique.placement.caption">
-              | {{ technique.placement.caption }}
-            </span>
-          </td>
-          <td>{{ technique.giCaption }}</td>
-          <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
-        </div>
-      </div>
-
-      <div class="bjj-list-row-body"></div>
-    </div>
-  </div>
+  <app-checklist-list [techniques]="techniquesFiltered"></app-checklist-list>
 
 </div>
