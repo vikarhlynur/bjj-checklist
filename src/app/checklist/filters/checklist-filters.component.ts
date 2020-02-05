@@ -32,7 +32,7 @@ export class ChecklistFiltersComponent implements OnInit {
     belts: ['blue', 'purple', 'brown'],
     position: [
       new TechniquePosition('backControl'),
-      new TechniquePosition('northSouth'),
+      new TechniquePosition('turtle'),
       new TechniquePosition('closedGuard'),
       new TechniquePosition('openGuard'),
       new TechniquePosition('halfGuard'),
