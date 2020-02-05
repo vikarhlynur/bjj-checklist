@@ -18,3 +18,29 @@
   cursor: pointer;
   &:hover { text-decoration: underline; }
 }
+
+/*
+ * BJJ List
+ */
+.bjj-list {
+  
+
+  .bjj-list-header {}
+
+  .bjj-list-header-cell {
+    display: inline-block;
+    cursor: pointer;
+    &:hover { text-decoration: underline; }
+  }
+
+  .bjj-list-body {}
+
+  .bjj-list-row {}
+  
+  .bjj-list-row-header {}
+  
+  .bjj-list-row-body {}
+
+
+
+}
