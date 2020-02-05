@@ -1,4 +1,43 @@
 {
+  "darceChoke": {
+    "belt": "brown",
+    "caption": "D'arce Choke",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["v_WjtZVGzvE", 0]
+  },
+  "theVice": {
+    "belt": "brown",
+    "caption": "The Vice",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "bottom",
+    "video": ["kqIQcjvNjrs", 0]
+  },
+  "flyTrapSubmission": {
+    "belt": "brown",
+    "caption": "Fly Trap Submission",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["5tpXjlbnZg4", 0]
+  },
+  "theHeismanEscape": {
+    "belt": "brown",
+    "caption": "The Heisman Escape",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["JbTxwGGebTA", 0]
+  },
+
+  
+  
+  
+  
+  
+  
   "weakSideBackToMatEscape": {
     "belt": "blue",
     "caption": "Weak side back to mat escape",
