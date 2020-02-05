@@ -1,6 +1,7 @@
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { get, sortBy } from 'lodash';
 
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Technique } from 'src/app/models/technique.model';
 import { ChecklistSortBtn } from '../filters/checklist-table-header.model';
 
@@ -11,10 +12,16 @@ import { ChecklistSortBtn } from '../filters/checklist-table-header.model';
 })
 export class ChecklistListComponent implements OnInit, OnChanges {
   @Input() techniques: Technique[];
+  @Output() readonly statusChanged = new EventEmitter<Technique>();
+
   sortBtns: ChecklistSortBtn[] = [];
   sortBtnActive: ChecklistSortBtn;
+  selected: Technique;
+  videoUrl: SafeResourceUrl;
 
-  constructor() { }
+  constructor(
+    private domSanitizer: DomSanitizer
+  ) { }
 
   ngOnInit() {
     this.setTableHeaders();
@@ -25,6 +32,18 @@ export class ChecklistListComponent implements OnInit, OnChanges {
     if (get(changes, 'techniques.currentValue.length') > 0) {
       this.setDefaultSort();
     }
+  }
+
+  //////////////////////////////////////////
+
+  setSelected(technique: Technique): void {
+    this.selected = technique;
+    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
+  }
+
+  toggleStatus(technique: Technique): void {
+    technique.status.toggle();
+    this.statusChanged.emit(technique);
   }
 
   // Sorting

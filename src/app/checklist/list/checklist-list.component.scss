@@ -1,0 +1,38 @@
+.dot {
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
+}
+
+.status-cell {
+  padding: 7px 0 0 18px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.fa-check { font-size: 16px; }
+
+
+/*
+ * BJJ List
+ */
+ .bjj-list {
+  
+
+  .bjj-list-header {}
+
+  .bjj-list-header-cell {
+    display: inline-block;
+    cursor: pointer;
+    &:hover { text-decoration: underline; }
+  }
+
+  .bjj-list-body {}
+
+  .bjj-list-row {}
+  
+  .bjj-list-row-header {}
+  
+  .bjj-list-row-body {}
+}
+

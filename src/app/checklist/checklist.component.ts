@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 import { Technique } from '../models/technique.model';
@@ -13,18 +12,15 @@ import { TechniqueFilters } from './filters/checklist-filters.component';
   styleUrls: ['./checklist.component.scss']
 })
 export class ChecklistComponent implements OnInit {
+  user: firebase.User;
   filters: TechniqueFilters;
   techniques: Technique[];
   techniquesFiltered: Technique[];
-  videoUrl: SafeResourceUrl;
-  user: firebase.User;
-  selected: Technique;
 
   constructor(
     private angularFireAuth: AngularFireAuth,
     private router: Router,
-    private service: ChecklistService,
-    private domSanitizer: DomSanitizer
+    private service: ChecklistService
   ) { }
 
   ngOnInit() {
@@ -32,11 +28,6 @@ export class ChecklistComponent implements OnInit {
   }
 
   //////////////////////////////////////////
-
-  setSelected(technique: Technique): void {
-    this.selected = technique;
-    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
-  }
 
   routeToLogin(): void {
     this.router.navigate(['/login']);
@@ -49,11 +40,8 @@ export class ChecklistComponent implements OnInit {
     });
   }
 
-  toggleStatus(technique: Technique): void {
-    if (!this.user) {
-      return;
-    }
-    technique.status.toggle();
+  onStatusChanged(technique: Technique): void {
+    if (!this.user) { return; }
     if (technique.status.id) {
       this.service.updateStatus(technique);
     } else {

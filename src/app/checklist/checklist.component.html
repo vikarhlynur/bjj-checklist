@@ -5,6 +5,6 @@
   <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
 
   <app-checklist-filters (changed)="onFiltersChanged($event)"></app-checklist-filters>
-  <app-checklist-list [techniques]="techniquesFiltered"></app-checklist-list>
+  <app-checklist-list [techniques]="techniquesFiltered" (statusChanged)="onStatusChanged($event)"></app-checklist-list>
 
 </div>
