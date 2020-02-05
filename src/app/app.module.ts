@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { ChecklistDataComponent } from './checklist-data/checklist-data.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 import { ChecklistFiltersComponent } from './checklist/filters/checklist-filters.component';
+import { ChecklistListComponent } from './checklist/list/checklist-list.component';
 import { LoginComponent } from './login/login.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
@@ -34,7 +35,8 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     ChecklistComponent,
     ChecklistDataComponent,
     ChecklistFiltersComponent,
-    LoginComponent
+    LoginComponent,
+    ChecklistListComponent
   ],
   imports: [
     AngularFireAuthModule,
