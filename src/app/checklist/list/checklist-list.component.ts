@@ -28,7 +28,6 @@ export class ChecklistListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes: ', changes);
     if (get(changes, 'techniques.currentValue.length') > 0) {
       this.setDefaultSort();
     }

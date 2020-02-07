@@ -1,38 +1,103 @@
+@import '../../_styles/variables';
+
+$row-bg: $gray-800;
+
 .dot {
-  height: 16px;
-  width: 16px;
-  border-radius: 16px;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  margin-top: 2px;
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
 }
-
-.status-cell {
-  padding: 7px 0 0 18px;
-  font-size: 18px;
-  line-height: 1;
-}
-
-.fa-check { font-size: 16px; }
-
 
 /*
  * BJJ List
+  - list
+    - header
+      - cell
+    - row
+      - row-header
+      - row-body
  */
- .bjj-list {
-  
 
-  .bjj-list-header {}
+// List
+.bjj-list {}
 
+// List Header
+.bjj-list-header {
   .bjj-list-header-cell {
     display: inline-block;
+    text-transform: uppercase;
     cursor: pointer;
     &:hover { text-decoration: underline; }
   }
-
-  .bjj-list-body {}
-
-  .bjj-list-row {}
-  
-  .bjj-list-row-header {}
-  
-  .bjj-list-row-body {}
 }
 
+// List Body
+.bjj-list-body {
+  .bjj-list-row {
+    display: flex;
+    height: 40px;
+    margin-bottom: 1px;
+    box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  
+    .bjj-list-row-header {
+      display: flex;
+      width: 100%;
+
+      // <- List cells
+    }
+    
+    .bjj-list-row-body {}
+  }
+}
+
+
+// List cells
+
+.bjj-list-cell {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  padding: 10px 12px;
+}
+
+.bjj-list-cell-status {
+  flex: 0 0 40px;
+  max-width: 40px;
+  min-width: 40px;
+  border-radius: 5px 0 0 5px;
+  .fa {
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  }
+  &.status-0 { background-color: $gray-500; }
+  &.status-1 { background-color: $yellow; }
+  &.status-2 { background-color: $yellow; }
+  &.status-3 { background-color: $green; }
+}
+.bjj-list-cell-technique {
+  background-color: $row-bg;
+}
+.bjj-list-cell-position {
+  flex: 0 0 200px;
+  background-color: $row-bg;
+}
+.bjj-list-cell-gi {
+  flex: 0 0 80px;
+  background-color: $row-bg;
+}
+.bjj-list-cell-belt {
+  display: flex;
+  background-color: $row-bg;
+  flex: 0 0 70px;
+  border-radius: 0 5px 5px 0;
+  justify-content: flex-end;
+  .badge {
+    display: flex;
+    font-size: 12px;
+    line-height: 14px;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  }
+}
