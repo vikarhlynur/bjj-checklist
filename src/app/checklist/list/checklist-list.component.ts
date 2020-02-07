@@ -68,11 +68,10 @@ export class ChecklistListComponent implements OnInit, OnChanges {
   }
 
   private setTableHeaders(): void {
-    this.sortBtns.push(new ChecklistSortBtn('Status', 'status.status'));
-    this.sortBtns.push(new ChecklistSortBtn('Technique', 'caption'));
-    this.sortBtns.push(new ChecklistSortBtn('Position', 'position.caption'));
-    this.sortBtns.push(new ChecklistSortBtn('Type', 'gi'));
-    this.sortBtns.push(new ChecklistSortBtn('Belt', 'belt'));
+    this.sortBtns.push(new ChecklistSortBtn('status', 'status.status'));
+    this.sortBtns.push(new ChecklistSortBtn('technique', 'caption'));
+    this.sortBtns.push(new ChecklistSortBtn('position', 'position.caption'));
+    this.sortBtns.push(new ChecklistSortBtn('gi', 'gi'));
+    this.sortBtns.push(new ChecklistSortBtn('belt', 'belt'));
   }
-
 }
