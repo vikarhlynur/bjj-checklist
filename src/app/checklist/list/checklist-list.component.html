@@ -10,7 +10,8 @@
   </div>
 
   <div class="bjj-list-body">
-    <div class="bjj-list-row" *ngFor="let technique of techniques" [class.table-active]="technique === selected">
+    <div class="bjj-list-row" *ngFor="let technique of techniques" [class.row-selected]="technique === selected"
+      (click)="setSelected(technique)">
       <div class="bjj-list-row-header">
         <div (click)="toggleStatus(technique)"
           class="bjj-list-cell bjj-list-cell-status status-{{technique.status.status}}">
@@ -29,7 +30,7 @@
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-technique">
-          <span (click)="setSelected(technique)">
+          <span>
             {{ technique.caption }}
             <i class="fa fa-eye-slash text-orange pl-2" *ngIf="!technique.video.id"></i>
           </span>
@@ -54,7 +55,10 @@
 
       </div> <!-- bjj-list-row-header -->
 
-      <div class="bjj-list-row-body"></div>
+      <div class="bjj-list-row-curtain" *ngIf="technique === selected">
+        <iframe *ngIf="videoUrl" width="auto" height="100%" [src]="videoUrl" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </div>

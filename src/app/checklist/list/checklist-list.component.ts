@@ -30,14 +30,19 @@ export class ChecklistListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (get(changes, 'techniques.currentValue.length') > 0) {
       this.setDefaultSort();
+      this.setSelected(this.techniques[1]);
     }
   }
 
   //////////////////////////////////////////
 
   setSelected(technique: Technique): void {
+    if (this.selected === technique) { return; }
     this.selected = technique;
-    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
+    this.videoUrl = undefined;
+    setTimeout(() => {
+      this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
+    }, 100);
   }
 
   toggleStatus(technique: Technique): void {

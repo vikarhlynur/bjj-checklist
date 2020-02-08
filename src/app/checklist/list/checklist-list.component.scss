@@ -74,6 +74,9 @@ $row-border-radius: 2px;
       background-color: #fff;
     }
   }
+  .bjj-list-header-cell-technique {}
+  .bjj-list-header-cell-position {}
+  .bjj-list-header-cell-gi {}
   .bjj-list-header-cell-belt {
     justify-content: flex-end;
   }
@@ -84,19 +87,36 @@ $row-border-radius: 2px;
 .bjj-list-body {
   .bjj-list-row {
     display: flex;
+    flex-flow: column;
     height: 40px;
     margin-bottom: 1px;
     box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: height ease-in-out .3s;
+
+    &.row-selected {
+      height: 300px !important;
+    }
   
     .bjj-list-row-header {
       display: flex;
+      flex-flow: row;
       width: 100%;
+      max-height: 40px;
+      background-color: rgba(255,255,255,.06);
+
+      &:hover {
+        background-color: rgba(255,255,255,.045) !important;
+      }
 
       // <- List cells
     }
     
-    .bjj-list-row-curtain {}
+    .bjj-list-row-curtain {
+      background-color: rgba(0, 0, 0, .3);
+      height: 100%;
+      margin: 0 0 0 40px;
+    }
   }
 }
 
@@ -123,22 +143,16 @@ $row-border-radius: 2px;
   &.status-2 { background-color: $yellow; }
   &.status-3 { background-color: $green; }
 }
-.bjj-list-cell-technique {
-  background-color: $row-bg;
-}
+.bjj-list-cell-technique {}
 .bjj-list-cell-position {
-  background-color: $row-bg;
   .small {
     letter-spacing: 1px;
     padding: 3px 0 0 6px;
   }
 }
-.bjj-list-cell-gi {
-  background-color: $row-bg;
-}
+.bjj-list-cell-gi {}
 .bjj-list-cell-belt {
   display: flex;
-  background-color: $row-bg;
   flex: 0 0 $cell-width-belt;
   border-radius: 0 $row-border-radius $row-border-radius 0;
   justify-content: flex-end;
