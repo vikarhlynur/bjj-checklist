@@ -1,0 +1,60 @@
+<div class="bjj-list">
+
+  <div class="bjj-list-header">
+    <div class="bjj-list-header-cell bjj-list-header-cell-{{ sortBtn.caption }}" *ngFor="let sortBtn of sortBtns"
+      (click)="sort(sortBtn)">
+      <span>{{ sortBtn.caption }}</span>
+      <i class="fa fa-chevron-up" *ngIf="sortBtn === sortBtnActive && !sortBtn.isReverse"></i>
+      <i class="fa fa-chevron-down" *ngIf="sortBtn === sortBtnActive && sortBtn.isReverse"></i>
+    </div>
+  </div>
+
+  <div class="bjj-list-body">
+    <div class="bjj-list-row" *ngFor="let technique of techniques" [class.table-active]="technique === selected">
+      <div class="bjj-list-row-header">
+        <div (click)="toggleStatus(technique)"
+          class="bjj-list-cell bjj-list-cell-status status-{{technique.status.status}}">
+          <span *ngIf="technique.status.status === 0">
+            <div class="dot bg-white"></div>
+          </span>
+          <span *ngIf="technique.status.status === 1">
+            <i class="fa fa-star-o"></i>
+          </span>
+          <span *ngIf="technique.status.status === 2">
+            <i class="fa fa-star"></i>
+          </span>
+          <span *ngIf="technique.status.status === 3">
+            <i class="fa fa-check"></i>
+          </span>
+        </div>
+
+        <div class="bjj-list-cell bjj-list-cell-technique">
+          <span (click)="setSelected(technique)">
+            {{ technique.caption }}
+            <i class="fa fa-eye-slash text-orange pl-2" *ngIf="!technique.video.id"></i>
+          </span>
+        </div>
+
+        <div class="bjj-list-cell bjj-list-cell-position">
+          {{ technique.position.caption }}
+          <span class="text-gray-500 small" *ngIf="technique.placement.caption">
+            | {{ technique.placement.caption }}
+          </span>
+        </div>
+
+        <div class="bjj-list-cell bjj-list-cell-gi">
+
+          <i class="fa fa-user-o" *ngIf="technique.noGi"></i>
+          <i class="fa fa-user" *ngIf="!technique.noGi"></i>
+        </div>
+
+        <div class="bjj-list-cell bjj-list-cell-belt">
+          <div class="badge bg-{{ technique.belt }}">{{ technique.belt }}</div>
+        </div>
+
+      </div> <!-- bjj-list-row-header -->
+
+      <div class="bjj-list-row-body"></div>
+    </div>
+  </div>
+</div>

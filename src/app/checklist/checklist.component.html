@@ -1,59 +1,10 @@
-<div *ngIf="user">{{ user.email }}</div>
-<button type="button" class="btn btn-secondary" *ngIf="user" (click)="signOut()">Sign Out</button>
-<button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
+<div class="bjj-wrapper">
 
-<app-checklist-filters (changed)="onFiltersChanged($event)"></app-checklist-filters>
+  <div *ngIf="user">{{ user.email }}</div>
+  <button type="button" class="btn btn-secondary" *ngIf="user" (click)="signOut()">Sign Out</button>
+  <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
 
-<div class="container-fluid pt-3">
-  <div class="row">
-    <div class="col-sm">
-      <table class="table table-hover table-sm">
-        <thead>
-          <tr>
-            <th *ngFor="let header of tableHeaders" (click)="sort(header)">
-              {{ header.caption }}
-              <i class="fa fa-caret-up" *ngIf="header === sortByHeader && !header.isReverse"></i>
-              <i class="fa fa-caret-down" *ngIf="header === sortByHeader && header.isReverse"></i>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let technique of techniquesFiltered" [class.table-active]="technique === selected">
-            <td (click)="toggleStatus(technique)" class="status-cell u-cursor-pointer">
-              <span *ngIf="technique.status.status === 0">
-                <div class="dot bg-gray-400"></div>
-              </span>
-              <span *ngIf="technique.status.status === 1">
-                <i class="fa fa-star-o text-yellow"></i>
-              </span>
-              <span *ngIf="technique.status.status === 2">
-                <i class="fa fa-star text-yellow"></i>
-              </span>
-              <span *ngIf="technique.status.status === 3">
-                <i class="fa fa-check text-green"></i>
-              </span>
-            </td>
-            <td>
-              <span [class.link]="technique.video.id" (click)="setSelected(technique)">
-                {{ technique.caption }}
-                <i class="fa fa-video-camera text-blue" *ngIf="technique.video.id"></i>
-              </span>
-            </td>
-            <td>
-              {{ technique.position.caption }}
-              <span class="text-gray-600 small" *ngIf="technique.placement.caption">
-                | {{ technique.placement.caption }}
-              </span>
-            </td>
-            <td>{{ technique.giCaption }}</td>
-            <td><span class="badge bg-{{ technique.belt }} text-white">{{ technique.belt }}</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-sm">
-      <iframe *ngIf="videoUrl" width="100%" height="500" [src]="videoUrl" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
+  <app-checklist-filters (changed)="onFiltersChanged($event)"></app-checklist-filters>
+  <app-checklist-list [techniques]="techniquesFiltered" (statusChanged)="onStatusChanged($event)"></app-checklist-list>
+
 </div>

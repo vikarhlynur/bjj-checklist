@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { sortBy } from 'lodash';
 
 import { Technique } from '../models/technique.model';
 import { ChecklistService } from './checklist.service';
 import { TechniqueFilters } from './filters/checklist-filters.component';
-import { ChecklistTableHeader } from './filters/checklist-table-header.model';
 
 @Component({
   selector: 'app-bjj-checklist',
@@ -15,33 +12,22 @@ import { ChecklistTableHeader } from './filters/checklist-table-header.model';
   styleUrls: ['./checklist.component.scss']
 })
 export class ChecklistComponent implements OnInit {
+  user: firebase.User;
   filters: TechniqueFilters;
   techniques: Technique[];
   techniquesFiltered: Technique[];
-  videoUrl: SafeResourceUrl;
-  user: firebase.User;
-  selected: Technique;
-  tableHeaders: ChecklistTableHeader[] = [];
-  sortByHeader: ChecklistTableHeader;
 
   constructor(
     private angularFireAuth: AngularFireAuth,
     private router: Router,
-    private service: ChecklistService,
-    private domSanitizer: DomSanitizer
+    private service: ChecklistService
   ) { }
 
   ngOnInit() {
-    this.setTableHeaders();
     this.getLoggedInUser();
   }
 
   //////////////////////////////////////////
-
-  setSelected(technique: Technique): void {
-    this.selected = technique;
-    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(technique.video.url);
-  }
 
   routeToLogin(): void {
     this.router.navigate(['/login']);
@@ -54,11 +40,8 @@ export class ChecklistComponent implements OnInit {
     });
   }
 
-  toggleStatus(technique: Technique): void {
-    if (!this.user) {
-      return;
-    }
-    technique.status.toggle();
+  onStatusChanged(technique: Technique): void {
+    if (!this.user) { return; }
     if (technique.status.id) {
       this.service.updateStatus(technique);
     } else {
@@ -89,33 +72,7 @@ export class ChecklistComponent implements OnInit {
       .filter(t => this.filters.gi.isFilter === !t.noGi || this.filters.noGi.isFilter === t.noGi);
   }
 
-  // Sorting
-
-  sort(header: ChecklistTableHeader): void {
-    if (this.sortByHeader !== header) {
-      this.techniquesFiltered = sortBy(this.techniquesFiltered, [header.path]);
-      this.sortByHeader = header;
-      return;
-    }
-    if (!header.isReverse) {
-      this.techniquesFiltered.reverse();
-      header.isReverse = true;
-    } else { // reset
-      header.isReverse = false;
-      this.sortByHeader = undefined;
-      this.filter();
-    }
-  }
-
   // Init functions
-
-  private setTableHeaders(): void {
-    this.tableHeaders.push(new ChecklistTableHeader('Status', 'status.status'));
-    this.tableHeaders.push(new ChecklistTableHeader('Technique', 'caption'));
-    this.tableHeaders.push(new ChecklistTableHeader('Position', 'position.caption'));
-    this.tableHeaders.push(new ChecklistTableHeader('Type', 'gi'));
-    this.tableHeaders.push(new ChecklistTableHeader('Belt', 'belt'));
-  }
 
   private getLoggedInUser(): void {
     this.angularFireAuth.authState.subscribe((user: firebase.User) => {

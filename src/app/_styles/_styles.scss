@@ -3,6 +3,17 @@
  * Use while css is small
  */
 
+ body {
+   background-color: $gray-900;
+   color: #fff;
+ }
+
+ .bjj-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
  .link {
    color: $blue;
    cursor: pointer;
