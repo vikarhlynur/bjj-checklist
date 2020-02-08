@@ -1,28 +1,4 @@
 {
-  "darceChoke": {
-    "belt": "brown",
-    "caption": "D'arce Choke",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "top",
-    "video": ["v_WjtZVGzvE", 0]
-  },
-  "theVice": {
-    "belt": "brown",
-    "caption": "The Vice",
-    "noGi": false,
-    "position": "openGuard",
-    "placement": "bottom",
-    "video": ["kqIQcjvNjrs", 0]
-  },
-  "flyTrapSubmission": {
-    "belt": "brown",
-    "caption": "Fly Trap Submission",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "bottom",
-    "video": ["5tpXjlbnZg4", 0]
-  },
   "theHeismanEscape": {
     "belt": "brown",
     "caption": "The Heisman Escape",
@@ -31,13 +7,6 @@
     "placement": "bottom",
     "video": ["JbTxwGGebTA", 0]
   },
-
-  
-  
-  
-  
-  
-  
   "weakSideBackToMatEscape": {
     "belt": "blue",
     "caption": "Weak side back to mat escape",
@@ -97,18 +66,10 @@
   "overUnderGuardPass": {
     "belt": "blue",
     "caption": "Over-under guard pass",
-    "noGi": true,
+    "noGi": false,
     "position": "closedGuard",
     "placement": "top",
-    "video": ["-669RC8iRAs", 0]
-  },
-  "kneeSlice": {
-    "belt": "blue",
-    "caption": "Knee slice",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "top",
-    "video": ["ghpI3sq4nb4", 250]
+    "video": ["-669RC8iRAs", 142]
   },
   "bullfighterGuardPassToreando": {
     "belt": "blue",
@@ -188,7 +149,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["5I6SNtejqe4", 0]
+    "video": ["5I6SNtejqe4", 72]
   },
   "triangleChoke2": {
     "belt": "blue",
@@ -196,7 +157,7 @@
     "noGi": true,
     "position": "closedGuard",
     "placement": "bottom",
-    "video": ["ID-DEV1pr1M", 0]
+    "video": ["ID-DEV1pr1M", 103]
   },
   "kimura": {
     "belt": "blue",
@@ -284,7 +245,7 @@
     "noGi": true,
     "position": "backControl",
     "placement": "top",
-    "video": ["X5OrEPQCrjk", 0]
+    "video": ["X5OrEPQCrjk", 98]
   },
   "doorbellChoke": {
     "belt": "blue",
@@ -292,7 +253,7 @@
     "noGi": false,
     "position": "backControl",
     "placement": "top",
-    "video": ["QNayO6kPmWE", 114]
+    "video": ["QNayO6kPmWE", 125]
   },
   "bowAndArrowChoke": {
     "belt": "blue",
@@ -302,40 +263,64 @@
     "placement": "top",
     "video": ["yrUXIujVGTM", 185]
   },
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  "darceChoke": {
+    "belt": "purple",
+    "caption": "D'arce Choke",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["v_WjtZVGzvE", 0]
+  },
+  "kneeSlice": {
+    "belt": "purple",
+    "caption": "Knee slice",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["ghpI3sq4nb4", 250]
+  },
   "armBar3": {
-    "belt": "blue",
+    "belt": "purple",
     "caption": "Arm bar",
     "noGi": true,
     "position": "backControl",
     "placement": "top",
-    "video": ["CtcZlbLkedg", 16]
+    "video": ["CtcZlbLkedg", 226]
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   "upwardLiftEscapeUnderMount": {
     "belt": "purple",
     "caption": "Upward Lift Escape (Under Mount)",
@@ -599,5 +584,42 @@
     "pisition": "turtle",
     "placement": "top",
     "video": ["J5yzT2p31u8", 0]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ "theVice": {
+    "belt": "brown",
+    "caption": "The Vice",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "bottom",
+    "video": ["kqIQcjvNjrs", 0]
+  },
+  "flyTrapSubmission": {
+    "belt": "brown",
+    "caption": "Fly Trap Submission",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["5tpXjlbnZg4", 0]
   }
 }
