@@ -1,9 +1,9 @@
 import { Belt } from '../../models/technique.model';
 
 export class BeltFilter {
-  blue = true;
-  purple = true;
-  brown = true;
+  blue = false;
+  purple = false;
+  brown = false;
 
   get belts(): Belt[] {
     const belts: Belt[] = [];

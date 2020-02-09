@@ -44,8 +44,8 @@ export class ChecklistFiltersComponent implements OnInit {
       new TechniquePlacement('top'),
       new TechniquePlacement('bottom')
     ],
-    gi: { caption: 'Gi', isFilter: true },
-    noGi: { caption: 'No-gi', isFilter: true }
+    gi: { caption: 'Gi', isFilter: false },
+    noGi: { caption: 'No-gi', isFilter: false }
   };
 
   constructor() { }

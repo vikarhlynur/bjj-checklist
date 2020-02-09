@@ -156,11 +156,4 @@ $row-border-radius: 2px;
   flex: 0 0 $cell-width-belt;
   border-radius: 0 $row-border-radius $row-border-radius 0;
   justify-content: flex-end;
-  .badge {
-    display: flex;
-    font-size: 12px;
-    line-height: 14px;
-    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
-    border-radius: $row-border-radius;
-  }
 }

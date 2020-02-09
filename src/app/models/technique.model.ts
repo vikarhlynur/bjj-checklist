@@ -51,7 +51,7 @@ export type PositionName = 'backControl' | 'turtle' | 'closedGuard' | 'openGuard
 export class TechniquePosition {
   name: PositionName;
   caption: string;
-  isFilter = true;
+  isFilter = false;
 
   constructor(name: PositionName) {
     this.name = name;
@@ -78,7 +78,7 @@ export type PlacementName = 'top' | 'bottom';
 export class TechniquePlacement {
   name: PlacementName;
   caption: string;
-  isFilter = true;
+  isFilter = false;
 
   constructor(placement: PlacementName) {
     this.name = placement;
@@ -123,7 +123,7 @@ export class TechniqueStatus {
   status = 0;
   userId?: string;
 
-  isFilter = true;
+  isFilter = false;
 
   constructor(techniqueId: string) {
     this.techniqueId = techniqueId;
