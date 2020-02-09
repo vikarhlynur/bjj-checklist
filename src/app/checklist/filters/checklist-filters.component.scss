@@ -1,3 +1,20 @@
-.filter-inactive {
-  opacity: .6;
+@import '../../_styles/variables';
+
+#technique-filter {
+  background-color: $gray-900;
+  border-color: rgba(0,0,0,.6);
+  border-radius: 2px;
+}
+
+.bjj-filter-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .bjj-filter-cell {}
+}
+
+.badge {
+  margin-bottom: 2px;
+  &.filter-inactive { opacity: .6; }
 }
