@@ -3,28 +3,53 @@
  * Use while css is small
  */
 
- body {
-   background-color: darken($gray-900, 3%);
-   color: #fff;
- }
+body.dark {
+  background-color: darken($gray-900, 3%);
+  color: #fff;
+}
 
- .bjj-wrapper {
+.bjj-wrapper {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 8px;
 }
 
- .link {
-   color: $blue;
-   cursor: pointer;
-   &:hover {
-     color: $blue-dark;
-     text-decoration: underline;
-   }
- }
+.bjj-menu-bar {
+  display: flex;
+  justify-content: flex-end;
+
+  .btn-link {
+    color: $gray-100;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover { color: $gray-300; }
+  }
+
+  #user-btn {
+    
+    .fa.caret-down {
+      display: none !important;
+    }
+  }
+}
+
+.dropdown-menu.expanded {
+  display: block;
+  background-color: $gray-900;
+}
+
+
+.link {
+  color: $blue;
+  cursor: pointer;
+  &:hover {
+    color: $blue-dark;
+    text-decoration: underline;
+  }
+}
 
  // Login - disable facebook
- .firebaseui-idp-facebook {
-    opacity: .5;
-    pointer-events: none;
- }
+.firebaseui-idp-facebook {
+  opacity: .5;
+  pointer-events: none;
+}

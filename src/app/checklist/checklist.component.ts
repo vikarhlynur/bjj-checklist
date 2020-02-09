@@ -13,6 +13,7 @@ import { TechniqueFilters } from './filters/checklist-filters.component';
 })
 export class ChecklistComponent implements OnInit {
   user: firebase.User;
+  userBtnExpanded = false;
   filters: TechniqueFilters;
   techniques: Technique[];
   techniquesFiltered: Technique[];
@@ -36,6 +37,7 @@ export class ChecklistComponent implements OnInit {
   signOut(): void {
     this.angularFireAuth.auth.signOut().then(() => {
       this.user = undefined;
+      this.userBtnExpanded = false;
     }).catch((error) => {
     });
   }

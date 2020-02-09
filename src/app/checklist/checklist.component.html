@@ -1,8 +1,20 @@
 <div class="bjj-wrapper">
 
-  <div *ngIf="user">{{ user.email }}</div>
-  <button type="button" class="btn btn-secondary" *ngIf="user" (click)="signOut()">Sign Out</button>
-  <button type="button" class="btn btn-secondary" *ngIf="!user" (click)="routeToLogin()">Log in</button>
+  <div class="bjj-menu-bar">
+
+    <button type="button" class="btn btn-link" *ngIf="!user" (click)="routeToLogin()">Sign in</button>
+
+    <div class="dropdown">
+      <button type="button" id="user-btn" class="btn btn-link dropdown-toggle" *ngIf="user"
+        (click)="userBtnExpanded = !userBtnExpanded">
+        {{ user.email }} <i class="fa caret-down"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" [class.expanded]="userBtnExpanded">
+        <button type="button" id="sign-out-btn" class="btn btn-link" *ngIf="user" (click)="signOut()">Sign out</button>
+      </div>
+    </div>
+  </div>
+
 
   <app-checklist-filters (changed)="onFiltersChanged($event)"></app-checklist-filters>
   <app-checklist-list [techniques]="techniquesFiltered" (statusChanged)="onStatusChanged($event)"></app-checklist-list>
