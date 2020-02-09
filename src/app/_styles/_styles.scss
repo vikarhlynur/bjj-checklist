@@ -33,6 +33,10 @@ body.dark {
   }
 }
 
+h1, h2, h3, h4, h5, h6, p, div, span, input {
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
 .dropdown-menu.expanded {
   display: block;
   background-color: $gray-900;
@@ -41,7 +45,6 @@ body.dark {
 .badge {
   font-size: 12px;
   line-height: 14px;
-  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
 }
 
