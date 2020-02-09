@@ -54,6 +54,11 @@ export class ChecklistFiltersComponent implements OnInit {
     this.changed.emit(this.filters);
   }
 
+  clearTextFilter(): void {
+    this.filters.caption = '';
+    this.changed.emit(this.filters);
+  }
+
   filterBelt(belt: Belt): void {
     this.filters.belt.toggle(belt);
     this.changed.emit(this.filters);

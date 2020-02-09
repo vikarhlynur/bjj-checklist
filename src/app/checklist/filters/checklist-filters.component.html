@@ -1,11 +1,16 @@
 <!-- Caption -->
-<div class="bjj-filter-row">
-  <div class="form-group form-inline">
-    <input type="text" id="technique-filter" class="form-control" [(ngModel)]="filters.caption"
-      (keyup)="changed.emit(filters)">
+<div id="technique-filter" class="bjj-filter-row">
+  <div class="input-group mt-5" style="max-width: 500px;">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><i class="fa fa-search"></i></div>
+    </div>
+    <input type="text" class="form-control" (keyup)="changed.emit(filters)" [(ngModel)]="filters.caption"
+      name="filterInput" placeholder="Search" autocomplete="off">
+    <div class="input-group-append" *ngIf="filters.caption.length > 0" (click)="clearTextFilter()">
+      <div class="input-group-text"><i class="fa fa-times-circle"></i></div>
+    </div>
   </div>
 </div>
-
 
 <div class="bjj-filter-row">
 
