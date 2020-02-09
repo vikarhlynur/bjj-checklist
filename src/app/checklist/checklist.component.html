@@ -15,6 +15,9 @@
     </div>
   </div>
 
+  <div id="bjj-title">
+    <h1><span class="badge bg-red">BJJ</span> Checklist<span class="bjj-title-dot">.</span></h1>
+  </div>
 
   <app-checklist-filters (changed)="onFiltersChanged($event)"></app-checklist-filters>
   <app-checklist-list [techniques]="techniquesFiltered" (statusChanged)="onStatusChanged($event)"></app-checklist-list>
