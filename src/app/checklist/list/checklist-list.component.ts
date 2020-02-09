@@ -47,7 +47,8 @@ export class ChecklistListComponent implements OnInit, OnChanges {
     }, 100);
   }
 
-  toggleStatus(technique: Technique): void {
+  toggleStatus(technique: Technique, event: Event): void {
+    event.stopPropagation();
     technique.status.toggle();
     this.statusChanged.emit(technique);
   }

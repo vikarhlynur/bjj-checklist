@@ -13,7 +13,7 @@
     <div class="bjj-list-row" *ngFor="let technique of techniques" [class.row-selected]="technique === selected"
       (click)="setSelected(technique)">
       <div class="bjj-list-row-header">
-        <div (click)="toggleStatus(technique)"
+        <div (click)="toggleStatus(technique, $event)"
           class="bjj-list-cell bjj-list-cell-status status-{{technique.status.status}}">
           <span *ngIf="technique.status.status === 0">
             <div class="dot bg-white"></div>
