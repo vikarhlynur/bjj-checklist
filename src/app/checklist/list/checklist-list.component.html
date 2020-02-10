@@ -30,17 +30,24 @@
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-technique">
-          <span>
+          <span class="text-truncate" *ngIf="technique.video.id">
             {{ technique.caption }}
-            <i class="fa fa-eye-slash text-orange pl-2" *ngIf="!technique.video.id"></i>
+          </span>
+          <span class="text-truncate" *ngIf="!technique.video.id">
+            {{ technique.caption }}
+            <i class="fa fa-eye-slash text-orange pl-2"></i>
           </span>
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-position">
           {{ technique.position.caption }}
-          <span class="text-gray-500 small" *ngIf="technique.placement.caption">
+          <span class="text-gray-500 small" *ngIf="browserWidth > 600">
             | {{ technique.placement.caption }}
           </span>
+          <span class="font-weight-bold text-red"
+            *ngIf="browserWidth <= 600 && technique.placement.caption === 'Top'">T</span>
+          <span class="font-weight-bold text-red"
+            *ngIf="browserWidth <= 600 && technique.placement.caption === 'Bottom'">B</span>
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-gi">

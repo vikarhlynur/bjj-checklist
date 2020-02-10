@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, HostListener } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { get, sortBy } from 'lodash';
 
@@ -18,6 +18,7 @@ export class ChecklistListComponent implements OnInit, OnChanges {
   sortBtnActive: ChecklistSortBtn;
   selected: Technique;
   videoUrl: SafeResourceUrl;
+  browserWidth: number;
 
   constructor(
     private domSanitizer: DomSanitizer
@@ -25,6 +26,7 @@ export class ChecklistListComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.setTableHeaders();
+    this.browserWidth = window.innerWidth;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -32,6 +34,11 @@ export class ChecklistListComponent implements OnInit, OnChanges {
       this.setDefaultSort();
     }
   }
+
+  @HostListener('window:resize') onResize() {
+    this.browserWidth = window.innerWidth;
+  }
+
 
   //////////////////////////////////////////
 

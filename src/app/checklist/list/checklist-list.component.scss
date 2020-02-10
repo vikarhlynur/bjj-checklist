@@ -5,7 +5,7 @@ $row-bg: $gray-800;
 $cell-width-status: 40px;
 $cell-width-technique: auto;
 $cell-width-position: 170px;
-$cell-width-gi: 70px;
+$cell-width-gi: 38px;
 $cell-width-belt: 70px;
 
 $row-border-radius: 2px;
@@ -33,7 +33,12 @@ $row-border-radius: 2px;
 // Column widths
 .bjj-list-header-cell-status, .bjj-list-cell-status { flex: 0 0 $cell-width-status; }
 .bjj-list-header-cell-technique, .bjj-list-cell-technique { flex: 1 1 $cell-width-technique; }
-.bjj-list-header-cell-position, .bjj-list-cell-position { flex: 0 0 $cell-width-position; }
+.bjj-list-header-cell-position, .bjj-list-cell-position {
+  flex: 0 0 $cell-width-position;
+  @media (max-width: 600px) {
+    flex: 0 0 130px;
+  }
+}
 .bjj-list-header-cell-gi, .bjj-list-cell-gi { flex: 0 0 $cell-width-gi; }
 .bjj-list-header-cell-belt, .bjj-list-cell-belt { flex: 0 0 $cell-width-belt; }
 
@@ -143,13 +148,19 @@ $row-border-radius: 2px;
   &.status-2 { background-color: $yellow; }
   &.status-3 { background-color: $green; }
 }
-.bjj-list-cell-technique {}
+.bjj-list-cell-technique {
+  min-width: 0; // for text truncate
+}
 .bjj-list-cell-position {
   .small {
     letter-spacing: 1px;
-    padding: 3px 0 0 6px;
+    padding: 3px 0 0 4px;
+  }
+  .text-red {
+    margin: 0 0 0 9px;
   }
 }
+
 .bjj-list-cell-gi {}
 .bjj-list-cell-belt {
   display: flex;
