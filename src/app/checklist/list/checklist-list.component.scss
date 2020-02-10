@@ -1,6 +1,7 @@
 @import '../../_styles/variables';
 
 $row-bg: $gray-800;
+$row-height: 40px;
 
 $cell-width-status: 40px;
 $cell-width-technique: auto;
@@ -94,7 +95,7 @@ $row-border-radius: 2px;
   .bjj-list-row {
     display: flex;
     flex-flow: column;
-    height: 40px;
+    height: $row-height;
     margin-bottom: 1px;
     box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -108,7 +109,7 @@ $row-border-radius: 2px;
       display: flex;
       flex-flow: row;
       width: 100%;
-      max-height: 40px;
+      max-height: $row-height;
       background-color: rgba(255,255,255,.06);
 
       &:hover {
@@ -138,6 +139,7 @@ $row-border-radius: 2px;
   max-width: $cell-width-status;
   border-radius: $row-border-radius 0 0 $row-border-radius;
   transition: opacity ease-in-out 100ms;
+  max-height: $row-height;
   &:hover { opacity: .94; }
   .fa {
     color: #fff;
