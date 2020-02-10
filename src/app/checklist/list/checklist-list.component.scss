@@ -33,14 +33,14 @@ $row-border-radius: 2px;
 // Column widths
 .bjj-list-header-cell-status, .bjj-list-cell-status { flex: 0 0 $cell-width-status; }
 .bjj-list-header-cell-technique, .bjj-list-cell-technique { flex: 1 1 $cell-width-technique; }
-.bjj-list-header-cell-position, .bjj-list-cell-position {
-  flex: 0 0 $cell-width-position;
-  @media (max-width: 600px) {
-    flex: 0 0 130px;
-  }
-}
+.bjj-list-header-cell-position, .bjj-list-cell-position { flex: 0 0 $cell-width-position; }
 .bjj-list-header-cell-gi, .bjj-list-cell-gi { flex: 0 0 $cell-width-gi; }
 .bjj-list-header-cell-belt, .bjj-list-cell-belt { flex: 0 0 $cell-width-belt; }
+
+@media (max-width: 600px) {
+  .bjj-list-header-cell-position, .bjj-list-cell-position { flex: 0 0 130px !important; }
+  .bjj-list-header-cell-belt, .bjj-list-cell-belt { flex: 0 0 46px !important; }
+}
 
 
 // List

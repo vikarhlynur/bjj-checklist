@@ -57,7 +57,9 @@
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-belt">
-          <div class="badge bg-{{ technique.belt }}">{{ technique.belt }}</div>
+          <div class="badge bg-{{ technique.belt }}">
+            {{ browserWidth > 600 ? technique.belt : ' ' }}
+          </div>
         </div>
 
       </div> <!-- bjj-list-row-header -->
