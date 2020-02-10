@@ -1,12 +1,4 @@
 {
-  "theHeismanEscape": {
-    "belt": "brown",
-    "caption": "The Heisman Escape",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "bottom",
-    "video": ["JbTxwGGebTA", 0]
-  },
   "weakSideBackToMatEscape": {
     "belt": "blue",
     "caption": "Weak side back to mat escape",
@@ -292,11 +284,42 @@
   
   
   
+ 
   
   
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  "anacondaChokefromturtle": {
+    "belt": "purple",
+    "caption": "Anaconda choke",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["8Qg5BH0sXKY", 114]
+  },"loopChokefromturtle": {
+    "belt": "purple",
+    "caption": "Loop choke",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["DLwzai0wviA", 202]
+  },
+  "turtleHelicopterchoke": {
+    "belt": "purple",
+    "caption": "Helicopter choke",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["DLwzai0wviA", 202]
+  },
   "darceChoke": {
     "belt": "purple",
     "caption": "D'arce Choke",
@@ -304,6 +327,14 @@
     "position": "sideControl",
     "placement": "top",
     "video": ["v_WjtZVGzvE", 0]
+  },
+  "anacondaChokefromsidcontrole": {
+    "belt": "purple",
+    "caption": "Anaconda choke",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["gQy-mmKJSu0", 126]
   },
   "kneeSlice": {
     "belt": "purple",
@@ -581,7 +612,7 @@
     "belt": "purple",
     "caption": "Crucifix",
     "noGi": false,
-    "pisition": "turtle",
+    "position": "turtle",
     "placement": "top",
     "video": ["J5yzT2p31u8", 0]
   },
@@ -606,7 +637,15 @@
 
 
 
- "theVice": {
+ "theHeismanEscape": {
+    "belt": "brown",
+    "caption": "The Heisman Escape",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["JbTxwGGebTA", 0]
+  },
+  "theVice": {
     "belt": "brown",
     "caption": "The Vice",
     "noGi": false,
