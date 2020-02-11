@@ -43,4 +43,5 @@
   margin-bottom: 2px;
   user-select: none;
   &.filter-inactive { opacity: .4; }
+  &:hover { opacity: .5 }
 }
