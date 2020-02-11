@@ -30,12 +30,9 @@
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-technique">
-          <span class="text-truncate" *ngIf="technique.video.id">
+          <span class="text-truncate u-collapser-left" [class.active]="selected === technique">
             {{ technique.caption }}
-          </span>
-          <span class="text-truncate" *ngIf="!technique.video.id">
-            {{ technique.caption }}
-            <i class="fa fa-eye-slash text-orange pl-2"></i>
+            <i class="fa fa-eye-slash text-orange pl-2" *ngIf="!technique.video.id"></i>
           </span>
         </div>
 
