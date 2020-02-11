@@ -140,6 +140,7 @@ $row-border-radius: 2px;
   border-radius: $row-border-radius 0 0 $row-border-radius;
   transition: opacity ease-in-out 100ms;
   max-height: $row-height;
+  min-height: $row-height;
   &:hover { opacity: .94; }
   .fa {
     color: #fff;
