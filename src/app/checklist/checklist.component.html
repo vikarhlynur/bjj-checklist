@@ -2,10 +2,10 @@
 
   <div class="bjj-menu-bar">
 
-    <button type="button" class="btn btn-link" *ngIf="!user" (click)="routeToLogin()">Sign in</button>
+    <button type="button" class="btn btn-link text-gray-600" *ngIf="!user" (click)="routeToLogin()">Sign in</button>
 
     <div class="dropdown">
-      <button type="button" id="user-btn" class="btn btn-link dropdown-toggle" *ngIf="user"
+      <button type="button" id="user-btn" class="btn btn-link dropdown-toggle text-gray-600" *ngIf="user"
         (click)="userBtnExpanded = !userBtnExpanded">
         {{ user.email }} <i class="fa caret-down"></i>
       </button>
