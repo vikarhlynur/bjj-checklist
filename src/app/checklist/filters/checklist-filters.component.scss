@@ -2,32 +2,47 @@
 
 #technique-filter {
   margin-bottom: 10px;
-  input {
-    background-color: $gray-900;
-    border: 0;
-    // border-radius: 2px;
-    min-width: 260px;
-    &:focus,
-    &:active {
-      box-shadow: none;
-      color: $gray-300;
-    }
-  }
-  .input-group-prepend {
-    .input-group-text {
-      padding-left: 10px;
-      padding-right: 3px;
-    }
-  }
-  .input-group-append {
-    cursor: pointer;
-    &:hover .fa { color: $gray-500; }
-  }
 
-  .input-group-text {
-    background-color: $gray-900;
-    color: $gray-300;
-    border: 0;
+  .fa {
+    font-size: 18px;
+  }
+  .input-group {
+    @media (max-width 800px) {
+      width: 86vw;
+    }
+    width: 460px;
+
+    input {
+      background-color: $gray-900;
+      border: 0;
+      font-size: 16px;
+      height: 44px;
+      
+      &:focus,
+      &:active {
+        box-shadow: none;
+        color: $gray-300;
+      }
+    }
+    .input-group-prepend {
+      .input-group-text {
+        padding-left: 12px;
+        padding-right: 3px;
+      }
+    }
+    .input-group-append {
+      cursor: pointer;
+      &:hover .fa { color: $gray-500; }
+      .input-group-text {
+        padding: 4px 14px 0;
+      }
+    }
+  
+    .input-group-text {
+      background-color: $gray-900;
+      color: $gray-300;
+      border: 0;
+    }
   }
 }
 
@@ -43,5 +58,6 @@
   margin-bottom: 2px;
   user-select: none;
   &.filter-inactive { opacity: .4; }
-  &:hover { opacity: .5; }
+  font-size: 14px;
+  padding: 7px 7px;
 }
