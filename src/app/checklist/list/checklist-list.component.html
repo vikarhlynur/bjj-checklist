@@ -16,10 +16,10 @@
         <div (click)="toggleStatus(technique, $event)"
           class="bjj-list-cell bjj-list-cell-status status-{{technique.status.status}}">
           <span *ngIf="technique.status.status === 0">
-            <div class="dot bg-white"></div>
+            <div class="fa fa-circle-o"></div>
           </span>
           <span *ngIf="technique.status.status === 1">
-            <i class="fa fa-star-o"></i>
+            <i class="fa fa-circle"></i>
           </span>
           <span *ngIf="technique.status.status === 2">
             <i class="fa fa-star"></i>

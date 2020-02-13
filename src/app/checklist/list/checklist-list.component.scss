@@ -144,14 +144,16 @@ $row-border-radius: 2px;
   max-width: $cell-width-status;
   border-radius: $row-border-radius 0 0 $row-border-radius;
   transition: opacity ease-in-out 100ms;
-  padding-left: 11px;
+  padding: 10px 0;
+  text-align: center;
   &:hover { opacity: .94; }
   .fa {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
+    width: $cell-width-status;
   }
   &.status-0 { background-color: $gray-500; }
-  &.status-1,
+  &.status-1 { background-color: $cyan; }
   &.status-2 { background-color: $yellow; }
   &.status-3 { background-color: $green; }
 }
