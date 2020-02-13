@@ -101,10 +101,6 @@ $row-border-radius: 2px;
     overflow: hidden;
     cursor: pointer;
     transition: height ease-in-out .3s;
-
-    &.row-selected {
-      height: 300px !important;
-    }
   
     .bjj-list-row-header {
       display: flex;
@@ -118,6 +114,13 @@ $row-border-radius: 2px;
       }
 
       // <- List cells
+    }
+
+    &.row-selected {
+      height: 300px !important;
+      .bjj-list-row-header {
+        background-color: rgba(134,155,255,.06) !important;
+      }
     }
     
     .bjj-list-row-curtain {
@@ -141,10 +144,11 @@ $row-border-radius: 2px;
   max-width: $cell-width-status;
   border-radius: $row-border-radius 0 0 $row-border-radius;
   transition: opacity ease-in-out 100ms;
+  padding-left: 11px;
   &:hover { opacity: .94; }
   .fa {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
   }
   &.status-0 { background-color: $gray-500; }
   &.status-1,
