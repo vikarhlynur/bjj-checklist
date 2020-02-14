@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
-import { Technique } from '../models/technique.model';
 import { ChecklistService } from './checklist.service';
 import { TechniqueFilters } from './filters/checklist-filters.component';
+import { Technique } from './technique.model';
 
 @Component({
   selector: 'app-bjj-checklist',

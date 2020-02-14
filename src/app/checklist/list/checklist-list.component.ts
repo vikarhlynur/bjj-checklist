@@ -2,7 +2,7 @@ import { Component, EventEmitter, HostListener, Input, OnChanges, OnInit, Output
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { get, sortBy } from 'lodash';
 
-import { Technique } from 'src/app/models/technique.model';
+import { Technique } from 'src/app/checklist/technique.model';
 import { ChecklistSortBtn } from '../filters/checklist-table-header.model';
 
 @Component({

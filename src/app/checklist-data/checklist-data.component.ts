@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Technique, TechniqueDto } from '../models/technique.model.js';
+import { Technique, TechniqueDto } from '../checklist/technique.model.js';
 import techniquesJson from './techniques.json';
 
 @Component({

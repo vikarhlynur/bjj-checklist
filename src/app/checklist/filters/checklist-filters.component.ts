@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { BeltFilter } from 'src/app/checklist/filters/belt-filter.model';
-import { Belt, Gi, TechniquePlacement, TechniquePosition } from 'src/app/models/technique.model';
+import { Belt, Gi, TechniquePlacement, TechniquePosition } from 'src/app/checklist/technique.model';
 
 export interface TechniqueFilters {
   caption: string;

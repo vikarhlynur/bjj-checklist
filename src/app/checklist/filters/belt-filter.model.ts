@@ -1,4 +1,4 @@
-import { Belt } from '../../models/technique.model';
+import { Belt } from '../technique.model';
 
 export class BeltFilter {
   blue = false;
