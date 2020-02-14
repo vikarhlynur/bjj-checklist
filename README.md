@@ -1,13 +1,13 @@
 # BjjChecklist
 
 ## TODO:
-* refactor: better user dropdown
+* feat: better search (like vscode)
+* feat: save user state in DB
+* fix: firebase rules
 * feat: belt indexing (to control sort)
 * feat: must login notification on status change
-* feat: better search (like vscode)
-* fix firebase rules
-* feat: User nicename and avatar
-* feat: save user state in DB
+* refactor: better user dropdown
+* feat: user nicename and avatar
 * refactor: better login experience
 
 
