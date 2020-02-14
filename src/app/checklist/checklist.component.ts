@@ -38,8 +38,7 @@ export class ChecklistComponent implements OnInit {
     this.angularFireAuth.auth.signOut().then(() => {
       this.user = undefined;
       this.userBtnExpanded = false;
-    }).catch((error) => {
-    });
+    }).catch(() => { });
   }
 
   onStatusChanged(technique: Technique): void {

@@ -31,7 +31,7 @@ export class ChecklistListComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (get(changes, 'techniques.currentValue.length') > 0) {
-      this.setDefaultSort();
+      this.sort();
     }
   }
 
@@ -62,7 +62,7 @@ export class ChecklistListComponent implements OnInit, OnChanges {
 
   // Sorting
 
-  sort(header: ChecklistSortBtn): void {
+  toggleSort(header: ChecklistSortBtn): void {
     if (this.sortBtnActive !== header) {
       this.techniques = sortBy(this.techniques, [header.path]);
       this.sortBtnActive = header;
@@ -75,6 +75,17 @@ export class ChecklistListComponent implements OnInit, OnChanges {
       header.isReverse = false;
       this.sortBtnActive = undefined;
       this.setDefaultSort();
+    }
+  }
+
+  private sort(): void {
+    if (!this.sortBtnActive) {
+      this.setDefaultSort();
+      return;
+    }
+    this.techniques = sortBy(this.techniques, [this.sortBtnActive.path]);
+    if (this.sortBtnActive.isReverse) {
+      this.techniques.reverse();
     }
   }
 
