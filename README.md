@@ -1,5 +1,32 @@
 # BjjChecklist
 
+## TODO:
+* refactor: better user dropdown
+* feat: belt indexing (to control sort)
+* feat: must login notification on status change
+* feat: better search (like vscode)
+* fix firebase rules
+* feat: User nicename and avatar
+* feat: save user state in DB
+* refactor: better login experience
+
+
+## Ideas
+* Pro
+  - Unlock colored belts (white only free)
+  - Create page with screen shots of highscharts graph
+  - More techniques (black belt)
+  - Light theme
+  - Compare status with training partner?
+  - Teacher mode? Groups?
+  - Ratings
+  - Suggest better video
+    - Upside-down penalty for submitting same video
+  - More filters: Submission | transition | escape
+  - Recommend videos
+* Drag-n-drop list
+
+
 ## Edit techniques list
 * Open file: `src/app/checklist-data/techniques.json`
 * Click pencil icon
