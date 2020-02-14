@@ -11,12 +11,10 @@ $cell-width-belt: 70px;
 
 $row-border-radius: 2px;
 
-.dot {
-  height: 15px;
-  width: 15px;
-  border-radius: 15px;
-  margin-top: 2px;
-  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+.bjj-technique-count {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 /*
@@ -45,10 +43,7 @@ $row-border-radius: 2px;
 
 
 // List
-.bjj-list {
-  margin-top: 30px;
-}
-
+.bjj-list {}
 
 // List Header
 .bjj-list-header {

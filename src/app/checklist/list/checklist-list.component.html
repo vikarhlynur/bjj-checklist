@@ -1,9 +1,13 @@
 <div class="bjj-list">
 
+  <div class="bjj-technique-count text-gray-600">
+    <span>{{ techniques.length }}</span>
+  </div>
+
   <div class="bjj-list-header">
     <div class="bjj-list-header-cell bjj-list-header-cell-{{ sortBtn.caption }}" *ngFor="let sortBtn of sortBtns"
       (click)="toggleSort(sortBtn)">
-      <span>{{ sortBtn.caption }}</span>
+      <span> {{ sortBtn.caption }} </span>
       <i class="fa fa-chevron-up" *ngIf="sortBtn === sortBtnActive && !sortBtn.isReverse"></i>
       <i class="fa fa-chevron-down" *ngIf="sortBtn === sortBtnActive && sortBtn.isReverse"></i>
     </div>
