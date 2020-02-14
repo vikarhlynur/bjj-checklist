@@ -29,7 +29,7 @@ export class ChecklistFiltersComponent implements OnInit {
   filters: TechniqueFilters = {
     caption: '',
     belt: new BeltFilter(),
-    belts: ['blue', 'purple', 'brown'],
+    belts: ['white', 'blue', 'purple', 'brown'],
     position: [
       new TechniquePosition('backControl'),
       new TechniquePosition('turtle'),

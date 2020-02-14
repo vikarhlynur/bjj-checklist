@@ -1,4 +1,4 @@
-export type Belt = 'blue' | 'purple' | 'brown';
+export type Belt = 'white' | 'blue' | 'purple' | 'brown';
 export type Gi = 'Gi' | 'No-gi';
 
 export interface TechniqueDto {

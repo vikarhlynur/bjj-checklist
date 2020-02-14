@@ -16,17 +16,17 @@
 
   <!-- Belts -->
   <div class="bjj-filter-cell">
-    <span class="badge bg-{{ filter }} text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filters.belt[filter]"
+    <span class="badge bg-{{ filter }} u-cursor-pointer mr-1" [class.filter-inactive]="!filters.belt[filter]"
       *ngFor="let filter of filters.belts" (click)="filterBelt(filter);">{{ filter }}</span>
   </div>
 
   <!-- Gi -->
   <div class="bjj-filter-cell">
-    <span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filters.gi.isFilter"
+    <span class="badge bg-pink u-cursor-pointer mr-1" [class.filter-inactive]="!filters.gi.isFilter"
       (click)="filterGi('Gi');">
       Gi
     </span>
-    <span class="badge bg-pink text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filters.noGi.isFilter"
+    <span class="badge bg-pink u-cursor-pointer mr-1" [class.filter-inactive]="!filters.noGi.isFilter"
       (click)="filterGi('No-gi');">
       No-gi
     </span>
@@ -34,7 +34,7 @@
 
   <!-- Placement -->
   <div class="bjj-filter-cell">
-    <span class="badge bg-danger text-white u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
+    <span class="badge bg-danger u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
       *ngFor="let filter of filters.placement" (click)="filterPlacement(filter);">
       {{ filter.caption }}
     </span>
