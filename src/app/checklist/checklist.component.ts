@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import FuzzySearch from 'fuzzy-search';
 
 import { ChecklistService } from './checklist.service';
 import { TechniqueFilters } from './filters/checklist-filters.component';
@@ -59,8 +60,8 @@ export class ChecklistComponent implements OnInit {
 
   filter(): void {
     if (!this.filters || !this.techniques) { return; }
-    this.techniquesFiltered = this.techniques
-      .filter(t => t.caption.toLowerCase().indexOf(this.filters.caption.toLowerCase()) > -1)
+    const techniques = this.fuzzySearch();
+    this.techniquesFiltered = techniques
       .filter(t => this.filters.belt.belts.length > 0 ? this.filters.belt.belts.includes(t.belt) : true)
       .filter(t => {
         const positionsNames = this.filters.position.filter(f => f.isFilter).map(f => f.name);
@@ -71,6 +72,15 @@ export class ChecklistComponent implements OnInit {
         return placementNames.length > 0 ? placementNames.includes(t.placement.name) : true;
       })
       .filter(t => this.filters.gi.isFilter === !t.noGi || this.filters.noGi.isFilter === t.noGi);
+  }
+
+  /**
+   * Sublime text inspired search on technique caption.
+   * Returns list of techniques filtered by the fuzzy search.
+   */
+  fuzzySearch(): Technique[] {
+    const fuzzySearch = new FuzzySearch(this.techniques, ['caption']);
+    return fuzzySearch.search(this.filters.caption);
   }
 
   // Init functions

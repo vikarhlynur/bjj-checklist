@@ -1,7 +1,6 @@
 # BjjChecklist
 
 ## TODO:
-* feat: better search (like vscode)
 * feat: save user state in DB
 * fix: firebase rules
 * feat: belt indexing (to control sort)
@@ -12,6 +11,7 @@
 
 
 ## Ideas
+* feat: gifs
 * Pro
   - Unlock colored belts (white only free)
   - Create page with screen shots of highscharts graph
