@@ -45,11 +45,13 @@ export type BeltName = 'white' | 'blue' | 'purple' | 'brown';
 export class TechniqueBelt {
   name: BeltName;
   caption: string;
+  index: number;
   isFilter = false;
 
   constructor(name: BeltName) {
     this.name = name;
     this.caption = this.captions[name];
+    this.index = this.indexes[name];
   }
 
   private captions = {
@@ -57,6 +59,13 @@ export class TechniqueBelt {
     blue: 'Blue',
     purple: 'Purple',
     brown: 'brown'
+  };
+
+  private indexes = {
+    white: 0,
+    blue: 1,
+    purple: 2,
+    brown: 3
   };
 }
 

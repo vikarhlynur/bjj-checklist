@@ -3,7 +3,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { get, sortBy } from 'lodash';
 
 import { Technique } from 'src/app/checklist/technique.model';
-import { ChecklistSortBtn } from '../filters/checklist-table-header.model';
+import { ChecklistSortBtn } from './checklist-sort-btn.model';
 
 @Component({
   selector: 'app-checklist-list',
@@ -90,14 +90,14 @@ export class ChecklistListComponent implements OnInit, OnChanges {
   }
 
   private setDefaultSort(): void {
-    this.techniques = sortBy(this.techniques, ['belt', 'caption']);
+    this.techniques = sortBy(this.techniques, ['belt.index', 'caption']);
   }
 
   private setTableHeaders(): void {
     this.sortBtns.push(new ChecklistSortBtn('status', 'status.status'));
     this.sortBtns.push(new ChecklistSortBtn('technique', 'caption'));
     this.sortBtns.push(new ChecklistSortBtn('position', 'position.caption'));
-    this.sortBtns.push(new ChecklistSortBtn('gi', 'gi'));
-    this.sortBtns.push(new ChecklistSortBtn('belt', 'belt'));
+    this.sortBtns.push(new ChecklistSortBtn('gi', 'gi.caption'));
+    this.sortBtns.push(new ChecklistSortBtn('belt', 'belt.index'));
   }
 }

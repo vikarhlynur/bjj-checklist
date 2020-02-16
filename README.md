@@ -2,12 +2,11 @@
 
 ## TODO:
 * fix: firebase rules
-* feat: belt indexing (to control sort)
 * feat: must login notification on status change
 * refactor: better user dropdown
 * feat: user nicename and avatar
 * refactor: better login experience
-* feat: filter states
+* feat: state filters
 
 
 ## Ideas
