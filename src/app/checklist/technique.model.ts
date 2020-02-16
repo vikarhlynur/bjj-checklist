@@ -1,9 +1,6 @@
-export type Belt = 'white' | 'blue' | 'purple' | 'brown';
-export type Gi = 'Gi' | 'No-gi';
-
 export interface TechniqueDto {
   id: string;
-  belt: Belt;
+  belt: BeltName;
   caption: string;
   noGi: boolean;
   position: PositionName;
@@ -18,9 +15,8 @@ export interface TechniqueDto {
  */
 export class Technique {
   id: string;
-  belt: Belt;
-  noGi: boolean;
-  giCaption: Gi;
+  belt: TechniqueBelt;
+  gi: TechniqueGi;
   caption: string;
   position: TechniquePosition;
   placement: TechniquePlacement;
@@ -28,19 +24,63 @@ export class Technique {
   video2: TechniqueVideo;
   status: TechniqueStatus;
 
-  constructor(technique: TechniqueDto) {
-    this.id = technique.id;
-    this.belt = technique.belt;
-    this.caption = technique.caption;
-    this.giCaption = technique.noGi ? 'No-gi' : 'Gi';
-    this.noGi = technique.noGi;
-    this.position = new TechniquePosition(technique.position);
-    this.placement = new TechniquePlacement(technique.placement);
-    this.video = new TechniqueVideo(technique.video);
-    this.video2 = new TechniqueVideo(technique.video2);
+  constructor(dto: TechniqueDto) {
+    this.id = dto.id;
+    this.belt = new TechniqueBelt(dto.belt);
+    this.caption = dto.caption;
+    this.gi = new TechniqueGi(dto.noGi ? 'noGi' : 'gi');
+    this.position = new TechniquePosition(dto.position);
+    this.placement = new TechniquePlacement(dto.placement);
+    this.video = new TechniqueVideo(dto.video);
+    this.video2 = new TechniqueVideo(dto.video2);
     this.status = new TechniqueStatus(this.id);
   }
 }
+
+/**
+ * Belt
+ */
+export type BeltName = 'white' | 'blue' | 'purple' | 'brown';
+
+export class TechniqueBelt {
+  name: BeltName;
+  caption: string;
+  isFilter = false;
+
+  constructor(name: BeltName) {
+    this.name = name;
+    this.caption = this.captions[name];
+  }
+
+  private captions = {
+    white: 'White',
+    blue: 'Blue',
+    purple: 'Purple',
+    brown: 'brown'
+  };
+}
+
+/**
+ * Gi
+ */
+export type GiName = 'gi' | 'noGi';
+
+export class TechniqueGi {
+  name: GiName;
+  caption: string;
+  isFilter = false;
+
+  constructor(name: GiName) {
+    this.name = name;
+    this.caption = this.captions[name];
+  }
+
+  private captions = {
+    gi: 'Gi',
+    noGi: 'No-gi'
+  };
+}
+
 
 /**
  * Position

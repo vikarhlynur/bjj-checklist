@@ -65,7 +65,14 @@ export class ChecklistComponent implements OnInit {
     if (!this.filters || !this.techniques) { return; }
     const techniques = this.fuzzySearch();
     this.techniquesFiltered = techniques
-      .filter(t => this.filters.belt.belts.length > 0 ? this.filters.belt.belts.includes(t.belt) : true)
+      .filter(t => {
+        const beltNames = this.filters.belt.filter(b => b.isFilter).map(f => f.name);
+        return beltNames.length > 0 ? beltNames.includes(t.belt.name) : true;
+      })
+      .filter(t => {
+        const giNames = this.filters.gi.filter(g => g.isFilter).map(f => f.name);
+        return giNames.length > 0 ? giNames.includes(t.gi.name) : true;
+      })
       .filter(t => {
         const positionsNames = this.filters.position.filter(f => f.isFilter).map(f => f.name);
         return positionsNames.length > 0 ? positionsNames.includes(t.position.name) : true;
@@ -73,8 +80,7 @@ export class ChecklistComponent implements OnInit {
       .filter(t => {
         const placementNames = this.filters.placement.filter(f => f.isFilter).map(f => f.name);
         return placementNames.length > 0 ? placementNames.includes(t.placement.name) : true;
-      })
-      .filter(t => this.filters.gi.isFilter === !t.noGi || this.filters.noGi.isFilter === t.noGi);
+      });
   }
 
   /**

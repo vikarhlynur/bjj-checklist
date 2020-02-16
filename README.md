@@ -1,7 +1,6 @@
 # BjjChecklist
 
 ## TODO:
-* refactor: filters - same structure for all
 * fix: firebase rules
 * feat: belt indexing (to control sort)
 * feat: must login notification on status change

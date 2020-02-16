@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { get } from 'lodash';
 
-import { Belt, Gi, TechniquePlacement, TechniquePosition } from 'src/app/checklist/technique.model';
+import { TechniqueBelt, TechniqueGi, TechniquePlacement, TechniquePosition } from 'src/app/checklist/technique.model';
 import { ChecklistService } from '../checklist.service';
 import { TechniqueFilters, TechniqueFiltersDto } from './technique-filters.model';
 
@@ -30,13 +30,18 @@ export class ChecklistFiltersComponent implements OnInit, OnChanges {
     }
   }
 
-  clearTextFilter(): void {
+  clearCaptionFilter(): void {
     this.filters.caption = '';
     this.changed.emit(this.filters);
   }
 
-  filterBelt(belt: Belt): void {
-    this.filters.belt.toggle(belt);
+  filterBelt(belt: TechniqueBelt): void {
+    belt.isFilter = !belt.isFilter;
+    this.changed.emit(this.filters);
+  }
+
+  filterGi(gi: TechniqueGi): void {
+    gi.isFilter = !gi.isFilter;
     this.changed.emit(this.filters);
   }
 
@@ -47,12 +52,6 @@ export class ChecklistFiltersComponent implements OnInit, OnChanges {
 
   filterPlacement(placement: TechniquePlacement): void {
     placement.isFilter = !placement.isFilter;
-    this.changed.emit(this.filters);
-  }
-
-  filterGi(gi: Gi): void {
-    if (gi === 'Gi') { this.filters.gi.isFilter = !this.filters.gi.isFilter; }
-    if (gi === 'No-gi') { this.filters.noGi.isFilter = !this.filters.noGi.isFilter; }
     this.changed.emit(this.filters);
   }
 

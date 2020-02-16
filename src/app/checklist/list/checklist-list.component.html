@@ -52,14 +52,13 @@
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-gi">
-
-          <i class="fa fa-user-o" *ngIf="technique.noGi"></i>
-          <i class="fa fa-user" *ngIf="!technique.noGi"></i>
+          <i class="fa fa-user-o" *ngIf="technique.gi.name === 'noGi'"></i>
+          <i class="fa fa-user" *ngIf="technique.gi.name === 'gi'"></i>
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-belt">
-          <div class="badge bg-{{ technique.belt }}">
-            {{ browserWidth > 600 ? technique.belt : '&nbsp;' }}
+          <div class="badge bg-{{ technique.belt.name }}">
+            {{ browserWidth > 600 ? technique.belt.caption : '&nbsp;' }}
           </div>
         </div>
 
