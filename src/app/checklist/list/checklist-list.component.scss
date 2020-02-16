@@ -14,7 +14,7 @@ $row-border-radius: 2px;
 .bjj-technique-count {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-top: 4px;
 }
 
 /*
@@ -43,7 +43,9 @@ $row-border-radius: 2px;
 
 
 // List
-.bjj-list {}
+.bjj-list {
+  margin-top: 30px;
+}
 
 // List Header
 .bjj-list-header {

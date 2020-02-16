@@ -1,9 +1,4 @@
 <div class="bjj-list">
-
-  <div class="bjj-technique-count text-gray-600">
-    <span>{{ techniques?.length }}</span>
-  </div>
-
   <div class="bjj-list-header">
     <div class="bjj-list-header-cell bjj-list-header-cell-{{ sortBtn.caption }}" *ngFor="let sortBtn of sortBtns"
       (click)="toggleSort(sortBtn)">
@@ -59,4 +54,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="bjj-technique-count text-gray-600">
+  <span>{{ techniques?.length }}</span>
 </div>
