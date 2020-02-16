@@ -1,13 +1,14 @@
 # BjjChecklist
 
 ## TODO:
-* feat: save user state in DB
+* refactor: filters - same structure for all
 * fix: firebase rules
 * feat: belt indexing (to control sort)
 * feat: must login notification on status change
 * refactor: better user dropdown
 * feat: user nicename and avatar
 * refactor: better login experience
+* feat: filter states
 
 
 ## Ideas

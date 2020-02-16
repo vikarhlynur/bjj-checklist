@@ -1,57 +1,33 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { get } from 'lodash';
 
-import { BeltFilter } from 'src/app/checklist/filters/belt-filter.model';
 import { Belt, Gi, TechniquePlacement, TechniquePosition } from 'src/app/checklist/technique.model';
-
-export interface TechniqueFilters {
-  caption: string;
-  belt: BeltFilter;
-  belts: Belt[];
-  position: TechniquePosition[];
-  placement: TechniquePlacement[];
-  gi: GiFilter;
-  noGi: GiFilter;
-}
-
-interface GiFilter {
-  caption: string;
-  isFilter: boolean;
-}
+import { ChecklistService } from '../checklist.service';
+import { TechniqueFilters, TechniqueFiltersDto } from './technique-filters.model';
 
 @Component({
   selector: 'app-checklist-filters',
   templateUrl: './checklist-filters.component.html',
   styleUrls: ['./checklist-filters.component.scss']
 })
-export class ChecklistFiltersComponent implements OnInit {
+export class ChecklistFiltersComponent implements OnInit, OnChanges {
+  @Input() user: firebase.User;
   @Output() readonly changed = new EventEmitter<TechniqueFilters>();
 
-  filters: TechniqueFilters = {
-    caption: '',
-    belt: new BeltFilter(),
-    belts: ['white', 'blue', 'purple', 'brown'],
-    position: [
-      new TechniquePosition('backControl'),
-      new TechniquePosition('turtle'),
-      new TechniquePosition('closedGuard'),
-      new TechniquePosition('openGuard'),
-      new TechniquePosition('halfGuard'),
-      new TechniquePosition('mount'),
-      new TechniquePosition('sideControl'),
-      new TechniquePosition('standing')
-    ],
-    placement: [
-      new TechniquePlacement('top'),
-      new TechniquePlacement('bottom')
-    ],
-    gi: { caption: 'Gi', isFilter: false },
-    noGi: { caption: 'No-gi', isFilter: false }
-  };
+  filters = new TechniqueFilters();
 
-  constructor() { }
+  constructor(
+    private service: ChecklistService
+  ) { }
 
   ngOnInit() {
     this.changed.emit(this.filters);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (get(changes, 'user.currentValue.uid')) {
+      this.getUserFilters();
+    }
   }
 
   clearTextFilter(): void {
@@ -78,6 +54,17 @@ export class ChecklistFiltersComponent implements OnInit {
     if (gi === 'Gi') { this.filters.gi.isFilter = !this.filters.gi.isFilter; }
     if (gi === 'No-gi') { this.filters.noGi.isFilter = !this.filters.noGi.isFilter; }
     this.changed.emit(this.filters);
+  }
+
+  private getUserFilters(): void {
+    this.service.getFilters(this.user.uid).subscribe((filters: TechniqueFiltersDto[]) => {
+      if (filters.length === 0) {
+        this.service.createFilters(this.user.uid).then(() => { this.getUserFilters(); });
+      } else {
+        this.filters.fromDto(filters[0]);
+        this.changed.emit(this.filters);
+      }
+    });
   }
 
 }

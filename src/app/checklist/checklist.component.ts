@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import FuzzySearch from 'fuzzy-search';
 
 import { ChecklistService } from './checklist.service';
-import { TechniqueFilters } from './filters/checklist-filters.component';
+import { TechniqueFilters } from './filters/technique-filters.model';
 import { Technique } from './technique.model';
 
 @Component({
@@ -55,6 +55,9 @@ export class ChecklistComponent implements OnInit {
 
   onFiltersChanged(filters: TechniqueFilters): void {
     this.filters = filters;
+    if (this.user) {
+      this.service.updateFilters(filters, this.user.uid);
+    }
     this.filter();
   }
 
