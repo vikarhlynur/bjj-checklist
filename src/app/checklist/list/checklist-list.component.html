@@ -18,19 +18,8 @@
       (click)="setSelected(technique)">
       <div class="bjj-list-row-header">
         <div (click)="toggleStatus(technique, $event)"
-          class="bjj-list-cell bjj-list-cell-status status-{{technique.status.status}}">
-          <span *ngIf="technique.status.status === 0">
-            <div class="fa fa-circle-o"></div>
-          </span>
-          <span *ngIf="technique.status.status === 1">
-            <i class="fa fa-circle"></i>
-          </span>
-          <span *ngIf="technique.status.status === 2">
-            <i class="fa fa-star"></i>
-          </span>
-          <span *ngIf="technique.status.status === 3">
-            <i class="fa fa-check"></i>
-          </span>
+          class="bjj-list-cell bjj-list-cell-status bg-{{technique.status.color}} status-{{technique.status.status}}">
+          <div class="fa fa-{{ technique.status.icon }}"></div>
         </div>
 
         <div class="bjj-list-cell bjj-list-cell-technique">

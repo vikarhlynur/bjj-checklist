@@ -80,6 +80,10 @@ export class ChecklistComponent implements OnInit {
       .filter(t => {
         const placementNames = this.filters.placement.filter(f => f.isFilter).map(f => f.name);
         return placementNames.length > 0 ? placementNames.includes(t.placement.name) : true;
+      })
+      .filter(t => {
+        const statusStatus = this.filters.status.filter(s => s.isFilter).map(s => s.status);
+        return statusStatus.length > 0 ? statusStatus.includes(t.status.status) : true;
       });
   }
 

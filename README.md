@@ -6,7 +6,6 @@
 * refactor: better user dropdown
 * feat: user nicename and avatar
 * refactor: better login experience
-* feat: state filters
 
 
 ## Ideas

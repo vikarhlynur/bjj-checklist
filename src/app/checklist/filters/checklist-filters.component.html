@@ -14,10 +14,18 @@
 
 <div class="bjj-filter-row">
 
-  <!-- Belts -->
+  <!-- Status -->
   <div class="bjj-filter-cell">
-    <span class="badge bg-{{filter.name}} u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
-      *ngFor="let filter of filters.belt" (click)="filterBelt(filter);">
+    <span class="badge bg-{{filter.color}} u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
+      *ngFor="let filter of filters.status" (click)="filterStatus(filter);">
+      <i class="fa fa-{{filter.icon}}"></i>
+    </span>
+  </div>
+
+  <!-- Placement -->
+  <div class="bjj-filter-cell">
+    <span class="badge bg-red u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
+      *ngFor="let filter of filters.placement" (click)="filterPlacement(filter);">
       {{ filter.caption }}
     </span>
   </div>
@@ -30,10 +38,10 @@
     </span>
   </div>
 
-  <!-- Placement -->
+  <!-- Belts -->
   <div class="bjj-filter-cell">
-    <span class="badge bg-red u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
-      *ngFor="let filter of filters.placement" (click)="filterPlacement(filter);">
+    <span class="badge bg-{{filter.name}} u-cursor-pointer mr-1" [class.filter-inactive]="!filter.isFilter"
+      *ngFor="let filter of filters.belt" (click)="filterBelt(filter);">
       {{ filter.caption }}
     </span>
   </div>

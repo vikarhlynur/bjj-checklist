@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { get } from 'lodash';
 
-import { TechniqueBelt, TechniqueGi, TechniquePlacement, TechniquePosition } from 'src/app/checklist/technique.model';
+import { TechniqueBelt, TechniqueGi, TechniquePlacement, TechniquePosition, TechniqueStatus } from 'src/app/checklist/technique.model';
 import { ChecklistService } from '../checklist.service';
 import { TechniqueFilters, TechniqueFiltersDto } from './technique-filters.model';
 
@@ -35,6 +35,8 @@ export class ChecklistFiltersComponent implements OnInit, OnChanges {
     this.changed.emit(this.filters);
   }
 
+  //////////////////////////////////////////
+
   filterBelt(belt: TechniqueBelt): void {
     belt.isFilter = !belt.isFilter;
     this.changed.emit(this.filters);
@@ -54,6 +56,13 @@ export class ChecklistFiltersComponent implements OnInit, OnChanges {
     placement.isFilter = !placement.isFilter;
     this.changed.emit(this.filters);
   }
+
+  filterStatus(status: TechniqueStatus): void {
+    status.isFilter = !status.isFilter;
+    this.changed.emit(this.filters);
+  }
+
+  //////////////////////////////////////////
 
   private getUserFilters(): void {
     this.service.getFilters(this.user.uid).subscribe((filters: TechniqueFiltersDto[]) => {

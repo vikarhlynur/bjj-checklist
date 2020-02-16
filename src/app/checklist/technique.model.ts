@@ -171,17 +171,36 @@ export class TechniqueStatus {
   techniqueId: string;
   status = 0;
   userId?: string;
+  icon: string;
+  color: string;
   isFilter = false;
 
-  constructor(techniqueId: string) {
-    this.techniqueId = techniqueId;
+  constructor(techniqueId?: string, status?: number) {
+    this.techniqueId = techniqueId ? techniqueId : undefined;
+    if (status !== undefined) { this.status = status; }
+    this.update();
   }
+
+  private icons = {
+    0: 'circle-o',
+    1: 'circle',
+    2: 'star',
+    3: 'check'
+  };
+
+  private colors = {
+    0: 'gray-500',
+    1: 'cyan',
+    2: 'yellow',
+    3: 'green'
+  };
 
   updateFormDto(dto: TechniqueStatusDto): void {
     if (!dto || !dto.id || dto.techniqueId !== this.techniqueId) { return; }
     this.id = dto.id;
     this.status = dto.status;
     this.userId = dto.userId;
+    this.update();
   }
 
   toDto(): TechniqueStatusDto {
@@ -194,5 +213,11 @@ export class TechniqueStatus {
 
   toggle(): void {
     this.status = (this.status + 1) % 4;
+    this.update();
+  }
+
+  private update(): void {
+    this.icon = this.icons[this.status];
+    this.color = this.colors[this.status];
   }
 }

@@ -51,7 +51,9 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  .bjj-filter-cell {}
+  .bjj-filter-cell {
+    margin: 0 8px 6px 0;
+  }
 }
 
 .badge {

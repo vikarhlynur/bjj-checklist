@@ -147,10 +147,6 @@ $row-border-radius: 2px;
     font-size: 18px;
     width: $cell-width-status;
   }
-  &.status-0 { background-color: $gray-500; }
-  &.status-1 { background-color: $cyan; }
-  &.status-2 { background-color: $yellow; }
-  &.status-3 { background-color: $green; }
 }
 .bjj-list-cell-technique {
   min-width: 0; // for text truncate
