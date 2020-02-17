@@ -1,17 +1,18 @@
 <div class="bjj-wrapper">
 
   <div class="bjj-menu-bar">
+    <button type="button" id="bjj-login-btn" class="btn btn-link text-gray-600" *ngIf="!user" (click)="routeToLogin()">
+      Sign in
+    </button>
 
-    <button type="button" class="btn btn-link text-gray-600" *ngIf="!user" (click)="routeToLogin()">Sign in</button>
-
-    <div class="dropdown">
-      <button type="button" id="user-btn" class="btn btn-link dropdown-toggle text-gray-600" *ngIf="user"
-        (click)="userBtnExpanded = !userBtnExpanded">
-        {{ user.email }} <i class="fa caret-down"></i>
+    <div class="btn-group" dropdown>
+      <button id="bjj-user-dropdown" dropdownToggle type="button" class="btn btn-link dropdown-toggle text-gray-600"
+        aria-controls="bjj-user-dropdown-menu">
+        {{ user?.email }} <span class="caret"></span>
       </button>
-      <div class="dropdown-menu dropdown-menu-right" [class.expanded]="userBtnExpanded">
-        <button type="button" id="sign-out-btn" class="btn btn-link" *ngIf="user" (click)="signOut()">Sign out</button>
-      </div>
+      <ul id="bjj-user-dropdown-menu" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
     </div>
   </div>
 

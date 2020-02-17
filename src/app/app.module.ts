@@ -4,7 +4,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { firebase, FirebaseUIModule } from 'firebaseui-angular';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,9 +45,11 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
+    BsDropdownModule.forRoot(),
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

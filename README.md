@@ -1,11 +1,11 @@
 # BjjChecklist
 
 ## TODO:
-* fix: firebase rules
-* feat: must login notification on status change
 * refactor: better user dropdown
 * feat: user nicename and avatar
 * refactor: better login experience
+* feat: must login notification on status change
+* fix: firebase rules
 
 
 ## Ideas

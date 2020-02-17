@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import FuzzySearch from 'fuzzy-search';
+import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 
 import { ChecklistService } from './checklist.service';
 import { TechniqueFilters } from './filters/technique-filters.model';
@@ -10,7 +11,8 @@ import { Technique } from './technique.model';
 @Component({
   selector: 'app-bjj-checklist',
   templateUrl: './checklist.component.html',
-  styleUrls: ['./checklist.component.scss']
+  styleUrls: ['./checklist.component.scss'],
+  providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }]
 })
 export class ChecklistComponent implements OnInit {
   user: firebase.User;

@@ -7,6 +7,16 @@ body.dark {
   background-color: darken($gray-900, 3%);
   color: #fff;
   .badge.bg-white { color: $gray-800; }
+  .dropdown-menu {
+    background-color: darken($gray-700, 3%);
+    a {
+      color: #fff;
+      &:hover {
+        color: #fff;
+        background-color: $gray-800;
+      }
+    }
+  }
 }
 
 .bjj-wrapper {
