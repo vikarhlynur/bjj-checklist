@@ -1,7 +1,6 @@
 # BjjChecklist
 
 ## TODO:
-* refactor: better user dropdown
 * feat: user nicename and avatar
 * refactor: better login experience
 * feat: must login notification on status change

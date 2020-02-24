@@ -182,16 +182,16 @@ export class TechniqueStatus {
   }
 
   private icons = {
-    0: 'circle-o',
-    1: 'circle',
+    0: 'circle',
+    1: 'eye',
     2: 'star',
     3: 'check'
   };
 
   private colors = {
     0: 'gray-500',
-    1: 'cyan',
-    2: 'yellow',
+    1: 'yellow',
+    2: 'orange',
     3: 'green'
   };
 
