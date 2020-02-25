@@ -47,6 +47,14 @@
     "placement": "bottom",
     "video": ["CCos35cv5T8", 79]
   },
+  "americana": {
+    "belt": "white",
+    "caption": "Americana",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["Zhh4W24rwrw", 3]
+  },
   "americana2": {
     "belt": "white",
     "caption": "Americana",
@@ -71,14 +79,6 @@
     "placement": "top",
     "video": ["Gcarl3Igv_A", 134]
   },
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -129,6 +129,14 @@
     "placement": "bottom",
     "video": ["2iB5nlIeZR8", 221]
   },
+    "kimuragripSweeptoMountFinishKimura": {
+    "belt": "blue",
+    "caption": "Kimura grip sweep to mount, finish kimura",
+    "noGi": true,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["CCos35cv5T8", 336]
+  },
   "hipEscapeGuardReplacement": {
     "belt": "blue",
     "caption": "Hip escape guard replacement",
@@ -140,10 +148,42 @@
   "backdoorEscape": {
     "belt": "blue",
     "caption": "Backdoor escape",
-    "noGi": true,
+    "noGi": false,
     "position": "sideControl",
     "placement": "bottom",
     "video": ["9S3nDygvk6A", 167]
+  },
+  "backdoorEscapenogi": {
+    "belt": "blue",
+    "caption": "Backdoor escape",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["IVwHZGAL7gM", 126]
+  },
+  "armbarfromSidecontrolebottom": {
+    "belt": "blue",
+    "caption": "Armbar from sidecontrole bottom",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["IVwHZGAL7gM", 166]
+  },
+  "sidecontrolEscapetotop": {
+    "belt": "blue",
+    "caption": "Sidecontol escape to sidecontrole top",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["IVwHZGAL7gM", 31]
+  },
+  "insideTripSitupGauardSweep": {
+    "belt": "blue",
+    "caption": "Inside trip, situp gauard sweep",
+    "noGi": true,
+    "position": "openGuard",
+    "placement": "bottom",
+    "video": ["deTxX6B_mSI", 3]
   },
   "kneeSliceguardpass": {
     "belt": "blue",
@@ -177,6 +217,14 @@
     "placement": "top",
     "video": ["https://www.youtube.com/watch?v=FTEXBoc6Z3o&feature=emb_rel_pause", 220]
   },
+    "nelsonsmashPass": {
+    "belt": "blue",
+    "caption": "Gunni nelson smash pass",
+    "noGi": true,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["https://www.youtube.com/watch?v=FTEXBoc6Z3o&feature=emb_rel_pause", 900]
+  },
   "underHookBackTake": {
     "belt": "blue",
     "caption": "Under-hook back take",
@@ -193,9 +241,9 @@
     "placement": "bottom",
     "video": ["65oxIM5llsk", 0]
   },
-  "footWedgesweep": {
+  "footWaitersweep": {
     "belt": "blue",
-    "caption": "Foot-wedge sweep",
+    "caption": "Foot-waiter sweep",
     "noGi": true,
     "position": "halfGuard",
     "placement": "bottom",
@@ -281,6 +329,22 @@
     "placement": "top",
     "video": ["PZ99OrGLSLo", 167]
   },
+  "kneeridetoArmbarcloseside": {
+    "belt": "blue",
+    "caption": "Knee ride to armbar close side",
+    "noGi": false,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["L7fN3UvtrO4", 246]
+  },
+  "sidecontroletoKneeride": {
+    "belt": "blue",
+    "caption": "Sidecontrole to knee ride",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["T7U2sUW2Kzc", 156]
+  },
   "kneeSliceToMount": {
     "belt": "blue",
     "caption": "Knee slice to mount",
@@ -296,14 +360,6 @@
     "position": "sideControl",
     "placement": "top",
     "video": ["PLa07zdiPZk", 2]
-  },
-  "americana": {
-    "belt": "blue",
-    "caption": "Americana",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "top",
-    "video": ["Zhh4W24rwrw", 3]
   },
   "headArmTriangleChoke": {
     "belt": "blue",
@@ -434,13 +490,7 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
+
   
   
   
