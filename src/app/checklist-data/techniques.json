@@ -129,14 +129,6 @@
     "placement": "bottom",
     "video": ["2iB5nlIeZR8", 221]
   },
-    "kimuragripSweeptoMountFinishKimura": {
-    "belt": "blue",
-    "caption": "Kimura grip sweep to mount, finish kimura",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["CCos35cv5T8", 336]
-  },
   "hipEscapeGuardReplacement": {
     "belt": "blue",
     "caption": "Hip escape guard replacement",
@@ -177,6 +169,14 @@
     "placement": "bottom",
     "video": ["IVwHZGAL7gM", 31]
   },
+  "delaRivaSweep": {
+    "belt": "blue",
+    "caption": "De la riva sweep",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "bottom",
+    "video": ["_Ye7G2N3S0", 431]
+  },
   "insideTripSitupGauardSweep": {
     "belt": "blue",
     "caption": "Inside trip, situp gauard sweep",
@@ -193,9 +193,9 @@
     "placement": "top",
     "video": ["T7U2sUW2Kzc", 15]
   },
-  "overUnderGuardPass": {
+  "overtheLegGuardPass": {
     "belt": "blue",
-    "caption": "Over-under guard pass",
+    "caption": "Over the leg guard pass",
     "noGi": false,
     "position": "closedGuard",
     "placement": "top",
@@ -224,6 +224,22 @@
     "position": "openGuard",
     "placement": "top",
     "video": ["https://www.youtube.com/watch?v=FTEXBoc6Z3o&feature=emb_rel_pause", 900]
+  },
+  "straightAnklelockAchilles": {
+    "belt": "blue",
+    "caption": "Straight ankle lock (Achilles)",
+    "noGi": true,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["92yhKE8w9zc", 21]
+  },
+  "overUnder": {
+    "belt": "blue",
+    "caption": "Over under (guard pass)",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["b8sco6ZtkCo", 93]
   },
   "underHookBackTake": {
     "belt": "blue",
@@ -257,13 +273,21 @@
     "placement": "top",
     "video": ["Vn8Y8AnxH14", 175]
   },
-  "armDragBackTake": {
+  "darceChokefromHalfguard": {
     "belt": "blue",
-    "caption": "Arm-drag back take",
+    "caption": "Darce choke from half guard",
+    "noGi": true,
+    "position": "halfGuard",
+    "placement": "top",
+    "video": ["2a05dcCrt9U", 70]
+  },
+  "closedGuardEscape": {
+    "belt": "blue",
+    "caption": "Closed guard escape",
     "noGi": false,
     "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["nnzXF5xntE0", 303]
+    "placement": "top",
+    "video": ["XfwRPR83ViY", 274]
   },
   "scissorSweep": {
     "belt": "blue",
@@ -280,6 +304,14 @@
     "position": "closedGuard",
     "placement": "bottom",
     "video": ["vPNx9jWz1qc", 245]
+  },
+  "spiderGuardSweep": {
+    "belt": "blue",
+    "caption": "Spider guard sweep",
+    "noGi": false,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["8_65z555Me0", 172]
   },
   "crossCollarChoke": {
     "belt": "blue",
@@ -329,13 +361,53 @@
     "placement": "top",
     "video": ["PZ99OrGLSLo", 167]
   },
-  "kneeridetoArmbarcloseside": {
+  "grabandRoleescape": {
     "belt": "blue",
-    "caption": "Knee ride to armbar close side",
+    "caption": "Grab and role escape",
     "noGi": false,
-    "position": "sideControl",
+    "position": "turtle",
+    "placement": "bottom",
+    "video": ["AW_hcF-QeBw", 150]
+  },
+  "fromTurtletoKneeride": {
+    "belt": "blue",
+    "caption": "From turtle to knee ride",
+    "noGi": false,
+    "position": "turtle",
     "placement": "top",
-    "video": ["L7fN3UvtrO4", 246]
+    "video": ["https://www.youtube.com/watch?v=_ZIC3w_Dg3Y", 180]
+  },
+  "clockChockefromTurtle": {
+    "belt": "blue",
+    "caption": "Clock chocke",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["https://www.youtube.com/watch?v=_ZIC3w_Dg3Y", 130]
+  },
+  "forarmTrap": {
+    "belt": "blue",
+    "caption": "Forarm trap",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["https://www.youtube.com/watch?v=_ZIC3w_Dg3Y", 56]
+  },
+  "loopChokefromturtle": {
+    "belt": "blue",
+    "caption": "Loop choke",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["lXo8GBcP49s", 50]
+  },
+  "frontheadlocktoguillotine": {
+    "belt": "blue",
+    "caption": "Front headlock to guillotine",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["l4FWC_kYKas", 210]
   },
   "sidecontroletoKneeride": {
     "belt": "blue",
@@ -368,6 +440,14 @@
     "position": "sideControl",
     "placement": "top",
     "video": ["2kvM6ACOxHw", 120]
+  },
+  "darceChoke": {
+    "belt": "purple",
+    "caption": "D'arce Choke",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["v_WjtZVGzvE", 251]
   },
   "sleeveChoke2": {
     "belt": "blue",
@@ -427,7 +507,7 @@
   },  
   "singleLegtakedown": {
     "belt": "blue",
-    "caption": "Double leg takedown",
+    "caption": "Single leg takedown",
     "noGi": true,
     "position": "standing",
     "placement": "top",
@@ -496,7 +576,30 @@
   
   
   
-  
+  "overUnderOlderBrother": {
+    "belt": "purple",
+    "caption": "Over under Older brother (guard pass)",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["GUfAuqlcw54", 264]
+  },
+  "kimuragripSweeptoMountFinishKimura": {
+    "belt": "purple",
+    "caption": "Kimura grip sweep to mount, finish kimura",
+    "noGi": true,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["CCos35cv5T8", 216]
+  },
+  "armDragBackTake": {
+    "belt": "purple",
+    "caption": "Arm-drag back take",
+    "noGi": false,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["nnzXF5xntE0", 303]
+  },
   "anacondaChokefromturtle": {
     "belt": "purple",
     "caption": "Anaconda choke",
@@ -504,13 +607,6 @@
     "position": "turtle",
     "placement": "top",
     "video": ["8Qg5BH0sXKY", 114]
-  },"loopChokefromturtle": {
-    "belt": "purple",
-    "caption": "Loop choke",
-    "noGi": false,
-    "position": "turtle",
-    "placement": "top",
-    "video": ["DLwzai0wviA", 202]
   },
   "turtleHelicopterchoke": {
     "belt": "purple",
@@ -524,7 +620,7 @@
     "belt": "purple",
     "caption": "D'arce Choke",
     "noGi": true,
-    "position": "sideControl",
+    "position": "turtle",
     "placement": "top",
     "video": ["v_WjtZVGzvE", 393]
   },
@@ -535,6 +631,14 @@
     "position": "sideControl",
     "placement": "top",
     "video": ["gQy-mmKJSu0", 126]
+  },
+  "kneeridetoArmbarcloseside": {
+    "belt": "purple",
+    "caption": "Knee ride to armbar close side",
+    "noGi": false,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["L7fN3UvtrO4", 246]
   },
   "kneeSlice": {
     "belt": "purple",
@@ -751,22 +855,6 @@
     "position": "halfGuard",
     "placement": "bottom",
     "video": ["", 0]
-  },
-  "kimura5": {
-    "belt": "purple",
-    "caption": "Straight ankle lock (Achilles)",
-    "noGi": true,
-    "position": "openGuard",
-    "placement": "top",
-    "video": ["92yhKE8w9zc", 21]
-  },
-  "frontheadlocktoguillotine": {
-    "belt": "purple",
-    "caption": "Front headlock to guillotine",
-    "noGi": true,
-    "position": "turtle",
-    "placement": "top",
-    "video": ["l4FWC_kYKas", 210]
   },
   "turtletohalfnelsontoarmbar": {
     "belt": "purple",
