@@ -297,6 +297,14 @@
     "placement": "bottom",
     "video": ["qp5AXBHxQec", 61]
   },
+  "scissorSweepGuardToMount": {
+    "belt": "blue",
+    "caption": "Scissor Sweep (Guard To Mount)",
+    "noGi": false,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["fcZJvERQcw0", 60]
+  },
   "hipBumpSweep": {
     "belt": "blue",
     "caption": "Hip bump sweep",
@@ -360,6 +368,14 @@
     "position": "closedGuard",
     "placement": "top",
     "video": ["PZ99OrGLSLo", 167]
+  },
+  "doubleAnkleGrabSweepGuardToMount": {
+    "belt": "blue",
+    "caption": "Double Ankle Grab Sweep (Guard To Mount)",
+    "noGi": false,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["iAXXkJssu1I", 4]
   },
   "grabandRoleescape": {
     "belt": "blue",
@@ -576,6 +592,35 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  "kneeSlice": {
+    "belt": "purple",
+    "caption": "Knee slice",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["ghpI3sq4nb4", 250]
+  },
   "overUnderOlderBrother": {
     "belt": "purple",
     "caption": "Over under Older brother (guard pass)",
@@ -583,6 +628,14 @@
     "position": "openGuard",
     "placement": "top",
     "video": ["GUfAuqlcw54", 264]
+  },
+  "guillotine3": {
+    "belt": "purple",
+    "caption": "Guillotine",
+    "noGi": true,
+    "position": "openGuard",
+    "placement": "top",
+    "video": ["oXgZ_Ud", 185]
   },
   "kimuragripSweeptoMountFinishKimura": {
     "belt": "purple",
@@ -599,6 +652,46 @@
     "position": "closedGuard",
     "placement": "bottom",
     "video": ["nnzXF5xntE0", 303]
+  },
+  "kimuraformZguard": {
+    "belt": "purple",
+    "caption": "Kimura from Z guard",
+    "noGi": true,
+    "position": "halfGuard",
+    "placement": "bottom",
+    "video": ["vmGMydNv", 123]
+  },
+  "guillotinefromHalfGuardTop": {
+    "belt": "purple",
+    "caption": "Guillotine",
+    "noGi": true,
+    "position": "halfGuard",
+    "placement": "top",
+    "video": ["yyCluhEgmfU", 120]
+  },
+  "guillotinefromHalfGuardBottom": {
+    "belt": "purple",
+    "caption": "Arm in - guillotine",
+    "noGi": true,
+    "position": "halfGuard",
+    "placement": "bottom",
+    "video": ["fGa-NJ8sF9k", 358]
+  },
+  "turtletohalfnelsontoarmbar": {
+    "belt": "purple",
+    "caption": "Turtle to half nelson to armbar",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["ECZ93LoLVDg", 50]
+  },
+  "crucifix": {
+    "belt": "purple",
+    "caption": "Crucifix",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["J5yzT2p31u8", 0]
   },
   "anacondaChokefromturtle": {
     "belt": "purple",
@@ -632,6 +725,14 @@
     "placement": "top",
     "video": ["gQy-mmKJSu0", 126]
   },
+  "straightArmbarOtherSide": {
+    "belt": "purple",
+    "caption": "Straight arm bar (other side)",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["qouu5qFtZZA", 80]
+  },
   "kneeridetoArmbarcloseside": {
     "belt": "purple",
     "caption": "Knee ride to armbar close side",
@@ -640,157 +741,21 @@
     "placement": "top",
     "video": ["L7fN3UvtrO4", 246]
   },
-  "kneeSlice": {
+  "straightArmBarFinishonTop": {
     "belt": "purple",
-    "caption": "Knee slice",
+    "caption": "Straight arm bar (finish on top)",
     "noGi": false,
-    "position": "openGuard",
-    "placement": "top",
-    "video": ["ghpI3sq4nb4", 250]
-  },
-  "armBar3": {
-    "belt": "purple",
-    "caption": "Arm bar",
-    "noGi": true,
-    "position": "backControl",
-    "placement": "top",
-    "video": ["CtcZlbLkedg", 226]
-  },
-  "upwardLiftEscapeUnderMount": {
-    "belt": "purple",
-    "caption": "Upward Lift Escape (Under Mount)",
-    "noGi": true,
-    "position": "mount",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "guardEscapePush": {
-    "belt": "purple",
-    "caption": "Guard Escape (Push)",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "guardEscapeElbowDrive": {
-    "belt": "purple",
-    "caption": "Guard Escape (Elbow Drive)",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "passingTheGuardKneeling": {
-    "belt": "purple",
-    "caption": "Passing The Guard (Kneeling)",
-    "noGi": true,
-    "position": "openGuard",
-    "placement": "top",
-    "video": ["", 0]
-  },
-  "headLockEscapeHipRoll": {
-    "belt": "purple",
-    "caption": "Head Lock Escape (Hip Roll)",
-    "noGi": true,
-    "position": "mount",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "headLockEscapeLegHook": {
-    "belt": "purple",
-    "caption": "Head Lock Escape (Leg Hook)",
-    "noGi": true,
-    "position": "mount",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "headLockEscapeArmFrame": {
-    "belt": "purple",
-    "caption": "Head Lock Escape (Arm Frame)",
-    "noGi": true,
-    "position": "mount",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "standingUpInBase": {
-    "belt": "purple",
-    "caption": "Standing Up In Base",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "top",
-    "video": ["", 0]
-  },
-  "sideMountToMountStepOver": {
-    "belt": "purple",
-    "caption": "Side Mount To Mount - Step Over",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "top",
-    "video": ["", 0]
-  },
-  "sideMountToMountKneeDrive": {
-    "belt": "purple",
-    "caption": "Side Mount To Mount - Knee Drive",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "top",
-    "video": ["", 0]
-  },
-  "scissorSweepGuardToMount": {
-    "belt": "purple",
-    "caption": "Scissor Sweep (Guard To Mount)",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "pushSweepGuardToMount": {
-    "belt": "purple",
-    "caption": "Push Sweep (Guard To Mount)",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "doubleAnkleGrabSweepGuardToMount": {
-    "belt": "purple",
-    "caption": "Double Ankle Grab Sweep (Guard To Mount)",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "straightArmBar": {
-    "belt": "purple",
-    "caption": "Straight arm bar",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "top",
-    "video": ["", 0]
-  },
-  "straightArmbarOtherSide": {
-    "belt": "purple",
-    "caption": "Straight arm bar (other side)",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "top",
-    "video": ["", 0]
-  },
-  "straightArmBar2": {
-    "belt": "purple",
-    "caption": "Straight arm bar",
-    "noGi": true,
-    "position": "sideControl",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "straightArmBarHoldingPosition": {
-    "belt": "purple",
-    "caption": "Straight arm bar (holding position)",
-    "noGi": true,
     "position": "mount",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["P29iEg1F88Q", 46]
+  },
+  "reverseArmBarfromSmount": {
+    "belt": "purple",
+    "caption": "Reverse arm bar from S mount",
+    "noGi": false,
+    "position": "mount",
+    "placement": "top",
+    "video": ["fe9BlGiww7M", 0]
   },
   "triangleChoke": {
     "belt": "purple",
@@ -798,79 +763,31 @@
     "noGi": true,
     "position": "mount",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["JNNuVJfWdkY", 230]
   },
-  "guillotine1": {
+  "triangleChokeFinishonTop": {
     "belt": "purple",
-    "caption": "Guillotine",
+    "caption": "Triangle choke (finish on top)",
     "noGi": true,
-    "position": "halfGuard",
+    "position": "mount",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["JNNuVJfWdkY", 123]
   },
-  "guillotine2": {
+  "armbarFromTrianglePosition": {
     "belt": "purple",
-    "caption": "Arm in - guillotine",
+    "caption": "Armbar from triangle position",
     "noGi": true,
-    "position": "halfGuard",
-    "placement": "bottom",
-    "video": ["fGa-NJ8sF9k", 358]
-  },
-  "guillotine3": {
-    "belt": "purple",
-    "caption": "Guillotine",
-    "noGi": true,
-    "position": "openGuard",
+    "position": "mount",
     "placement": "top",
-    "video": ["", 0]
+    "video": ["JNNuVJfWdkY", 160]
   },
-  "guillotine4": {
+  "backcontroletoKimuratoArmbar": {
     "belt": "purple",
-    "caption": "Guillotine",
-    "noGi": true,
-    "position": "closedGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "guillotine5": {
-    "belt": "purple",
-    "caption": "Guillotine",
-    "noGi": true,
-    "position": "standing",
-    "placement": "top",
-    "video": ["fGa-NJ8sF9k", 188]
-  },
-  "kimura3": {
-    "belt": "purple",
-    "caption": "Kimura",
+    "caption": "Kimuragrip to armbar",
     "noGi": true,
     "position": "backControl",
     "placement": "top",
-    "video": ["", 0]
-  },
-  "kimura4": {
-    "belt": "purple",
-    "caption": "Kimura",
-    "noGi": true,
-    "position": "halfGuard",
-    "placement": "bottom",
-    "video": ["", 0]
-  },
-  "turtletohalfnelsontoarmbar": {
-    "belt": "purple",
-    "caption": "Turtle to half nelson to armbar",
-    "noGi": true,
-    "position": "turtle",
-    "placement": "top",
-    "video": ["ECZ93LoLVDg", 50]
-  },
-  "crucifix": {
-    "belt": "purple",
-    "caption": "Crucifix",
-    "noGi": false,
-    "position": "turtle",
-    "placement": "top",
-    "video": ["J5yzT2p31u8", 0]
+    "video": ["W2miqzII2RQ", 95]
   },
   "ouchiGaritakedown": {
     "belt": "purple",
@@ -887,6 +804,14 @@
     "position": "standing",
     "placement": "top",
     "video": ["Gcarl3Igv_A", 163]
+  },
+  "guillotine5": {
+    "belt": "purple",
+    "caption": "Guillotine",
+    "noGi": true,
+    "position": "standing",
+    "placement": "top",
+    "video": ["fGa-NJ8sF9k", 188]
   },
     "anklePicktakedown": {
     "belt": "purple",
@@ -934,14 +859,13 @@
   
   
   
-  
- "theHeismanEscape": {
+  "theCrabride": {
     "belt": "brown",
-    "caption": "The Heisman Escape",
-    "noGi": true,
-    "position": "sideControl",
+    "caption": "The Crab ride",
+    "noGi": false,
+    "position": "openGuard",
     "placement": "bottom",
-    "video": ["JbTxwGGebTA", 0]
+    "video": ["2JD6AsOdRxQ", 91]
   },
   "theVice": {
     "belt": "brown",
@@ -949,7 +873,15 @@
     "noGi": false,
     "position": "openGuard",
     "placement": "bottom",
-    "video": ["kqIQcjvNjrs", 0]
+    "video": ["kqIQcjvNjrs", 186]
+  },
+  "theHeismanEscape": {
+    "belt": "brown",
+    "caption": "The Heisman Escape",
+    "noGi": true,
+    "position": "sideControl",
+    "placement": "bottom",
+    "video": ["JbTxwGGebTA", 71]
   },
   "flyTrapSubmission": {
     "belt": "brown",
