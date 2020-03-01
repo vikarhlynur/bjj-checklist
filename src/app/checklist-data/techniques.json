@@ -597,22 +597,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   "kneeSlice": {
     "belt": "purple",
     "caption": "Knee slice",
@@ -637,6 +621,14 @@
     "placement": "top",
     "video": ["oXgZ_Ud", 185]
   },
+  "omoplatafromSpiderguard ": {
+    "belt": "purple",
+    "caption": "Omoplata from spider guard ",
+    "noGi": false,
+    "position": "openGuard",
+    "placement": "bottom",
+    "video": ["i4WEQqkn8gc", 202]
+  },
   "kimuragripSweeptoMountFinishKimura": {
     "belt": "purple",
     "caption": "Kimura grip sweep to mount, finish kimura",
@@ -652,6 +644,14 @@
     "position": "closedGuard",
     "placement": "bottom",
     "video": ["nnzXF5xntE0", 303]
+  },
+  "omoplatafromClosedguard": {
+    "belt": "purple",
+    "caption": "Omoplata from closed guard",
+    "noGi": false,
+    "position": "closedGuard",
+    "placement": "bottom",
+    "video": ["yOGbaXm3Htw", 90]
   },
   "kimuraformZguard": {
     "belt": "purple",
@@ -717,6 +717,38 @@
     "placement": "top",
     "video": ["v_WjtZVGzvE", 393]
   },
+  "reverseOmoplatafromTurtleFrontrole ": {
+    "belt": "purple",
+    "caption": "Reverse omoplata from turtle (front role) ",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["kOAeE0tKieg", 37]
+  },
+  "ReverseOmoplatafromTurtle ": {
+    "belt": "purple",
+    "caption": "Reverse omoplata from turtle ",
+    "noGi": false,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["uJw6swjGDMo", 412]
+  },
+  "bananaSplitwithSurprise": {
+    "belt": "purple",
+    "caption": "Banana split with surprise",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["bsqLi9LfiwM", 13]
+  },
+  "bananaSplit": {
+    "belt": "purple",
+    "caption": "Banana split",
+    "noGi": true,
+    "position": "turtle",
+    "placement": "top",
+    "video": ["E2MZRD_RObs", 109]
+  },
   "anacondaChokefromsidcontrole": {
     "belt": "purple",
     "caption": "Anaconda choke",
@@ -732,6 +764,14 @@
     "position": "sideControl",
     "placement": "top",
     "video": ["qouu5qFtZZA", 80]
+  },
+  "omoplatafromSidecontrol": {
+    "belt": "purple",
+    "caption": "Omoplata from side control",
+    "noGi": false,
+    "position": "sideControl",
+    "placement": "top",
+    "video": ["omoplata+from+side+control", 278]
   },
   "kneeridetoArmbarcloseside": {
     "belt": "purple",
@@ -839,8 +879,6 @@
 
 
 
-  
-  
   
   
   
